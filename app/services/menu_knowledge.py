@@ -1,20 +1,65 @@
 """메뉴 기준 DB (필수 재료 / 숨은 재료 / 변형 메뉴).
 
-지금은 app/data/menu_base.json을 읽는다. 추후 Supabase menu_items 테이블로 옮기면
-load_menu_base()만 바꾸면 된다 (supabase/migrations/08_menu_items_proposal.sql 참고).
+1순위: Supabase menu_items 테이블 (이관 완료 시)
+2순위: app/data/menu_base.json (이관 전 또는 DB 조회 실패 시 폴백)
+
+이관 방법: scripts/migrate_menu_items.py 실행 (menu_base.json 팀 검수 완료 후).
+DB에 행이 하나도 없으면 자동으로 JSON을 계속 사용하므로, 이관 전에 이 파일을
+미리 배포해도 기존 동작이 바뀌지 않는다.
 """
 import json
+import logging
 import re
 from functools import lru_cache
 from pathlib import Path
 
+log = logging.getLogger("uvicorn.error")
+
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "menu_base.json"
+
+
+def _load_from_db() -> dict[str, dict] | None:
+    """menu_items 테이블 조회 → JSON과 동일한 형태(dict[name, item])로 변환.
+    실패하거나 행이 없으면 None을 반환해 JSON 폴백을 쓰게 한다."""
+    try:
+        from app.db.supabase_client import require_supabase
+        client = require_supabase()
+    except Exception:
+        return None
+
+    try:
+        res = client.table("menu_items").select("*").execute()
+    except Exception as e:
+        log.warning("menu_items 조회 실패, menu_base.json으로 폴백: %s", e)
+        return None
+
+    rows = res.data or []
+    if not rows:
+        return None
+
+    return {
+        row["name"]: {
+            "aliases": row.get("aliases") or [],
+            "category": row.get("category"),
+            "required": row.get("required_ingredients") or [],
+            "hidden": row.get("hidden_ingredients") or [],
+            "variants": row.get("variants") or [],
+        }
+        for row in rows
+    }
+
+
+def _load_from_json() -> dict[str, dict]:
+    with open(DATA_PATH, encoding="utf-8") as f:
+        return json.load(f)["menus"]
 
 
 @lru_cache
 def load_menu_base() -> dict[str, dict]:
-    with open(DATA_PATH, encoding="utf-8") as f:
-        return json.load(f)["menus"]
+    db = _load_from_db()
+    if db:
+        return db
+    return _load_from_json()
 
 
 def normalize(name: str) -> str:
@@ -44,7 +89,7 @@ def match_menu(menu_name: str) -> tuple[str, dict] | None:
 
 
 def build_known_ingredients(menu_name: str) -> dict | None:
-    """1순위 메뉴젠(공공데이터) → 2순위 자체 메뉴 DB(menu_base.json)."""
+    """1순위 메뉴젠(공공데이터) → 2순위 자체 메뉴 DB(menu_items/menu_base.json)."""
     from app.services.menuzen_knowledge import build_from_menuzen
 
     found = build_from_menuzen(menu_name)
