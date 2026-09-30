@@ -1,7 +1,6 @@
 """농촌진흥청 메뉴젠(음식·재료·알레르기) 데이터 파싱·정규화.
 
-- scripts/fetch_menuzen.py 가 API 전체를 받아 app/data/menuzen_raw.json 저장
-- scripts/build_menuzen.py 가 이 모듈로 정규화해 app/data/menuzen_menus.json 생성
+- scripts/fetch_menuzen.py 가 API 전체를 받아 이 모듈로 정규화해 app/data/menuzen_menus.json 생성
 """
 import re
 import xml.etree.ElementTree as ET

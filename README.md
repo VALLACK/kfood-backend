@@ -56,12 +56,14 @@ app/
 │   └── groq_service.py         # 재시도·JSON 파싱
 ├── data/
 │   ├── menu_base.json      # 부산/한식 메뉴 기준 데이터 (2순위 소스, 팀 검수 필요 — menu_items 테이블 이관 준비 중)
-│   └── menuzen_menus.json  # 메뉴젠 공공데이터 정규화 결과 (1순위 소스, scripts/fetch_menuzen.py + build_menuzen.py로 생성)
+│   └── menuzen_menus.json  # 메뉴젠 공공데이터 (1순위 소스, scripts/fetch_menuzen.py로 생성)
 └── models/schemas.py
 
 scripts/
-├── fetch_menuzen.py         # 메뉴젠 API 전체 수집 → app/data/menuzen_raw.json
-├── build_menuzen.py         # 원본 JSON → app/data/menuzen_menus.json 정규화
+├── fetch_menuzen.py         # 메뉴젠 API 전체 수집·정규화 → app/data/menuzen_menus.json
+├── add_menu.py              # 미매칭으로 기록된 메뉴를 menu_base.json에 추가
+├── evaluate_menus.py        # 메뉴판 사진으로 실사용 검증 → eval_result/
+├── warm_cache.py            # 시연 전날 시연 메뉴판을 미리 분석해 캐시 채우기
 └── migrate_menu_items.py    # (진행 중) menu_base.json → Supabase menu_items 테이블 이관. SUPABASE_SECRET_KEY 필요, --dry-run으로 먼저 확인
 
 supabase/
@@ -105,3 +107,16 @@ pytest -q
 ```
 
 API 상세는 `docs/API.md`, 피드백 반영 내역은 `docs/FEEDBACK_RESPONSE.md` 참고.
+
+## 문서
+
+| 문서 | 내용 |
+|---|---|
+| `docs/API.md` | API 명세 (요청·응답 형식, 프로필 값 규약) |
+| `docs/FRONTEND_GUIDE.md` | **프론트 연동 가이드** — 응답 구조 변경 대응, 로그인 토큰, 직원 확인 기능 |
+| `docs/frontend/` | 수정 예시 코드(`ResultPage.example.jsx`), 실제 응답 예시 JSON |
+| `docs/EVALUATION.md` | 실사용 검증 결과 (메뉴판 9장·메뉴 136개) |
+| `docs/EVALUATION_SCORED.md` | 채점 결과 — 메뉴명 인식률, SAFE 오판 2건과 조치 |
+| `docs/DEMO.md` | 시연 가이드 및 AI 구성 설명 |
+| `docs/ADDING_MENU_DATA.md` | 메뉴 데이터 추가 방법 |
+| `docs/FEEDBACK_RESPONSE.md` | 피드백 반영 정리 |

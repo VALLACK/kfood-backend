@@ -1,0 +1,75 @@
+{
+  "scan_log_id": "a3f1c9e2-...",
+  "profile_applied": true,
+  "results": [
+    {
+      "menu": "짬뽕",
+      "menu_translated": "Jjamppong",
+      "description_translated": "Spicy seafood noodle soup with vegetables and meat.",
+      "data_source": "menuzen",
+      "matched_menu_db": true,
+      "base_menu": "짬뽕",
+      "family": ["짬뽕", "채소짬뽕", "짬뽕국", "배추백짬뽕탕", "백짬뽕국", "해물짬뽕", "차돌박이짬뽕국"],
+      "ingredients": [
+        {
+          "name": "우동면",
+          "name_translated": "Noodle, Udong, Boiled",
+          "tags": ["wheat"],
+          "certainty": "confirmed",
+          "source": "menuzen",
+          "weight_g": 100,
+          "ratio_percent": 35.2,
+          "ratio_source": "menuzen"
+        },
+        {
+          "name": "오징어",
+          "name_translated": "Japanese flying squid",
+          "tags": ["squid"],
+          "certainty": "confirmed",
+          "source": "menuzen",
+          "ratio_percent": 10.6,
+          "ratio_source": "menuzen"
+        },
+        {
+          "name": "새우",
+          "name_translated": "Shrimp",
+          "tags": ["shrimp"],
+          "certainty": "possible",
+          "source": "family",
+          "seen_in": ["배추백짬뽕탕", "백짬뽕국", "해물짬뽕"],
+          "ratio_percent": null
+        }
+      ],
+      "custom_allergen_hits": [],
+      "risk": {
+        "level": "CAUTION",
+        "confirmed_reasons": [],
+        "possible_reasons": [
+          {
+            "kind": "allergy",
+            "tag": "shrimp",
+            "label": "shrimp",
+            "ingredient": "새우",
+            "certainty": "possible",
+            "severity": "심각"
+          }
+        ],
+        "needs_confirmation": true,
+        "staff_questions": [
+          {
+            "kind": "contains",
+            "ingredient": "새우",
+            "tag": "shrimp",
+            "tags": ["shrimp"],
+            "options": [],
+            "ko": "짬뽕에 새우가 들어가나요?",
+            "user_lang": "en",
+            "translated": "Does the Jjamppong contain shrimp?"
+          }
+        ],
+        "notes": []
+      }
+    }
+  ],
+  "disclaimer": "성분 비율(ratio_percent)은 AI 추정치이며, 최종 판단은 반드시 직원 확인 후 하세요."
+}

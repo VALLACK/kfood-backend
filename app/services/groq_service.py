@@ -33,8 +33,18 @@ def parse_json(text: str):
         raise
 
 
-def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries: int = 2, **extra) -> dict:
-    """JSON object 모드로 호출하고 dict를 반환. 429/5xx/파싱 실패 시 재시도."""
+class AIUnavailable(HTTPException):
+    """하루 한도 소진 등 기다려도 복구되지 않는 AI 장애. 호출한 쪽은 AI 없이 판정으로 넘어간다."""
+
+    def __init__(self, detail: str):
+        super().__init__(status_code=503, detail=detail)
+
+
+_DAILY_LIMIT_HINTS = ("tokens per day", "requests per day", "(TPD)", "(RPD)")
+
+
+def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries: int = 4, **extra) -> dict:
+    """JSON object 모드로 호출하고 dict를 반환. 429(분당 한도)/5xx/파싱 실패 시 대기 후 재시도."""
     client = get_client()
     last_err: Exception | None = None
     for attempt in range(retries + 1):
@@ -52,7 +62,20 @@ def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries:
                 else:
                     raise
             return parse_json(resp.choices[0].message.content or "")
-        except (RateLimitError, APIConnectionError) as e:
+        except RateLimitError as e:  # 분당 토큰·요청 한도 → 헤더가 알려주는 시간만큼 대기
+            if any(h in str(e) for h in _DAILY_LIMIT_HINTS):
+                # 하루 한도는 몇 분 기다려도 안 풀린다. 재시도로 시간을 끌지 않는다.
+                raise AIUnavailable(f"AI 하루 사용 한도 소진: {e}")
+            last_err = e
+            wait = 0
+            try:
+                h = getattr(e, "response", None) and e.response.headers or {}
+                wait = float(h.get("retry-after") or h.get("x-ratelimit-reset-tokens", "0").rstrip("s") or 0)
+            except Exception:
+                wait = 0
+            time.sleep(min(max(wait, 5 * (attempt + 1)), 60))
+            continue
+        except APIConnectionError as e:
             last_err = e
         except APIStatusError as e:
             if e.status_code < 500:
@@ -61,4 +84,4 @@ def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries:
         except (json.JSONDecodeError, ValueError) as e:
             last_err = e
         time.sleep(1.5 * (attempt + 1))
-    raise HTTPException(status_code=502, detail=f"AI 응답 처리 실패: {last_err}")
+    raise HTTPException(status_code=502, detail=f"AI 응답 처리 실패({type(last_err).__name__}): {last_err}")

@@ -1,23 +1,83 @@
 import base64
 import io
+import re
 
 from fastapi import APIRouter, HTTPException, UploadFile
 from PIL import Image, ImageOps
 
 from app.core.config import settings
-from app.services import groq_service
+from app.services import groq_service, menu_board
 
 router = APIRouter(tags=["ocr"])
 
 ALLOWED = {"image/jpeg", "image/png", "image/webp", "image/heic", "image/heif"}
 
+# 음료·주류·공기밥 등 성분 분석이 필요 없는 항목 (분석 호출 절약)
+# 음료·주류·공기밥 등 성분 분석이 필요 없는 항목 (분석 호출 절약)
+# 이름이 정확히 이것이면 제외 — 부분 일치로 하면 '와인삼겹살', '카스테라', '새로운 해물찜'까지 빠진다.
+SKIP_EXACT = {
+    "소주", "맥주", "막걸리", "청하", "동동주", "백세주", "설중매", "매실마을", "정종", "사케", "와인",
+    "위스키", "탁주", "청주", "좋은데이", "해오름", "가을국화", "대선", "강알리", "진로", "참이슬", "테라",
+    "카스", "아사히", "삿포로", "새로", "처음처럼", "산사춘", "칵테일", "토닉", "하이볼", "소맥",
+    "음료", "음료수", "콜라", "사이다", "주스", "커피", "아메리카노", "라떼", "생수", "공기밥", "공깃밥",
+}
+# 음식 이름에 섞일 일이 없는 단어는 부분 일치로 제외 ('보해복분자', '부산생탁', '진로,참이슬')
+SKIP_CONTAINS = ("소주", "맥주", "막걸리", "생맥", "생탁", "음료", "복분자", "참이슬", "처음처럼", "에이드",
+                 "하이볼", "아메리카노", "공기밥", "공깃밥")
+
+
+# 이 글자가 들어 있으면 음식으로 본다 ('소주잔치국수', '막걸리찜닭', '맥주 수육')
+FOOD_HINTS = ("국수", "탕", "찌개", "볶음", "구이", "찜", "전골", "면", "스테이크", "국", "튀김",
+              "무침", "회", "닭", "갈비", "수육", "삼겹", "살")
+
+
+def _is_drink(name: str) -> bool:
+    base = re.sub(r"\s+", "", re.sub(r"[(（\[].*$", "", name))   # 괄호 앞부분만, 공백 제거
+    if base in SKIP_EXACT:
+        return True
+    if len(base) > 2 and base[-1] in "대중소大中小" and base[:-1] in SKIP_EXACT:  # '맥주대'
+        return True
+    if any(h in name for h in FOOD_HINTS):
+        return False
+    return any(k in name for k in SKIP_CONTAINS)
+
+
 OCR_PROMPT = """이 이미지는 한국 음식점 메뉴판(또는 원산지 표시판)이다.
 보이는 텍스트를 추출해서 아래 JSON 하나로만 답해라.
 {"raw_text": "<보이는 텍스트 전체, 줄바꿈 유지>",
- "menus": [{"name": "<메뉴명>", "price": "<가격 문자열 또는 null>"}],
+ "menus": [{"name": "<메뉴명>", "price": "<가격 문자열 또는 null>", "note": "<재료 설명 또는 null>"}],
  "origin_info": ["<원산지 표시 문구, 없으면 빈 배열>"]}
 - 메뉴명 오타·인식 오류는 자연스러운 한국 음식명으로 교정
+- note: 메뉴명 옆이나 아래에 괄호로 재료가 적혀 있으면 그 문구를 **고치지 말고 그대로** 옮길 것.
+  예) "돌게탕 (전복2,가리비2,오징어中,꽃게,새우2,낙지,대구,알,곤,조개다수)"
+      → {"name": "돌게탕", "price": "40,000", "note": "전복2,가리비2,오징어中,꽃게,새우2,낙지,대구,알,곤,조개다수"}
+  인분·중량·원산지만 적힌 괄호(예: "3~4인분", "국내산 400g이상")도 note에 그대로 넣을 것.
+  재료 설명이 없으면 note는 null.
+- 같은 메뉴에 가격이 둘(소/대)이면 두 줄로 나누고, 큰 쪽 이름 끝에 "(대)"를 붙일 것.
+  이때 **재료 설명(note)은 소·대 양쪽에 똑같이** 넣을 것. (큰 쪽 칸에는 보통 "大"와 가격만 적혀 있다)
 - 가게 이름, 영업시간, 안내 문구는 menus에 넣지 말 것"""
+
+
+def _share_notes(menus: list[dict]) -> list[dict]:
+    """같은 메뉴의 소/대가 따로 잡히면 재료 설명을 공유한다.
+
+    메뉴판의 큰 사이즈 칸에는 "大 70,000"처럼 크기·가격만 적혀 있어서
+    note가 비거나 "大"만 들어온다. 그대로 두면 같은 메뉴인데 소는 WARNING,
+    대는 CAUTION으로 갈리는 문제가 생긴다.
+    """
+    def richness(note):
+        return len(menu_board.parse(note))
+
+    best: dict[str, str] = {}
+    for m in menus:
+        base = m["name"].replace("(대)", "").replace("(소)", "").strip()
+        if richness(m.get("note")) > richness(best.get(base)):
+            best[base] = m.get("note") or ""
+    for m in menus:
+        base = m["name"].replace("(대)", "").replace("(소)", "").strip()
+        if richness(best.get(base)) > richness(m.get("note")):
+            m["note"] = best[base]
+    return menus
 
 
 def _compress(data: bytes) -> tuple[bytes, str]:
@@ -58,10 +118,16 @@ def extract_text(file: UploadFile):
         max_tokens=2000,
         reasoning_format="hidden",  # qwen 계열 추론 텍스트 숨김 (미지원 모델이면 자동 제거 후 재시도)
     )
-    menus = [m for m in result.get("menus", []) if isinstance(m, dict) and m.get("name")]
+    menus = [{"name": m["name"], "price": m.get("price"), "note": m.get("note") or None}
+             for m in result.get("menus", []) if isinstance(m, dict) and m.get("name")]
+    drinks = [m for m in menus if _is_drink(m["name"])]
+    skipped_names = {m["name"] for m in drinks}
+    menus = [m for m in menus if m["name"] not in skipped_names]  # 음료·주류는 분석 대상에서 제외
+    menus = _share_notes(menus)
     raw = result.get("raw_text") or "\n".join(m["name"] for m in menus)
     return {
         "text": raw,  # 기존 프론트 호환
         "menus": menus,
+        "skipped": [m["name"] for m in drinks],  # 음료·주류 등 분석 제외 항목
         "origin_info": result.get("origin_info", []),
     }

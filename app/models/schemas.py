@@ -15,6 +15,11 @@ class ProfileInput(BaseModel):
 class MenuLine(BaseModel):
     name: str
     price: str | None = None
+    note: str | None = Field(
+        default=None,
+        description="메뉴명 옆·아래 괄호에 인쇄된 재료 설명 (예: '전복2, 가리비2, 새우2, 낙지'). "
+                    "가게가 직접 표기한 재료이므로 공공데이터·AI 추론보다 우선 적용된다.",
+    )
 
 
 class AnalyzeRequest(BaseModel):
@@ -22,6 +27,11 @@ class AnalyzeRequest(BaseModel):
     menus: list[MenuLine] | None = Field(default=None, description="/ocr 응답의 menus를 그대로 넘기면 OCR 텍스트 재파싱을 생략")
     scan_image_url: str | None = None
     profile: ProfileInput | None = None
+    skip_ai: bool = Field(
+        default=False,
+        description="AI 호출 없이 공공데이터·자체 DB·메뉴판 표기만으로 즉시 판정한다. "
+                    "화면을 먼저 그리는 용도(1~2초). 번역·설명은 비어 있다.",
+    )
 
 
 class QnaRequest(BaseModel):
