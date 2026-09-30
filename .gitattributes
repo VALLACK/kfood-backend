@@ -1,0 +1,4 @@
+# 윈도우 배치 파일은 반드시 CRLF 여야 cmd가 정상 실행한다 (LF면 명령이 깨짐)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sh  text eol=lf

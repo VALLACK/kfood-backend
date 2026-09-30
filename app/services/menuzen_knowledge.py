@@ -141,20 +141,35 @@ def build_from_menuzen(menu_name: str, dishes: list[dict] | None = None) -> dict
 
 
 # 메뉴명에 재료가 드러난 경우 (예: '돼지등갈비찜', '소고기우동', '해물아구찜')
+# 3번째 값은 예외 — 그 단어가 메뉴명에 있으면 이 규칙을 적용하지 않는다.
+# (예: '아구수육'은 생선 요리라서 '수육' 규칙에서 빼야 한다)
 NAME_CONFIRM = [("돼지", "pork"), ("삼겹", "pork"), ("소고기", "beef"), ("쇠고기", "beef"), ("차돌", "beef"),
                 ("한우", "beef"), ("닭", "chicken"), ("새우", "shrimp"), ("오징어", "squid"), ("낙지", "mollusk"),
                 ("문어", "mollusk"), ("전복", "shellfish"), ("굴", "shellfish"), ("조개", "shellfish"),
                 ("꽃게", "crab"), ("치즈", "milk"), ("계란", "egg"), ("달걀", "egg"), ("순대", "pork"),
-                ("참치", "fish"), ("고등어", "mackerel"), ("장어", "fish"), ("김치", "fish")]
+                ("참치", "fish"), ("고등어", "mackerel"), ("장어", "fish"), ("김치", "fish"),
+                # 고기 이름이 드러나지 않지만 재료가 정해진 메뉴
+                ("수육", "pork", ("아구수육", "아귀수육", "문어수육", "오리수육", "닭수육", "소수육", "한우수육")),
+                ("항정살", "pork"), ("목살", "pork"), ("갈매기살", "pork"),
+                ("보쌈", "pork"), ("족발", "pork"), ("차슈", "pork"),
+                ("돈까스", "pork"), ("돈가스", "pork"), ("돈카츠", "pork"),
+                # 게 종류 — '홍게라면'이 공공데이터 '라면'으로 매칭되면서 게가 빠지던 문제
+                ("대게", "crab"), ("홍게", "crab"), ("킹크랩", "crab"), ("돌게", "crab"), ("털게", "crab"),
+                ("게장", "crab"), ("게살", "crab"),
+                # 생선 이름 ('대구'는 지명 '대구막창'과 겹쳐서 메뉴명 규칙에서는 뺀다)
+                ("명태", "fish"), ("동태", "fish"), ("생태", "fish"), ("황태", "fish"), ("코다리", "fish"),
+                ("아귀", "fish"), ("아구", "fish"), ("우럭", "fish"), ("광어", "fish"), ("갈치", "fish")]
 NAME_POSSIBLE = [("해물", ["shrimp", "squid", "shellfish"]), ("해산물", ["shrimp", "squid", "shellfish"]),
-                 ("모듬", ["shrimp", "squid", "shellfish"])]
+                 ("모듬", ["shrimp", "squid", "shellfish"]), ("모둠", ["shrimp", "squid", "shellfish"])]
 
 
 def _from_menu_name(menu_name: str, confirmed_tags: set, KO_SHORT) -> list[dict]:
     """메뉴명에 재료가 명시돼 있으면 공공데이터 레시피보다 우선해 반영한다."""
     out, seen = [], set(confirmed_tags)
-    for kw, tag in NAME_CONFIRM:
-        if kw in menu_name and tag not in seen:
+    for rule in NAME_CONFIRM:
+        kw, tag = rule[0], rule[1]
+        exceptions = rule[2] if len(rule) > 2 else ()
+        if kw in menu_name and tag not in seen and not any(x in menu_name for x in exceptions):
             seen.add(tag)
             out.append({"name": KO_SHORT.get(tag, (tag, []))[0], "name_translated": None, "tags": [tag],
                         "certainty": "confirmed", "source": "menu_name", "matched_keyword": kw, "ratio_percent": None})
@@ -166,3 +181,14 @@ def _from_menu_name(menu_name: str, confirmed_tags: set, KO_SHORT) -> list[dict]
                     out.append({"name": KO_SHORT.get(tag, (tag, []))[0], "name_translated": None, "tags": [tag],
                                 "certainty": "possible", "source": "menu_name", "matched_keyword": kw, "ratio_percent": None})
     return out
+
+
+def from_menu_name(menu_name: str, confirmed_tags: set) -> list[dict]:
+    """메뉴명 규칙을 데이터 출처와 상관없이 적용한다.
+
+    build_from_menuzen() 안에서만 쓰이던 규칙이라, 공공데이터·자체 DB에 없는 메뉴
+    (data_source='ai')에는 적용되지 않았다. 실사용 검증에서 '수육백반'이 할랄
+    프로필에 SAFE로 나온 원인이다. 이제 모든 경로에서 호출한다.
+    """
+    from app.services.dietary_rules import KO_SHORT  # 순환 import 방지
+    return _from_menu_name(menu_name, confirmed_tags, KO_SHORT)

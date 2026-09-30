@@ -23,5 +23,9 @@ class Settings:
     MAX_IMAGE_BYTES: int = 3 * 1024 * 1024
     MAX_UPLOAD_BYTES: int = 15 * 1024 * 1024
 
+    # 한 번의 LLM 호출에 담는 메뉴 수. 호출마다 지시문이 반복되므로 작을수록 느리다.
+    # 무료 등급 분당 토큰 한도(8,000)에 걸리면 줄이고, 유료 등급이면 늘린다.
+    ANALYZE_CHUNK: int = max(1, int(os.environ.get("ANALYZE_CHUNK", "6")))
+
 
 settings = Settings()

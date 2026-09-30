@@ -33,6 +33,16 @@ def parse_json(text: str):
         raise
 
 
+class AIUnavailable(HTTPException):
+    """하루 한도 소진 등 기다려도 복구되지 않는 AI 장애. 호출한 쪽은 AI 없이 판정으로 넘어간다."""
+
+    def __init__(self, detail: str):
+        super().__init__(status_code=503, detail=detail)
+
+
+_DAILY_LIMIT_HINTS = ("tokens per day", "requests per day", "(TPD)", "(RPD)")
+
+
 def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries: int = 4, **extra) -> dict:
     """JSON object 모드로 호출하고 dict를 반환. 429(분당 한도)/5xx/파싱 실패 시 대기 후 재시도."""
     client = get_client()
@@ -53,6 +63,9 @@ def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries:
                     raise
             return parse_json(resp.choices[0].message.content or "")
         except RateLimitError as e:  # 분당 토큰·요청 한도 → 헤더가 알려주는 시간만큼 대기
+            if any(h in str(e) for h in _DAILY_LIMIT_HINTS):
+                # 하루 한도는 몇 분 기다려도 안 풀린다. 재시도로 시간을 끌지 않는다.
+                raise AIUnavailable(f"AI 하루 사용 한도 소진: {e}")
             last_err = e
             wait = 0
             try:

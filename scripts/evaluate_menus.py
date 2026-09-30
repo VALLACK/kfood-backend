@@ -47,7 +47,7 @@ def main():
     ap.add_argument("--api", default="http://localhost:8000")
     ap.add_argument("--out", default="eval_result")
     ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--max-menus", type=int, default=10, help="사진당 분석할 메뉴 수 상한 (시간 단축)")
+    ap.add_argument("--max-menus", type=int, default=0, help="사진당 분석할 메뉴 수 상한. 0=제한 없음(기본). 빨리 확인만 할 때 10 정도로 지정")
     ap.add_argument("--profiles", default="", help="쉼표로 구분 (shrimp_allergy,halal,vegan) — 지정하면 그 프로필만 측정")
     args = ap.parse_args()
 
@@ -64,7 +64,7 @@ def main():
     out.mkdir(exist_ok=True)
 
     raw, menu_rows, photo_rows = [], [], []
-    with httpx.Client(timeout=900) as c:  # 분당 한도 대기 포함, 넉넉히
+    with httpx.Client(timeout=1800) as c:  # 분당 토큰 한도 대기 포함, 넉넉히
         for i, ph in enumerate(photos, 1):
             print(f"[{i}/{len(photos)}] {ph.name}")
             t0 = time.time()

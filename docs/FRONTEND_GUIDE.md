@@ -33,13 +33,17 @@ axios.post(`${API_URL}/analyze`, {
   profile_id: localStorage.getItem('profile_id'),
 });
 
-// 수정 — 로그인 토큰을 헤더로
+// 수정 — 로그인 토큰을 헤더로 (비로그인이면 헤더 없이 호출)
 const { data: { session } } = await supabase.auth.getSession();
+const token = session?.access_token;              // 비로그인이면 session이 null
 axios.post(`${API_URL}/analyze`, { menus }, {
-  headers: { Authorization: `Bearer ${session.access_token}` },
+  headers: token ? { Authorization: `Bearer ${token}` } : {},
   timeout: 180000,
 });
 ```
+
+`session`은 로그인하지 않았으면 `null`이라 `session.access_token`으로 바로 접근하면 오류가 납니다.
+예시 파일의 `authHeader()`가 이 처리를 하고 있으니 그대로 쓰셔도 됩니다.
 
 - 헤더를 붙이면 백엔드가 DB에서 프로필을 불러오고, 분석 기록을 `scan_logs`에 저장합니다 (`scan_log_id` 반환).
 - 비로그인 상태로 테스트하려면 body에 `profile`을 직접 넣어도 됩니다.
@@ -78,7 +82,30 @@ navigate('/result', { state: { menus: res.data.menus, ocrText: res.data.text } }
 
 ---
 
-## 4. 직원 확인 기능 (우리 핵심 기능, 현재 화면에 없음)
+## 4. API 오류 시 데모 결과를 실제처럼 보여주지 않기 ⚠️
+
+현재 `ResultPage.jsx`는 오류가 나면 `DEMO_RESULTS`(가짜 데이터)를 그대로 화면에 띄웁니다.
+알레르기 판정 앱에서는 **사용자가 가짜 결과를 실제 판정으로 오해할 수 있어 위험합니다.**
+
+```js
+// 현재 — 오류가 나도 데모 결과가 그대로 보임
+} catch (err) {
+  setError(...);
+  setResults(DEMO_RESULTS);   // ← 제거 필요
+}
+
+// 수정 — 오류 안내 + 다시 시도
+} catch (err) {
+  setError(...);
+  setResults([]);
+}
+```
+
+데모 화면이 필요하면 홈의 "데모 보기" 같은 **별도 진입점**으로 분리하고, 화면 상단에 "예시 화면입니다" 배지를 달아주세요. 첨부한 수정본에는 이미 데모 대체 로직이 빠져 있습니다.
+
+---
+
+## 5. 직원 확인 기능 (우리 핵심 기능, 현재 화면에 없음)
 
 `risk.staff_questions`가 있으면 그 질문을 직원에게 보여주고, 답변을 받아 다시 판정합니다.
 
@@ -117,30 +144,7 @@ window.speechSynthesis.speak(u);
 
 ---
 
-## 4-1. API 오류 시 데모 결과를 실제처럼 보여주지 않기 ⚠️
-
-현재 `ResultPage.jsx`는 오류가 나면 `DEMO_RESULTS`(가짜 데이터)를 그대로 화면에 띄웁니다.
-알레르기 판정 앱에서는 **사용자가 가짜 결과를 실제 판정으로 오해할 수 있어 위험합니다.**
-
-```js
-// 현재 — 오류가 나도 데모 결과가 그대로 보임
-} catch (err) {
-  setError(...);
-  setResults(DEMO_RESULTS);   // ← 제거 필요
-}
-
-// 수정 — 오류 안내 + 다시 시도
-} catch (err) {
-  setError(...);
-  setResults([]);
-}
-```
-
-데모 화면이 필요하면 홈의 "데모 보기" 같은 **별도 진입점**으로 분리하고, 화면 상단에 "예시 화면입니다" 배지를 달아주세요. 첨부한 수정본에는 이미 데모 대체 로직이 빠져 있습니다.
-
----
-
-## 5. 참고 — 응답 주요 필드
+## 6. 참고 — 응답 주요 필드
 
 | 필드 | 설명 |
 |---|---|
@@ -152,7 +156,8 @@ window.speechSynthesis.speak(u);
 | `ingredients[].ratio_percent` | 성분 비율 |
 | `ingredients[].ratio_source` | `"menuzen"`이면 **공공데이터 실제 중량 기준**, 없으면 AI 추정 |
 | `ingredients[].seen_in` | 그 재료가 등장한 유사 레시피 이름 (근거 표시용) |
-| `data_source` | `menuzen`(공공데이터) / `menu_base`(자체 DB) / `ai`(추론) |
+| `data_source` | `menuzen`(공공데이터) / `menu_base`(자체 DB) / `menu_board`(메뉴판 표기) / `ai`(추론) |
+| `provisional` | `true`면 전체 재료를 모르는 상태. 이때는 SAFE가 나오지 않고 최소 CAUTION + 직원 질문 |
 | `family[]` | 비교에 사용한 유사 레시피 목록 |
 | `profile_applied` | 프로필이 적용됐는지 |
 
@@ -161,13 +166,33 @@ API 명세 전체는 저장소 `docs/API.md`, 서버 실행 후 `http://localhos
 
 ---
 
-## 6. 프로필 저장값 — **이미 맞습니다, 수정 불필요**
+## 참고 — 즉시 판정 (`skip_ai`, 선택)
+
+필수는 아닙니다. 화면을 먼저 빨리 그리고 싶을 때만 쓰세요.
+
+```js
+// 1) 1초 안에 위험도만 먼저 (AI 호출 없음, 번역·설명은 비어 있음)
+const quick = await axios.post(`${API_URL}/analyze`, { menus, skip_ai: true }, { headers: authHeader() });
+setResults(quick.data.results);
+// 2) 이어서 전체 분석으로 교체 (번역·성분 비율 채워짐)
+const full = await axios.post(`${API_URL}/analyze`, { menus }, { headers: authHeader(), timeout: 180000 });
+setResults(full.data.results);
+```
+
+즉시 판정에서 `provisional: true`인 메뉴는 재료 정보가 부족한 상태라 🟢가 나오지 않습니다(🟡 직원 확인).
+
+---
+
+## 7. 프로필 저장값 — **이미 맞습니다, 수정 불필요**
 
 `Profile.jsx`의 선택지가 백엔드와 전부 호환됩니다.
 
 | 항목 | 현재 저장값 | 백엔드 인식 |
 |---|---|---|
 | 알레르기 | `peanuts` `shellfish` `eggs` `dairy` `gluten` `soy` `sesame` `tree_nuts` | 전부 매핑됨 |
+
+> `shellfish`는 **조개류 + 새우 + 게**로 처리합니다. 영어권에서 "shellfish allergy"는 보통 새우·게를 뜻하는데,
+> 선택지에 새우가 따로 없어서 새우 알레르기 관광객도 이걸 고르기 때문입니다. 수정할 건 없습니다.
 | 종교 식단 | `halal` `kosher` | 매핑됨 (`hindu`도 지원) |
 | 채식 | `vegetarian` `vegan` | 매핑됨 (`lacto` `ovo` `pescatarian`도 지원) |
 

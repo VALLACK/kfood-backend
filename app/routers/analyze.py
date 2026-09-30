@@ -14,10 +14,10 @@ def analyze_menu(body: AnalyzeRequest, auth: AuthContext | None = Depends(option
         raise HTTPException(status_code=422, detail="menus 또는 ocr_text 중 하나는 필요합니다.")
 
     profile, row = resolve_profile(auth, body.profile)
-    results = analysis_service.analyze(body.menus, body.ocr_text, profile)
+    results = analysis_service.analyze(body.menus, body.ocr_text, profile, skip_ai=body.skip_ai)
 
     scan_log_id = None
-    if auth and row:
+    if auth and row and not body.skip_ai:  # 즉시 판정은 중간 결과라 기록하지 않는다
         res = auth.client.table("scan_logs").insert({
             "profile_id": row["id"],
             "scan_image_url": body.scan_image_url,

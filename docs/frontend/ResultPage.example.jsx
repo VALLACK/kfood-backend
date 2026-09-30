@@ -181,7 +181,7 @@ function ResultCard({ item, onUpdated }) {
 
           {item.data_source && (
             <div style={{ fontSize: 11, color: '#888', marginTop: 10 }}>
-              판정 근거: {{ menuzen: '공공데이터(메뉴젠)', menu_base: '자체 메뉴 DB', ai: 'AI 추론' }[item.data_source]}
+              판정 근거: {{ menuzen: '공공데이터(메뉴젠)', menu_base: '자체 메뉴 DB', menu_board: '메뉴판 표기', ai: 'AI 추론' }[item.data_source]}
               {item.family?.length > 1 && ` · 유사 레시피 ${item.family.length}종 비교`}
             </div>
           )}

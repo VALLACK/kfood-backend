@@ -55,7 +55,11 @@ ALLERGY_ALIASES: dict[str, list[str]] = {
     "닭고기": ["chicken"], "chicken": ["chicken"],
     "쇠고기": ["beef"], "소고기": ["beef"], "beef": ["beef"],
     "오징어": ["squid"], "squid": ["squid"],
-    "조개류": ["shellfish"], "조개": ["shellfish"], "shellfish": ["shellfish"],
+    "조개류": ["shellfish"], "조개": ["shellfish"],
+    # 영어 "shellfish"는 새우·게(갑각류)까지 포함하는 말이다. 영어권 관광객이 새우 알레르기로
+    # "Shellfish"를 고르면 조개류만 잡혀서 새우 요리가 SAFE로 나오던 문제를 막는다.
+    # (한국어 '조개류'를 고른 경우는 조개만 — 사용자가 구분해서 고른 것이므로 존중한다)
+    "shellfish": ["shellfish", "shrimp", "crab"], "shell fish": ["shellfish", "shrimp", "crab"],
     "잣": ["pine_nut"], "pine_nut": ["pine_nut"],
     "생선": ["fish", "mackerel"], "어류": ["fish", "mackerel"], "fish": ["fish", "mackerel"],
     "해산물": ["fish", "mackerel", "shrimp", "crab", "squid", "mollusk", "shellfish"],
