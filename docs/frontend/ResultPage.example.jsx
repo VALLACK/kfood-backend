@@ -233,8 +233,10 @@ export default function ResultPage() {
   };
 
   // 직원 답변 후 갱신된 결과로 교체
-  const handleUpdated = (updated) => {
-    setResults((prev) => prev.map((r) => (r.menu === updated.menu ? updated : r)));
+  // 메뉴판에 같은 이름의 메뉴가 두 번 나올 수 있으므로(예: 해물탕 소/대)
+  // 이름이 아니라 카드 순번으로 교체한다.
+  const handleUpdated = (index, updated) => {
+    setResults((prev) => prev.map((r, i) => (i === index ? updated : r)));
   };
 
   const summary = {
@@ -267,7 +269,7 @@ export default function ResultPage() {
       {error && <div style={errorBox}>⚠️ {error}</div>}
 
       {results.map((item, i) => (
-        <ResultCard key={`${item.menu}-${i}`} item={item} onUpdated={handleUpdated} />
+        <ResultCard key={`${item.menu}-${i}`} item={item} onUpdated={(updated) => handleUpdated(i, updated)} />
       ))}
 
       {disclaimer && <div style={{ fontSize: 11, color: '#888', marginTop: 16 }}>※ {disclaimer}</div>}
