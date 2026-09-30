@@ -105,3 +105,15 @@ pytest -q
 ```
 
 API 상세는 `docs/API.md`, 피드백 반영 내역은 `docs/FEEDBACK_RESPONSE.md` 참고.
+
+## 문서
+
+| 문서 | 내용 |
+|---|---|
+| `docs/API.md` | API 명세 (요청·응답 형식, 프로필 값 규약) |
+| `docs/FRONTEND_GUIDE.md` | **프론트 연동 가이드** — 응답 구조 변경 대응, 로그인 토큰, 직원 확인 기능 |
+| `docs/frontend/` | 수정 예시 코드(`ResultPage.example.jsx`), 실제 응답 예시 JSON |
+| `docs/EVALUATION.md` | 실사용 검증 결과 (메뉴판 9장·메뉴 136개) |
+| `docs/DEMO.md` | 시연 가이드 및 AI 구성 설명 |
+| `docs/ADDING_MENU_DATA.md` | 메뉴 데이터 추가 방법 |
+| `docs/FEEDBACK_RESPONSE.md` | 피드백 반영 정리 |

@@ -11,7 +11,7 @@ class Settings:
     GROQ_API_KEY: str = os.environ.get("GROQ_API_KEY", "")
 
     # llama-4-scout(비전)는 2026-07-17, llama-3.3-70b는 2026-08-16에 Groq에서 종료됨
-    GROQ_VISION_MODEL: str = os.environ.get("GROQ_VISION_MODEL", "qwen/qwen3.6-27b")
+    GROQ_VISION_MODEL: str = os.environ.get("GROQ_VISION_MODEL", "qwen/qwen3.8-27b")
     GROQ_TEXT_MODEL: str = os.environ.get("GROQ_TEXT_MODEL", "openai/gpt-oss-120b")
     GROQ_STT_MODEL: str = os.environ.get("GROQ_STT_MODEL", "whisper-large-v3-turbo")
 

@@ -11,6 +11,10 @@ router = APIRouter(tags=["ocr"])
 
 ALLOWED = {"image/jpeg", "image/png", "image/webp", "image/heic", "image/heif"}
 
+# 음료·주류·공기밥 등 성분 분석이 필요 없는 항목 (분석 호출 절약)
+SKIP_KEYWORDS = ("소주", "맥주", "막걸리", "청하", "동동주", "복분자", "하이볼", "생맥", "생탁", "음료", "콜라",
+                 "사이다", "주스", "커피", "아메리카노", "라떼", "에이드", "생수", "공기밥", "공깃밥", "사리")
+
 OCR_PROMPT = """이 이미지는 한국 음식점 메뉴판(또는 원산지 표시판)이다.
 보이는 텍스트를 추출해서 아래 JSON 하나로만 답해라.
 {"raw_text": "<보이는 텍스트 전체, 줄바꿈 유지>",
@@ -59,9 +63,12 @@ def extract_text(file: UploadFile):
         reasoning_format="hidden",  # qwen 계열 추론 텍스트 숨김 (미지원 모델이면 자동 제거 후 재시도)
     )
     menus = [m for m in result.get("menus", []) if isinstance(m, dict) and m.get("name")]
+    drinks = [m for m in menus if any(k in m["name"] for k in SKIP_KEYWORDS)]
+    menus = [m for m in menus if m not in drinks]  # 음료·주류는 분석 대상에서 제외
     raw = result.get("raw_text") or "\n".join(m["name"] for m in menus)
     return {
         "text": raw,  # 기존 프론트 호환
         "menus": menus,
+        "skipped": [m["name"] for m in drinks],  # 음료·주류 등 분석 제외 항목
         "origin_info": result.get("origin_info", []),
     }

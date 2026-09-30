@@ -1,10 +1,14 @@
 """/analyze 파이프라인: 메뉴 DB 매칭 → LLM 성분 추론(태그·비율) → 규칙 판정."""
 import json
 
+from fastapi import HTTPException
+
 from app.core.config import settings
+from app.models.schemas import MenuLine
 from app.services import groq_service
 from app.services.dietary_rules import DietProfile, evaluate, LEVEL_ORDER
 from app.services.ingredient_lexicon import enrich
+from app.services.unmatched_log import record as record_unmatched
 from app.services.menu_knowledge import build_known_ingredients
 from app.services.taxonomy import TAGS
 
@@ -20,8 +24,7 @@ USER_TEMPLATE = """Menu items (from a restaurant menu photo):
 Reference data from our menu DB (authoritative; reuse these ingredient names EXACTLY when listing them):
 {known}
 
-Allowed tags (use only these keys):
-{tags}
+Allowed tags (use only these): {tags}
 
 Custom allergies the user listed that have no tag (report if an ingredient may contain them): {custom}
 
@@ -51,6 +54,7 @@ Rules:
 - "confirmed" only if virtually every restaurant uses it for this dish.
 - Tag conservatively: soy sauce → ["soy","wheat"], fish cake → ["fish","wheat"], anchovy broth → ["fish"].
 - Non-food lines (prices, shop name, notices) must be skipped.
+- List at most 12 ingredients per menu (largest share first) to keep the response short.
 """
 
 
@@ -107,11 +111,33 @@ def _normalize_ratios(ings: list[dict]) -> None:
             i["ratio_percent"] = None
 
 
+CHUNK = 2  # 한 번에 보내는 메뉴 수 (Groq 무료 등급 분당 토큰 한도 8,000 대응)
+
+
 def analyze(menus, ocr_text: str | None, profile: DietProfile) -> list[dict]:
     names = _menus_from_request(menus, ocr_text)
     if not names:
         return []
+    if len(names) > CHUNK:  # 메뉴판이 크면 나눠서 호출하고 결과를 합친다
+        out = []
+        for i in range(0, len(names), CHUNK):
+            out += analyze([MenuLine(name=n) for n in names[i:i + CHUNK]], None, profile)
+        return out
+    if len(names) > 1:
+        try:
+            return _analyze_batch(names, profile)
+        except HTTPException:  # 요청이 여전히 크면 절반으로 나눠 재시도
+            half = len(names) // 2
+            return (analyze([MenuLine(name=n) for n in names[:half]], None, profile)
+                    + analyze([MenuLine(name=n) for n in names[half:]], None, profile))
+    return _analyze_batch(names, profile)
+
+
+def _analyze_batch(names: list[str], profile: DietProfile) -> list[dict]:
     known_map = {n: build_known_ingredients(n) for n in names}
+    for n, k in known_map.items():
+        if not k:
+            record_unmatched(n)  # 데이터가 없는 메뉴 → 검수 대상으로 기록
     lang = profile.preferred_language if profile.preferred_language in LANG_NAMES else "en"
 
     known_for_prompt = {
@@ -122,14 +148,14 @@ def analyze(menus, ocr_text: str | None, profile: DietProfile) -> list[dict]:
     prompt = USER_TEMPLATE.format(
         menus="\n".join(f"- {n}" for n in names),
         known=json.dumps(known_for_prompt, ensure_ascii=False) if known_for_prompt else "(none)",
-        tags=json.dumps(TAGS, ensure_ascii=False),
+        tags=", ".join(TAGS),
         custom=", ".join(profile.unmapped_allergies) or "(none)",
         lang=LANG_NAMES[lang],
     )
     data = groq_service.chat_json(
         settings.GROQ_TEXT_MODEL,
         [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": prompt}],
-        max_tokens=6000,
+        max_tokens=3000,
     )
     ai_by_menu = {r.get("menu"): r for r in data.get("results", []) if isinstance(r, dict)}
 

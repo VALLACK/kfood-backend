@@ -5,3 +5,5 @@ __pycache__/
 *.pyc
 .DS_Store
 *:Zone.Identifier
+photos/
+eval_result/

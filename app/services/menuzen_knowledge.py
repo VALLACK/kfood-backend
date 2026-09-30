@@ -8,6 +8,7 @@
 """
 import json
 import re
+from collections import Counter
 from functools import lru_cache
 from pathlib import Path
 
@@ -49,6 +50,11 @@ def find_family(query: str, dishes: list[dict]) -> tuple[list[dict], list[dict]]
             q = suffixes[0]
             fam = family_of(q)
     exact = [d for d in fam if core(d["name"]) == q]
+    if not exact and len(fam) > 1:
+        # '수육' → '탕수육'(튀김류)처럼 이름만 비슷한 다른 요리 제외: 최빈 식품군만 남김
+        groups = Counter(d.get("upper_group") for d in fam)
+        top = groups.most_common(1)[0][0]
+        fam = [d for d in fam if d.get("upper_group") == top]
     return exact, fam
 
 
@@ -122,6 +128,8 @@ def build_from_menuzen(menu_name: str, dishes: list[dict] | None = None) -> dict
             "ratio_percent": None,
         })
 
+    ingredients += _from_menu_name(menu_name, {t for i in ingredients if i["certainty"] == "confirmed" for t in i["tags"]}, KO_SHORT)
+
     return {
         "base_menu": base["name"],
         "resolved_variant": None,
@@ -130,3 +138,31 @@ def build_from_menuzen(menu_name: str, dishes: list[dict] | None = None) -> dict
         "data_source": "menuzen",
         "ingredients": ingredients,
     }
+
+
+# 메뉴명에 재료가 드러난 경우 (예: '돼지등갈비찜', '소고기우동', '해물아구찜')
+NAME_CONFIRM = [("돼지", "pork"), ("삼겹", "pork"), ("소고기", "beef"), ("쇠고기", "beef"), ("차돌", "beef"),
+                ("한우", "beef"), ("닭", "chicken"), ("새우", "shrimp"), ("오징어", "squid"), ("낙지", "mollusk"),
+                ("문어", "mollusk"), ("전복", "shellfish"), ("굴", "shellfish"), ("조개", "shellfish"),
+                ("꽃게", "crab"), ("치즈", "milk"), ("계란", "egg"), ("달걀", "egg"), ("순대", "pork"),
+                ("참치", "fish"), ("고등어", "mackerel"), ("장어", "fish"), ("김치", "fish")]
+NAME_POSSIBLE = [("해물", ["shrimp", "squid", "shellfish"]), ("해산물", ["shrimp", "squid", "shellfish"]),
+                 ("모듬", ["shrimp", "squid", "shellfish"])]
+
+
+def _from_menu_name(menu_name: str, confirmed_tags: set, KO_SHORT) -> list[dict]:
+    """메뉴명에 재료가 명시돼 있으면 공공데이터 레시피보다 우선해 반영한다."""
+    out, seen = [], set(confirmed_tags)
+    for kw, tag in NAME_CONFIRM:
+        if kw in menu_name and tag not in seen:
+            seen.add(tag)
+            out.append({"name": KO_SHORT.get(tag, (tag, []))[0], "name_translated": None, "tags": [tag],
+                        "certainty": "confirmed", "source": "menu_name", "matched_keyword": kw, "ratio_percent": None})
+    for kw, tags in NAME_POSSIBLE:
+        if kw in menu_name:
+            for tag in tags:
+                if tag not in seen:
+                    seen.add(tag)
+                    out.append({"name": KO_SHORT.get(tag, (tag, []))[0], "name_translated": None, "tags": [tag],
+                                "certainty": "possible", "source": "menu_name", "matched_keyword": kw, "ratio_percent": None})
+    return out

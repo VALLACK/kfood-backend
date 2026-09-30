@@ -92,3 +92,17 @@ TTS는 프론트 `speechSynthesis` + `lang: 'ko-KR'` 사용.
 2. **자체 메뉴 DB** `app/data/menu_base.json` — 메뉴젠에 없는 부산 향토음식 보완
 3. **AI 추론** — 둘 다 없을 때
 - 응답 `results[].data_source`: `menuzen` | `menu_base` | `ai`, `results[].family`: 비교에 쓴 레시피 이름
+
+## 효용성 검증 (메뉴판 사진 기반)
+```bash
+python -m scripts.evaluate_menus --dir photos          # 서버 실행 상태에서
+```
+- 사진마다 `/ocr` → `/analyze`(프로필 3종: 새우 알레르기 · 할랄 · 비건)를 호출해 측정
+- `eval_result/summary.md`: 처리 성공률, 판정 근거 확보율(메뉴젠/자체DB/AI), 위험도 분포, 직원 질문 수, 응답 속도
+- `eval_result/menus.csv`: 메뉴별 결과 + 수동 채점란(`채점_메뉴명정확`, `채점_판정적절`)
+
+## 운영 API (팀 내부)
+- `GET /menus/unmatched?limit=50` — 데이터에 없어 AI 추론으로 처리된 메뉴를 빈도순으로 반환
+- `GET /menus/lookup?name=돈까스` — 해당 메뉴가 어떤 데이터·재료로 판정되는지 확인 (검수용)
+- 메뉴 추가: `python -m scripts.add_menu --list` → `python -m scripts.add_menu "메뉴명" --required "재료:태그" ...`
+- 자세한 운영 루프와 시연 순서는 `docs/DEMO.md`
