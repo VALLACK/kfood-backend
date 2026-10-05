@@ -28,18 +28,21 @@ def record(name: str, source_menu_board: str | None = None) -> None:
     name = (name or "").strip()
     if not name or len(name) > 40:
         return
-    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    with _lock:
-        data = _load()
-        item = data.get(name) or {"count": 0, "first_seen": now, "status": "대기"}
-        item["count"] += 1
-        item["last_seen"] = now
-        if source_menu_board:
-            item["last_source"] = source_menu_board
-        data[name] = item
-        if len(data) > MAX_ENTRIES:  # 오래되고 빈도 낮은 항목부터 정리
-            data = dict(sorted(data.items(), key=lambda kv: (-kv[1]["count"], kv[1]["last_seen"]))[:MAX_ENTRIES])
-        PATH.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    try:
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        with _lock:
+            data = _load()
+            item = data.get(name) or {"count": 0, "first_seen": now, "status": "대기"}
+            item["count"] += 1
+            item["last_seen"] = now
+            if source_menu_board:
+                item["last_source"] = source_menu_board
+            data[name] = item
+            if len(data) > MAX_ENTRIES:  # 오래되고 빈도 낮은 항목부터 정리
+                data = dict(sorted(data.items(), key=lambda kv: (-kv[1]["count"], kv[1]["last_seen"]))[:MAX_ENTRIES])
+            PATH.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception:
+        return  # 읽기 전용 환경(Vercel 등)에서 기록 실패가 분석을 막으면 안 된다
 
 
 def top(limit: int = 50, status: str | None = None) -> list[dict]:

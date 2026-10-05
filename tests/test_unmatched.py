@@ -18,3 +18,7 @@ def test_ignores_junk(tmp_path, monkeypatch):
     unmatched_log.record("  ")
     unmatched_log.record("가" * 50)
     assert unmatched_log.top(10) == []
+
+def test_record_never_raises_when_unwritable(tmp_path, monkeypatch):
+    monkeypatch.setattr(unmatched_log, "PATH", tmp_path / "missing_dir" / "u.json")
+    unmatched_log.record("하가우")  # 예외가 나면 실패
