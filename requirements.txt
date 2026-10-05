@@ -1,3 +1,4 @@
+# TODO(한석호): 정식 배포 직전, 최종 테스트 후 == 로 버전 고정 (README "의존성 버전 고정 계획" 참고)
 fastapi>=0.115
 uvicorn[standard]>=0.30
 python-dotenv>=1.0
