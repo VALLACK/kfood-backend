@@ -33,3 +33,4 @@ def root():
 @app.get("/health")
 def health_check():
     return {"status": "ok", "supabase_configured": supabase is not None, "groq_configured": bool(settings.GROQ_API_KEY)}
+
