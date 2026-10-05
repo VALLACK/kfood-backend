@@ -19,6 +19,8 @@ class Settings:
         o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()
     ]
 
+    ENABLE_OPS_ROUTES: bool = os.environ.get("ENABLE_OPS_ROUTES", "") == "1"
+
     # Groq base64 이미지 한도 4MB → 여유 있게 3MB로 압축
     MAX_IMAGE_BYTES: int = 3 * 1024 * 1024
     MAX_UPLOAD_BYTES: int = 15 * 1024 * 1024

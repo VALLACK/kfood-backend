@@ -90,13 +90,24 @@ supabase/
 - **Redirect URL 등록 확인**: Supabase Authentication > URL Configuration의 Site URL / Redirect URLs에 로컬 개발 주소(`http://localhost:5173/**`)가 등록되어 있어야 로그인 후 리다이렉트가 정상 작동
 - **Google OAuth Client의 Authorized redirect URIs**: Google Cloud Console의 Client 설정에 Supabase 콜백 URL(`https://<project-ref>.supabase.co/auth/v1/callback`)이 등록되어 있어야 함
 
+## 의존성 버전 고정 계획
+
+- 현재 `requirements.txt`는 `>=` 하한만 지정한다. 개발 중에는 최신 패치를 따라가기 위함이다.
+- 정식 배포 직전, 최종 테스트(`pytest -q`와 시연 시나리오)를 마친 `.venv`에서 아래를 실행해 버전을 고정하고 커밋한다.
+  ```bash
+  pip freeze | grep -iE "^(fastapi|uvicorn|python-dotenv|python-multipart|pydantic|groq|supabase|httpx|pillow)=="
+  ```
+  `uvicorn`은 `uvicorn[standard]==버전`으로 표기한다.
+- 고정 후 새 가상환경에서 `pip install -r requirements.txt && pytest -q`로 재현성을 확인한다.
+- 고정 전까지는 배포 빌드마다 최신 버전이 설치된다. 배포 후 빌드나 동작에 이상이 있으면 의존성 버전 변경을 먼저 의심한다.
+
 ## 알려진 이슈
 
 ~~`app/routers/analyze.py` 필드명 불일치~~ → `feat/analyze-v2`에서 해결 (profiles는 `user_id`로 조회, scan_logs는 `profile_id`·`raw_ocr_text`·`analysis_result`로 저장).
+~~`GET /profiles/test`: 인증 없이 `profiles` 전체를 조회하는 디버그용 엔드포인트~~ → `chore/vercel-prep`에서 제거 완료
 
 - 저장소에 `venv/` 폴더(가상환경 바이너리)가 커밋되어 있음 → `git rm -r --cached venv` 필요
 - Groq `meta-llama/llama-4-scout-17b-16e-instruct`(2026-07-17), `llama-3.3-70b-versatile`(2026-08-16) 서비스 종료 → 모델명은 `.env`로 관리
-- `GET /profiles/test`: 인증 없이 `profiles` 전체를 조회하는 디버그용 엔드포인트. 팀 논의 결과 당분간 유지하기로 결정(로컬 개발 편의 목적). anon 키 사용 중엔 RLS로 빈 배열만 반환되어 안전하지만, **배포 전 반드시 삭제하거나 인증을 추가할 것** — `SUPABASE_KEY`가 실수로 secret key로 바뀌면 전체 프로필이 노출됨
 - `menu_items` DB 이관 진행 중: `menu_base.json` 팀 검수가 끝나기 전까지 `scripts/migrate_menu_items.py`는 실제 실행(`--yes`)하지 말 것. `app/services/menu_knowledge.py`는 DB에 데이터가 없으면 자동으로 `menu_base.json`을 계속 사용하므로, 코드 자체는 검수 전에 배포해도 안전함
 
 ## 테스트
