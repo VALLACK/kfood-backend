@@ -83,7 +83,9 @@ def test_agu_suyuk_is_not_tagged_as_pork():
 
 
 def test_menu_name_rule_does_not_duplicate_already_confirmed_tag():
-    assert from_menu_name("돼지국밥", {"pork"}) == []
+    assert from_menu_name("돼지갈비", {"pork"}) == []
+    # 국밥은 새우젓 확인 질문이 추가로 붙지만, 돼지고기는 중복으로 넣지 않는다
+    assert [i["name"] for i in from_menu_name("돼지국밥", {"pork"})] == ["새우젓"]
 
 
 # ── 파이프라인 전체 (AI가 재료를 빠뜨린 상황) ──────────────────
@@ -158,14 +160,14 @@ def test_second_profile_reuses_cache_without_calling_llm(monkeypatch, tmp_path):
 
     def fake(*a, **k):
         calls.append(1)
-        return {"results": [{"menu": "돼지국밥", "menu_translated": "Pork soup",
+        return {"results": [{"menu": "제육볶음", "menu_translated": "Spicy stir-fried pork",
                              "ingredients": [{"name": "돼지고기", "tags": ["pork"],
                                               "certainty": "confirmed", "ratio_percent": 40}]}]}
 
     monkeypatch.setattr(groq_service, "chat_json", fake)
     monkeypatch.setattr(analysis_service, "build_known_ingredients", lambda name: None)
 
-    line = [MenuLine(name="돼지국밥")]
+    line = [MenuLine(name="제육볶음")]
     first = analysis_service.analyze(line, None, _halal_profile())
     second = analysis_service.analyze(line, None, _shrimp_profile())
 

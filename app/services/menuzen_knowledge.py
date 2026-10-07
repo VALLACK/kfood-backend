@@ -158,9 +158,22 @@ NAME_CONFIRM = [("돼지", "pork"), ("삼겹", "pork"), ("소고기", "beef"), (
                 ("게장", "crab"), ("게살", "crab"),
                 # 생선 이름 ('대구'는 지명 '대구막창'과 겹쳐서 메뉴명 규칙에서는 뺀다)
                 ("명태", "fish"), ("동태", "fish"), ("생태", "fish"), ("황태", "fish"), ("코다리", "fish"),
-                ("아귀", "fish"), ("아구", "fish"), ("우럭", "fish"), ("광어", "fish"), ("갈치", "fish")]
+                ("아귀", "fish"), ("아구", "fish"), ("우럭", "fish"), ("광어", "fish"), ("갈치", "fish"),
+                # 부산식 줄임말: 낙곱새 = 낙지+곱창+새우, 낙새 = 낙지+새우, 낙삼새 = 낙지+삼겹살+새우
+                # (10/05 평가: '수백당곱새세트'가 새우 알레르기에 SAFE로 나옴)
+                ("곱새", "shrimp"), ("낙새", "shrimp"), ("삼새", "shrimp"), ("낙삼", "pork"),
+                # 돼지 부위가 이름에 들어간 카츠 (10/05 평가: '등심카츠'를 AI가 소고기로 추정)
+                ("등심카츠", "pork"), ("안심카츠", "pork"), ("로스카츠", "pork"), ("히레카츠", "pork")]
+
+# (키워드, 태그, 예외 메뉴명, 재료 이름) — 재료 이름이 None이면 태그 기본 이름을 쓴다.
 NAME_POSSIBLE = [("해물", ["shrimp", "squid", "shellfish"]), ("해산물", ["shrimp", "squid", "shellfish"]),
-                 ("모듬", ["shrimp", "squid", "shellfish"]), ("모둠", ["shrimp", "squid", "shellfish"])]
+                 ("모듬", ["shrimp", "squid", "shellfish"]), ("모둠", ["shrimp", "squid", "shellfish"]),
+                 # 한국 카츠는 대부분 돼지고기. 고기 종류가 이름에 없으면 확인 질문을 띄운다 ('명란카츠')
+                 ("카츠", ["pork"], ("생선", "치킨", "닭", "새우", "규", "연어", "함박", "비프", "소고기"), "돼지고기"),
+                 # 국밥·수육은 새우젓을 넣거나 곁들인다. 공공데이터 레시피에는 빠져 있어서
+                 # '돼지국밥'은 CAUTION인데 '순대국밥'·'수육'은 SAFE로 갈리던 문제
+                 ("국밥", ["shrimp"], (), "새우젓"),
+                 ("수육", ["shrimp"], ("아구수육", "아귀수육", "문어수육"), "새우젓")]
 
 
 def _from_menu_name(menu_name: str, confirmed_tags: set, KO_SHORT) -> list[dict]:
@@ -173,12 +186,15 @@ def _from_menu_name(menu_name: str, confirmed_tags: set, KO_SHORT) -> list[dict]
             seen.add(tag)
             out.append({"name": KO_SHORT.get(tag, (tag, []))[0], "name_translated": None, "tags": [tag],
                         "certainty": "confirmed", "source": "menu_name", "matched_keyword": kw, "ratio_percent": None})
-    for kw, tags in NAME_POSSIBLE:
-        if kw in menu_name:
+    for rule in NAME_POSSIBLE:
+        kw, tags = rule[0], rule[1]
+        exceptions = rule[2] if len(rule) > 2 else ()
+        label = rule[3] if len(rule) > 3 else None
+        if kw in menu_name and not any(x in menu_name for x in exceptions):
             for tag in tags:
                 if tag not in seen:
                     seen.add(tag)
-                    out.append({"name": KO_SHORT.get(tag, (tag, []))[0], "name_translated": None, "tags": [tag],
+                    out.append({"name": label or KO_SHORT.get(tag, (tag, []))[0], "name_translated": None, "tags": [tag],
                                 "certainty": "possible", "source": "menu_name", "matched_keyword": kw, "ratio_percent": None})
     return out
 
