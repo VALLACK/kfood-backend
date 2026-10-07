@@ -1,0 +1,357 @@
+﻿사진,프로필,메뉴,데이터출처,비교레시피수,위험도,확정사유,가능사유,직원질문수,직원질문,비율출처,분석초,채점_메뉴명정확,채점_판정적절,채점_비고
+스크린샷 2026-09-23 193106.png,shrimp_allergy,돌게탕,menu_board,0,WARNING,새우(shrimp),,0,,ai추정,60.4,O,과잉,옆 메뉴(해물탕) 괄호가 붙음 — 실제 재료 미표기
+스크린샷 2026-09-23 193106.png,shrimp_allergy,돌게탕(대),menu_board,0,WARNING,새우(shrimp),,0,,ai추정,60.4,O,과잉,옆 메뉴(해물탕) 괄호가 붙음 — 실제 재료 미표기
+스크린샷 2026-09-23 193106.png,shrimp_allergy,해물탕,menuzen,1,WARNING,새우(shrimp),,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,해물탕(대),menuzen,1,WARNING,새우(shrimp),,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산우럭매운탕,menuzen,1,SAFE,,,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산우럭구이,ai,0,CAUTION,,새우(shrimp),1,산우럭구이에 새우가 들어가나요?,ai추정,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산조개탕,menuzen,3,SAFE,,,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,해물조개전골,menu_board,0,WARNING,새우(shrimp),,0,,ai추정,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산가리비찜,ai,0,SAFE,,,0,,ai추정,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산소라숙회,ai,0,SAFE,,,0,,ai추정,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산눈지방탕탕이,ai,0,SAFE,,,0,,ai추정,60.4,X,O,산낙지탕탕이 오인식
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산해물모듬,menu_board,0,CAUTION,,새우(shrimp),1,산해물모듬에 새우가 들어가나요?,ai추정,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,소갈비찜,menuzen,2,SAFE,,,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,소갈비찜(대),menuzen,2,SAFE,,,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,돼지등갈비찜,menuzen,6,SAFE,,,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,돼지등갈비찜(대),menuzen,6,SAFE,,,0,,menuzen,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산우럭구이,ai,0,SAFE,,,0,,ai추정,60.4,X,O,중복 추출
+스크린샷 2026-09-23 193106.png,shrimp_allergy,산소라구이,ai,0,SAFE,,,0,,ai추정,60.4,X,O,"실제 ""멍게"" — 없는 메뉴"
+스크린샷 2026-09-23 193106.png,shrimp_allergy,"털게찜, 과메기",ai,0,SAFE,,,0,,ai추정,60.4,O,O,
+스크린샷 2026-09-23 193106.png,shrimp_allergy,"맑은국 우동,곤약사리",ai,0,SAFE,,,0,,ai추정,60.4,X,O,사리 칸 오인식(칼국수·우동·감자수제비)
+스크린샷 2026-09-23 193106.png,shrimp_allergy,통나무죽,ai,0,SAFE,,,0,,ai추정,60.4,X,O,없는 메뉴
+스크린샷 2026-09-23 193106.png,shrimp_allergy,"대구알2,라2",ai,0,SAFE,,,0,,ai추정,60.4,X,O,"대구알2,곤2 오인식"
+스크린샷 2026-09-23 193106.png,shrimp_allergy,란전,ai,0,SAFE,,,0,,ai추정,60.4,X,O,없는 메뉴
+스크린샷 2026-09-23 193106.png,halal,돌게탕,menu_board,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,돌게탕(대),menu_board,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,해물탕,menuzen,1,SAFE,,,0,,menuzen,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,해물탕(대),menuzen,1,SAFE,,,0,,menuzen,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,산우럭매운탕,menuzen,1,SAFE,,,0,,menuzen,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,산우럭구이,ai,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,산조개탕,menuzen,3,CAUTION,닭(chicken),,1,산조개탕에 들어가는 닭이 할랄 인증 제품인가요?,menuzen,25.5,O,과잉,"담치를 ""닭1""로 오인식"
+스크린샷 2026-09-23 193106.png,halal,해물조개전골,menu_board,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,산가리비찜,ai,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,산소라숙회,ai,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,산눈지방탕탕이,ai,0,SAFE,,,0,,ai추정,25.5,X,O,산낙지탕탕이 오인식
+스크린샷 2026-09-23 193106.png,halal,산해물모듬,menu_board,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,소갈비찜,menuzen,2,CAUTION,소고기(beef),술이나 맛술(alcohol (incl. cooking wine)),2,소갈비찜에 술이나 맛술이 들어가나요? / 소갈비찜에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,소갈비찜(대),menuzen,2,CAUTION,소고기(beef),술이나 맛술(alcohol (incl. cooking wine)),2,소갈비찜(대)에 술이나 맛술이 들어가나요? / 소갈비찜(대)에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,돼지등갈비찜,menuzen,6,WARNING,소고기(beef) / 돼지고기(pork),술이나 맛술(alcohol (incl. cooking wine)),0,,menuzen,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,돼지등갈비찜(대),menuzen,6,WARNING,소고기(beef) / 돼지고기(pork),술이나 맛술(alcohol (incl. cooking wine)),0,,menuzen,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,산우럭구이,ai,0,SAFE,,,0,,ai추정,25.5,X,O,중복 추출
+스크린샷 2026-09-23 193106.png,halal,산소라구이,ai,0,SAFE,,,0,,ai추정,25.5,X,O,"실제 ""멍게"" — 없는 메뉴"
+스크린샷 2026-09-23 193106.png,halal,"털게찜, 과메기",ai,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193106.png,halal,"맑은국 우동,곤약사리",ai,0,SAFE,,,0,,ai추정,25.5,X,O,사리 칸 오인식(칼국수·우동·감자수제비)
+스크린샷 2026-09-23 193106.png,halal,통나무죽,ai,0,SAFE,,,0,,ai추정,25.5,X,O,없는 메뉴
+스크린샷 2026-09-23 193106.png,halal,"대구알2,라2",ai,0,SAFE,,,0,,ai추정,25.5,X,O,"대구알2,곤2 오인식"
+스크린샷 2026-09-23 193106.png,halal,란전,ai,0,SAFE,,,0,,ai추정,25.5,X,O,없는 메뉴
+스크린샷 2026-09-23 193208.png,shrimp_allergy,돼지국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,돼지국밥에 새우젓이 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,shrimp_allergy,내장섞어국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,내장섞어국밥에 새우젓이 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,shrimp_allergy,순대국밥,menuzen,1,SAFE,,,0,,menuzen,51.4,O,위험,"같은 집 돼지국밥은 새우젓 질문, 순대국밥만 SAFE / 수정됨→CAUTION"
+스크린샷 2026-09-23 193208.png,shrimp_allergy,모둠국밥,menu_base,0,CAUTION,,새우젓(shrimp) / 새우(shrimp),2,모둠국밥에 새우젓이 들어가나요? / 모둠국밥에 새우가 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,shrimp_allergy,수육백반,menu_board,0,CAUTION,,김치 속 젓갈(새우젓·액젓)(shrimp) / 새우젓(shrimp),2,수육백반에 김치 속 젓갈(새우젓·액젓)이 들어가나요? / 수육백반에 새우젓이 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,shrimp_allergy,삼겹국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,삼겹국밥에 새우젓이 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,shrimp_allergy,얼큰국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,얼큰국밥에 새우젓이 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,shrimp_allergy,얼큰모둠국밥,menu_base,0,CAUTION,,새우젓(shrimp) / 새우(shrimp),2,얼큰모둠국밥에 새우젓이 들어가나요? / 얼큰모둠국밥에 새우가 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,shrimp_allergy,얼큰삼겹국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,얼큰삼겹국밥에 새우젓이 들어가나요?,ai추정,51.4,O,O,
+스크린샷 2026-09-23 193208.png,halal,돼지국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,내장섞어국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork) / 돼지 내장(pork),,0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,순대국밥,menuzen,1,WARNING,소 부산물(beef) / 소 부산물(meat) / 소고기(beef) / 돼지고기(pork),,0,,menuzen,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,모둠국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,수육백반,menu_board,0,WARNING,돼지고기(pork) / 항정살(pork),,0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,삼겹국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,얼큰국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork) / 순대(pork),돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,얼큰모둠국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193208.png,halal,얼큰삼겹국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,하가우,ai,0,WARNING,새우(shrimp),,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,새우 돼지고기 시우마이,ai,0,WARNING,새우(shrimp),,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,새우 부추 교자,ai,0,WARNING,새우(shrimp),,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,관자 새우 딤섬,ai,0,WARNING,새우(shrimp),,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,사오롱바오,ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,"허니소스 돼지고기 ""차슈""",ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,"광동식 오리구이, Quarter",ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,"광동식 오리구이, Half",ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,가지딤섬,ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,춘권,ai,0,SAFE,,,0,,ai추정,98.4,O,위험,영문 표기 Spring Rolls with Shrimp / 미수정(영문 설명 미반영)
+스크린샷 2026-09-23 193251.png,shrimp_allergy,마라원면,ai,0,SAFE,,,0,,ai추정,98.4,X,O,마라완탕
+스크린샷 2026-09-23 193251.png,shrimp_allergy,차슈 장펀,ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,새우 장펀,ai,0,WARNING,새우(shrimp),,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,크리스피 장펀,ai,0,WARNING,새우(shrimp),,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,완탕팔면,ai,0,SAFE,,,0,,ai추정,98.4,X,O,완탕탕면
+스크린샷 2026-09-23 193251.png,shrimp_allergy,마라우육팔면,menu_board,0,SAFE,,,0,,ai추정,98.4,X,O,마라우육탕면
+스크린샷 2026-09-23 193251.png,shrimp_allergy,돼지고기 차슈 덮밥,ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,돼지고기 차슈 로미엔,ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,오리구이 로미엔,ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,shrimp_allergy,오리구이 탱면,ai,0,SAFE,,,0,,ai추정,98.4,X,O,오리구이 탕면
+스크린샷 2026-09-23 193251.png,shrimp_allergy,연잎덮밥,ai,0,SAFE,,,0,,ai추정,98.4,X,O,연잎찰밥
+스크린샷 2026-09-23 193251.png,shrimp_allergy,청경채 / 초이삼 데침,ai,0,SAFE,,,0,,ai추정,98.4,O,O,
+스크린샷 2026-09-23 193251.png,halal,하가우,ai,0,SAFE,,,0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,새우 돼지고기 시우마이,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,새우 부추 교자,ai,0,SAFE,,,0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,관자 새우 딤섬,ai,0,SAFE,,,0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,사오롱바오,ai,0,WARNING,돼지고기(pork),젤라틴(animal gelatin),0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,"허니소스 돼지고기 ""차슈""",ai,0,WARNING,돼지고기(pork),술(alcohol (incl. cooking wine)),0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,"광동식 오리구이, Quarter",ai,0,CAUTION,오리고기(meat),요리용 와인(alcohol (incl. cooking wine)),2,"광동식 오리구이, Quarter의 요리용 와인에 술이나 맛술이 들어가나요? / 광동식 오리구이, Quarter에 들어가는 오리고기가 할랄 인증 제품인가요?",ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,"광동식 오리구이, Half",ai,0,CAUTION,오리고기(meat),요리용 와인(alcohol (incl. cooking wine)),2,"광동식 오리구이, Half의 요리용 와인에 술이나 맛술이 들어가나요? / 광동식 오리구이, Half에 들어가는 오리고기가 할랄 인증 제품인가요?",ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,가지딤섬,ai,0,CAUTION,,돼지고기(pork),1,가지딤섬에 돼지고기가 들어가나요?,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,춘권,ai,0,SAFE,,,0,,ai추정,0.5,O,위험,메뉴판에 돈지방 표기 / 수정됨→WARNING
+스크린샷 2026-09-23 193251.png,halal,마라원면,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.5,X,O,마라완탕
+스크린샷 2026-09-23 193251.png,halal,차슈 장펀,ai,0,WARNING,돼지고기(pork),요리용 와인(alcohol (incl. cooking wine)),0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,새우 장펀,ai,0,CAUTION,,청주(alcohol (incl. cooking wine)),1,새우 장펀에 청주가 들어가나요?,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,크리스피 장펀,ai,0,CAUTION,,청주(alcohol (incl. cooking wine)),1,크리스피 장펀에 청주가 들어가나요?,ai추정,0.5,O,약함,돈지방 표기 → WARNING이어야 / 수정됨→WARNING
+스크린샷 2026-09-23 193251.png,halal,완탕팔면,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.5,X,O,완탕탕면
+스크린샷 2026-09-23 193251.png,halal,마라우육팔면,menu_board,0,CAUTION,소고기(beef),,1,마라우육팔면에 들어가는 소고기가 할랄 인증 제품인가요?,ai추정,0.5,X,O,마라우육탕면
+스크린샷 2026-09-23 193251.png,halal,돼지고기 차슈 덮밥,ai,0,WARNING,돼지고기(pork),청주(alcohol (incl. cooking wine)),0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,돼지고기 차슈 로미엔,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,오리구이 로미엔,ai,0,CAUTION,오리고기(meat),,1,오리구이 로미엔에 들어가는 오리고기가 할랄 인증 제품인가요?,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193251.png,halal,오리구이 탱면,ai,0,CAUTION,오리고기(meat),,1,오리구이 탱면에 들어가는 오리고기가 할랄 인증 제품인가요?,ai추정,0.5,X,O,오리구이 탕면
+스크린샷 2026-09-23 193251.png,halal,연잎덮밥,ai,0,WARNING,오리고기(meat) / 돼지고기(pork),,0,,ai추정,0.5,X,O,연잎찰밥
+스크린샷 2026-09-23 193251.png,halal,청경채 / 초이삼 데침,ai,0,SAFE,,,0,,ai추정,0.5,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,조개구이,menu_base,0,CAUTION,,새우(shrimp),1,조개구이에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,조개구이,menu_base,0,CAUTION,,새우(shrimp),1,조개구이에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,조개구이,menu_base,0,CAUTION,,새우(shrimp),1,조개구이에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,조개구이,menu_base,0,CAUTION,,새우(shrimp),1,조개구이에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,해산물 모듬,ai,0,CAUTION,,새우(shrimp),1,해산물 모듬에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,해산물 모듬,ai,0,CAUTION,,새우(shrimp),1,해산물 모듬에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,해산물 모듬,ai,0,CAUTION,,새우(shrimp),1,해산물 모듬에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,해산물 모듬,ai,0,CAUTION,,새우(shrimp),1,해산물 모듬에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,조개구이 볶음밥,menu_base,0,CAUTION,,새우(shrimp),1,조개구이 볶음밥에 새우가 들어가나요?,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,또띠아,ai,0,SAFE,,,0,,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,전복죽,menuzen,5,SAFE,,,0,,menuzen,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,왕새우 버터구이,ai,0,WARNING,왕새우(shrimp),,0,,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,전복 버터구이,ai,0,SAFE,,,0,,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,shrimp_allergy,전복 버터구이,ai,0,SAFE,,,0,,ai추정,31.7,O,O,
+스크린샷 2026-09-23 193307.png,halal,조개구이,menu_base,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,조개구이,menu_base,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,조개구이,menu_base,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,조개구이,menu_base,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,해산물 모듬,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,해산물 모듬,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,해산물 모듬,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,해산물 모듬,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,조개구이 볶음밥,menu_base,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,또띠아,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,전복죽,menuzen,5,CAUTION,,술이나 맛술(alcohol (incl. cooking wine)),1,전복죽에 술이나 맛술이 들어가나요?,menuzen,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,왕새우 버터구이,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,전복 버터구이,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193307.png,halal,전복 버터구이,ai,0,SAFE,,,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,돼지국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,돼지국밥에 새우젓이 들어가나요?,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,돼지국밥(대),menu_base,0,CAUTION,,새우젓(shrimp),1,돼지국밥(대)에 새우젓이 들어가나요?,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,내장국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,내장국밥에 새우젓이 들어가나요?,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,순대국밥,menuzen,1,SAFE,,,0,,menuzen,25.5,O,위험,"같은 집 돼지국밥은 새우젓 질문, 순대국밥만 SAFE / 수정됨→CAUTION"
+스크린샷 2026-09-23 193320.png,shrimp_allergy,섞어국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,섞어국밥에 새우젓이 들어가나요?,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,모둠국밥,menu_base,0,CAUTION,,새우젓(shrimp) / 새우(shrimp),2,모둠국밥에 새우젓이 들어가나요? / 모둠국밥에 새우가 들어가나요?,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,수육백반,ai,0,CAUTION,,김치 속 젓갈(새우젓·액젓)(shrimp),1,수육백반에 김치 속 젓갈(새우젓·액젓)이 들어가나요?,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,수육 - 소,ai,0,SAFE,,,0,,ai추정,25.5,O,위험,"수육은 새우젓에 찍어 먹음, 모둠수육만 CAUTION / 수정됨→CAUTION"
+스크린샷 2026-09-23 193320.png,shrimp_allergy,수육 - 중,ai,0,SAFE,,,0,,ai추정,25.5,O,위험,"수육은 새우젓에 찍어 먹음, 모둠수육만 CAUTION / 수정됨→CAUTION"
+스크린샷 2026-09-23 193320.png,shrimp_allergy,수육 - 대,ai,0,SAFE,,,0,,ai추정,25.5,O,위험,"수육은 새우젓에 찍어 먹음, 모둠수육만 CAUTION / 수정됨→CAUTION"
+스크린샷 2026-09-23 193320.png,shrimp_allergy,모둠수육,ai,0,CAUTION,,새우(shrimp),1,모둠수육에 새우가 들어가나요?,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,shrimp_allergy,순대 1접시,menu_base,0,SAFE,,,0,,ai추정,25.5,O,O,
+스크린샷 2026-09-23 193320.png,halal,돼지국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,돼지국밥(대),menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,내장국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork) / 돼지 내장(pork),,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,순대국밥,menuzen,1,WARNING,소 부산물(beef) / 소 부산물(meat) / 소고기(beef) / 돼지고기(pork),,0,,menuzen,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,섞어국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,모둠국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,수육백반,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,수육 - 소,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,수육 - 중,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,수육 - 대,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,모둠수육,ai,0,WARNING,돼지고기(pork),,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193320.png,halal,순대 1접시,menu_base,0,WARNING,돼지 창자·선지(pork),,0,,ai추정,0.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,함박스테이크,menuzen,4,SAFE,,,0,,menuzen,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,오무라이스,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,오코노미야키,ai,0,CAUTION,,새우(shrimp),1,오코노미야키에 새우가 들어가나요?,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,돈카츠카레,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,함박카레,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,코로케카레,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,카레라이스,menuzen,5,SAFE,,,0,,menuzen,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,장어덮밥,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,돈카츠덮밥,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,소고기덮밥,menuzen,2,SAFE,,,0,,menuzen,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,달걀밥,menuzen,1,SAFE,,,0,,menuzen,77.3,X,O,"실제 ""닭덮밥"""
+스크린샷 2026-09-23 193336.png,shrimp_allergy,계란덮밥,menuzen,1,SAFE,,,0,,menuzen,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,안주용함박,ai,0,CAUTION,,새우(shrimp),1,안주용함박에 새우가 들어가나요?,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,안주용돈까스,ai,0,CAUTION,,새우(shrimp),1,안주용돈까스에 새우가 들어가나요?,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,카츠토지,ai,0,CAUTION,,새우(shrimp),1,카츠토지에 새우가 들어가나요?,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,자루소바,ai,0,CAUTION,,새우(shrimp),1,자루소바에 새우가 들어가나요?,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,돈코츠라멘,ai,0,CAUTION,,새우(shrimp),1,돈코츠라멘에 새우가 들어가나요?,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,소유라멘,ai,0,CAUTION,,새우(shrimp),1,소유라멘에 새우가 들어가나요?,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,소고기우동,menuzen,8,CAUTION,,새우(shrimp),1,소고기우동에 새우가 들어가나요?,menuzen,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,우동,menuzen,8,CAUTION,,새우(shrimp),1,우동에 새우가 들어가나요?,menuzen,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,돈까스,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,고로케,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,차슈,ai,0,SAFE,,,0,,ai추정,77.3,O,O,
+스크린샷 2026-09-23 193336.png,shrimp_allergy,"단타카토나, 키티",ai,0,CAUTION,,새우(shrimp),1,"단타카토나, 키티에 새우가 들어가나요?",ai추정,77.3,X,제외,음료 칸(취소선) 오인식 / 음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193336.png,shrimp_allergy,탄타카토닉,ai,0,SAFE,,,0,,ai추정,77.3,X,제외,음료(탄타카토닉) / 음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193336.png,halal,함박스테이크,menuzen,4,CAUTION,소고기(beef),술이나 맛술(alcohol (incl. cooking wine)) / 돼지고기(pork),3,함박스테이크에 술이나 맛술이 들어가나요? / 함박스테이크에 돼지고기가 들어가나요? / 함박스테이크에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,오무라이스,ai,0,CAUTION,,닭고기(chicken),1,오무라이스에 닭고기가 들어가나요?,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,오코노미야키,ai,0,CAUTION,,돼지고기(pork),1,오코노미야키에 돼지고기가 들어가나요?,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,돈카츠카레,ai,0,WARNING,돼지고기(pork),,0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,함박카레,ai,0,CAUTION,소고기(beef),돼지고기(pork),2,함박카레에 돼지고기가 들어가나요? / 함박카레에 들어가는 소고기가 할랄 인증 제품인가요?,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,코로케카레,ai,0,CAUTION,,소고기(beef) / 돼지고기(pork),2,코로케카레에 소고기가 들어가나요? / 코로케카레에 돼지고기가 들어가나요?,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,카레라이스,menuzen,5,WARNING,돼지고기(pork),소고기(beef),0,,menuzen,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,장어덮밥,ai,0,SAFE,,,0,,ai추정,63.7,O,약함(맛술),소스에 미림 가능성 — SAFE보다 CAUTION이 적절
+스크린샷 2026-09-23 193336.png,halal,돈카츠덮밥,ai,0,WARNING,돼지고기(pork),돈가스(pork) / 돈까스 소스(pork),0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,소고기덮밥,menuzen,2,CAUTION,소고기(beef),,1,소고기덮밥에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,달걀밥,menuzen,1,SAFE,,,0,,menuzen,63.7,X,위험,"실제 ""닭덮밥"" / 실제 닭덮밥(OCR 오인식 때문) / 미수정(OCR)"
+스크린샷 2026-09-23 193336.png,halal,계란덮밥,menuzen,1,CAUTION,소고기(beef),,1,계란덮밥에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,안주용함박,ai,0,WARNING,돼지고기(pork) / 소고기(beef),,0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,안주용돈까스,ai,0,WARNING,돼지고기(pork),,0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,카츠토지,ai,0,WARNING,돼지고기(pork),,0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,자루소바,ai,0,SAFE,,,0,,ai추정,63.7,O,약함(맛술),소스에 미림 가능성 — SAFE보다 CAUTION이 적절
+스크린샷 2026-09-23 193336.png,halal,돈코츠라멘,ai,0,WARNING,돼지고기(pork),,0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,소유라멘,ai,0,CAUTION,,닭고기(chicken),1,소유라멘에 닭고기가 들어가나요?,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,소고기우동,menuzen,8,CAUTION,소고기(beef),술이나 맛술(alcohol (incl. cooking wine)) / 돼지고기(pork),3,소고기우동에 술이나 맛술이 들어가나요? / 소고기우동에 돼지고기가 들어가나요? / 소고기우동에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,우동,menuzen,8,CAUTION,,술이나 맛술(alcohol (incl. cooking wine)) / 돼지고기(pork),2,우동에 술이나 맛술이 들어가나요? / 우동에 돼지고기가 들어가나요?,menuzen,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,돈까스,ai,0,WARNING,돼지고기(pork),,0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,고로케,ai,0,CAUTION,,돼지고기(pork),1,고로케에 돼지고기가 들어가나요?,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,차슈,ai,0,WARNING,돼지고기(pork),술(alcohol (incl. cooking wine)),0,,ai추정,63.7,O,O,
+스크린샷 2026-09-23 193336.png,halal,"단타카토나, 키티",ai,0,CAUTION,,술이나 맛술·젤라틴·돼지고기(alcohol (incl. cooking wine)) / 술이나 맛술·젤라틴·돼지고기(animal gelatin) / 술이나 맛술·젤라틴·돼지고기(pork),1,"단타카토나, 키티에 술이나 맛술·젤라틴·돼지고기가 들어가나요?",ai추정,63.7,X,제외,음료 칸(취소선) 오인식 / 음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193336.png,halal,탄타카토닉,ai,0,WARNING,진(alcohol (incl. cooking wine)),,0,,ai추정,63.7,X,제외,음료(탄타카토닉) / 음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193353.png,shrimp_allergy,미니 냉모밀,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,미니 쫄면,menuzen,1,SAFE,,,0,,menuzen,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,냉모밀,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,쫄면,menuzen,1,SAFE,,,0,,menuzen,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,고로케,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,카레고로케,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,새우튀김,menuzen,1,WARNING,새우(shrimp),,0,,menuzen,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,빅웨이브,ai,0,SAFE,,,0,,ai추정,72.9,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193353.png,shrimp_allergy,강서 마일드 에일,ai,0,SAFE,,,0,,ai추정,72.9,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193353.png,shrimp_allergy,담서 오렌지 에일,ai,0,SAFE,,,0,,ai추정,72.9,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193353.png,shrimp_allergy,초밥카츠,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,치즈카츠,menu_board,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,안심카츠,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,등심카츠,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,명란카츠,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,shrimp_allergy,생선카츠,ai,0,SAFE,,,0,,ai추정,72.9,O,O,
+스크린샷 2026-09-23 193353.png,halal,미니 냉모밀,ai,0,SAFE,,,0,,ai추정,0.4,O,약함(맛술),소스에 미림 가능성 — SAFE보다 CAUTION이 적절
+스크린샷 2026-09-23 193353.png,halal,미니 쫄면,menuzen,1,SAFE,,,0,,menuzen,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,냉모밀,ai,0,SAFE,,,0,,ai추정,0.4,O,약함(맛술),소스에 미림 가능성 — SAFE보다 CAUTION이 적절
+스크린샷 2026-09-23 193353.png,halal,쫄면,menuzen,1,SAFE,,,0,,menuzen,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,고로케,ai,0,SAFE,,,0,,ai추정,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,카레고로케,ai,0,SAFE,,,0,,ai추정,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,새우튀김,menuzen,1,SAFE,,,0,,menuzen,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,빅웨이브,ai,0,CAUTION,,맥주(alcohol (incl. cooking wine)),1,빅웨이브에 맥주가 들어가나요?,ai추정,0.4,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193353.png,halal,강서 마일드 에일,ai,0,CAUTION,,맥주(alcohol (incl. cooking wine)),1,강서 마일드 에일에 맥주가 들어가나요?,ai추정,0.4,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193353.png,halal,담서 오렌지 에일,ai,0,CAUTION,,맥주(alcohol (incl. cooking wine)),1,담서 오렌지 에일에 맥주가 들어가나요?,ai추정,0.4,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193353.png,halal,초밥카츠,ai,0,WARNING,우스터소스(alcohol (incl. cooking wine)),돼지고기(pork),0,,ai추정,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,치즈카츠,menu_board,0,WARNING,돼지(pork),돼지고기(pork) / 매운소스(alcohol (incl. cooking wine)),0,,ai추정,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,안심카츠,ai,0,WARNING,안심(pork),,0,,ai추정,0.4,O,O,
+스크린샷 2026-09-23 193353.png,halal,등심카츠,ai,0,CAUTION,등심(beef),,1,등심카츠에 들어가는 등심이 할랄 인증 제품인가요?,ai추정,0.4,O,약함,AI가 등심을 소고기로 추정 / 수정됨→WARNING
+스크린샷 2026-09-23 193353.png,halal,명란카츠,ai,0,SAFE,,,0,,ai추정,0.4,O,위험,돼지고기 카츠(원산지 돼지고기 표기) / 수정됨→CAUTION(돼지고기 질문)
+스크린샷 2026-09-23 193353.png,halal,생선카츠,ai,0,CAUTION,,우스터소스(alcohol (incl. cooking wine)),1,생선카츠의 우스터소스에 술이나 맛술이 들어가나요?,ai추정,0.4,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구찜,menuzen,1,SAFE,,,0,,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구찜,menuzen,1,SAFE,,,0,,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구찜,menuzen,1,SAFE,,,0,,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구찜,menuzen,1,SAFE,,,0,,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,해물아구찜,menuzen,1,CAUTION,,새우(shrimp),1,해물아구찜에 새우가 들어가나요?,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,해물아구찜,menuzen,1,CAUTION,,새우(shrimp),1,해물아구찜에 새우가 들어가나요?,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,해물아구찜,menuzen,1,CAUTION,,새우(shrimp),1,해물아구찜에 새우가 들어가나요?,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구탕,ai,0,CAUTION,,새우(shrimp),1,아구탕에 새우가 들어가나요?,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구탕,ai,0,CAUTION,,새우(shrimp),1,아구탕에 새우가 들어가나요?,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구탕,ai,0,CAUTION,,새우(shrimp),1,아구탕에 새우가 들어가나요?,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구수육,ai,0,CAUTION,,새우(shrimp),1,아구수육에 새우가 들어가나요?,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구수육,ai,0,CAUTION,,새우(shrimp),1,아구수육에 새우가 들어가나요?,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,아구수육,ai,0,SAFE,,,0,,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,된장찌개,menuzen,30,CAUTION,,새우(shrimp),1,된장찌개에 새우가 들어가나요?,menuzen,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,다슬기탕,ai,0,SAFE,,,0,,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,shrimp_allergy,감자사리,ai,0,SAFE,,,0,,ai추정,62.5,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구찜,menuzen,1,SAFE,,,0,,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구찜,menuzen,1,SAFE,,,0,,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구찜,menuzen,1,SAFE,,,0,,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구찜,menuzen,1,SAFE,,,0,,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,해물아구찜,menuzen,1,SAFE,,,0,,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,해물아구찜,menuzen,1,SAFE,,,0,,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,해물아구찜,menuzen,1,SAFE,,,0,,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구탕,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구탕,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구탕,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구수육,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구수육,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,아구수육,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,된장찌개,menuzen,30,CAUTION,,돼지고기(pork) / 소고기(beef) / 술이나 맛술(alcohol (incl. cooking wine)),3,된장찌개에 돼지고기가 들어가나요? / 된장찌개에 소고기가 들어가나요? / 된장찌개에 술이나 맛술이 들어가나요?,menuzen,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,다슬기탕,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193404.png,halal,감자사리,ai,0,SAFE,,,0,,ai추정,5.4,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,꽃게탕,menuzen,2,SAFE,,,0,,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,뻐없는닭발,ai,0,SAFE,,,0,,ai추정,102.7,X,O,뼈없는닭발
+스크린샷 2026-09-23 193421.png,shrimp_allergy,꼬막,ai,0,SAFE,,,0,,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,동태탕,menuzen,1,SAFE,,,0,,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,골뱅이무침,menuzen,1,SAFE,,,0,,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,생굴,ai,0,SAFE,,,0,,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,닭도리탕,ai,0,CAUTION,,새우(shrimp),1,닭도리탕에 새우가 들어가나요?,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,오징어무침,menuzen,4,SAFE,,,0,,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,과일,ai,0,CAUTION,,새우(shrimp),1,과일에 새우가 들어가나요?,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,김치찌개,menuzen,20,CAUTION,,김치 속 젓갈(새우젓·액젓)(shrimp) / 새우(shrimp),2,김치찌개에 김치 속 젓갈(새우젓·액젓)이 들어가나요? / 김치찌개에 새우가 들어가나요?,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,파전,menuzen,4,CAUTION,,새우(shrimp),1,파전에 새우가 들어가나요?,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,옥,ai,0,CAUTION,,새우(shrimp),1,옥에 새우가 들어가나요?,ai추정,102.7,X,O,"실제 ""편육"""
+스크린샷 2026-09-23 193421.png,shrimp_allergy,불고기,menuzen,16,SAFE,,,0,,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,호박전,menuzen,4,SAFE,,,0,,menuzen,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,닭날개,ai,0,SAFE,,,0,,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,고갈비,ai,0,SAFE,,,0,,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,닭꼬지,ai,0,SAFE,,,0,,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,shrimp_allergy,게란말이,ai,0,SAFE,,,0,,ai추정,102.7,X,O,계란말이
+스크린샷 2026-09-23 193421.png,shrimp_allergy,청하/별빛청하,ai,0,SAFE,,,0,,ai추정,102.7,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193421.png,shrimp_allergy,닭동집볶음,ai,0,SAFE,,,0,,ai추정,102.7,X,O,닭똥집볶음
+스크린샷 2026-09-23 193421.png,shrimp_allergy,스팸볶음,ai,0,SAFE,,,0,,ai추정,102.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,꽃게탕,menuzen,2,SAFE,,,0,,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,뻐없는닭발,ai,0,CAUTION,닭발(chicken),,1,뻐없는닭발에 들어가는 닭발이 할랄 인증 제품인가요?,ai추정,37.7,X,O,뼈없는닭발
+스크린샷 2026-09-23 193421.png,halal,꼬막,ai,0,SAFE,,,0,,ai추정,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,동태탕,menuzen,1,SAFE,,,0,,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,골뱅이무침,menuzen,1,SAFE,,,0,,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,생굴,ai,0,SAFE,,,0,,ai추정,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,닭도리탕,ai,0,CAUTION,닭고기(chicken),,1,닭도리탕에 들어가는 닭고기가 할랄 인증 제품인가요?,ai추정,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,오징어무침,menuzen,4,SAFE,,,0,,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,과일,ai,0,SAFE,,,0,,ai추정,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,김치찌개,menuzen,20,WARNING,돼지고기(pork),소고기(beef) / 닭고기(chicken) / 술이나 맛술(alcohol (incl. cooking wine)) / 고기(meat),0,,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,파전,menuzen,4,SAFE,,,0,,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,옥,ai,0,CAUTION,,술이나 맛술·젤라틴·돼지고기(alcohol (incl. cooking wine)) / 술이나 맛술·젤라틴·돼지고기(animal gelatin) / 술이나 맛술·젤라틴·돼지고기(pork),1,옥에 술이나 맛술·젤라틴·돼지고기가 들어가나요?,ai추정,37.7,X,약함,"실제 ""편육"" / 실제 편육(돼지) — OCR 오인식"
+스크린샷 2026-09-23 193421.png,halal,불고기,menuzen,16,CAUTION,닭고기(chicken),발효주(alcohol (incl. cooking wine)) / 소고기(beef) / 돼지고기(pork),4,불고기에 발효주가 들어가나요? / 불고기에 소고기가 들어가나요? / 불고기에 돼지고기가 들어가나요? / 불고기에 들어가는 닭고기가 할랄 인증 제품인가요?,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,호박전,menuzen,4,SAFE,,,0,,menuzen,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,닭날개,ai,0,CAUTION,닭날개(chicken),,1,닭날개에 들어가는 닭날개가 할랄 인증 제품인가요?,ai추정,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,고갈비,ai,0,WARNING,돼지고기(pork),,0,,ai추정,37.7,O,과잉,"고갈비=고등어구이, 돼지고기로 추정"
+스크린샷 2026-09-23 193421.png,halal,닭꼬지,ai,0,CAUTION,닭고기(chicken),,1,닭꼬지에 들어가는 닭고기가 할랄 인증 제품인가요?,ai추정,37.7,O,O,
+스크린샷 2026-09-23 193421.png,halal,게란말이,ai,0,SAFE,,,0,,ai추정,37.7,X,O,계란말이
+스크린샷 2026-09-23 193421.png,halal,청하/별빛청하,ai,0,SAFE,,,0,,ai추정,37.7,O,제외,음료인데 분석됨 / 수정됨→음료 제외
+스크린샷 2026-09-23 193421.png,halal,닭동집볶음,ai,0,CAUTION,닭고기(chicken),,1,닭동집볶음에 들어가는 닭고기가 할랄 인증 제품인가요?,ai추정,37.7,X,O,닭똥집볶음
+스크린샷 2026-09-23 193421.png,halal,스팸볶음,ai,0,WARNING,스팸(pork),,0,,ai추정,37.7,O,O,
+스크린샷 2026-09-23 200045.png,shrimp_allergy,낙지볶음,menuzen,1,SAFE,,,0,,menuzen,15.2,O,O,
+스크린샷 2026-09-23 200045.png,shrimp_allergy,낙새볶음,ai,0,CAUTION,,새우(shrimp),1,낙새볶음에 새우가 들어가나요?,ai추정,15.2,O,약함,새=새우 / 수정됨→WARNING
+스크린샷 2026-09-23 200045.png,shrimp_allergy,낙곱볶음,ai,0,SAFE,,,0,,ai추정,15.2,O,O,
+스크린샷 2026-09-23 200045.png,shrimp_allergy,낙곱새볶음,menu_base,0,WARNING,새우(shrimp),,0,,ai추정,15.2,O,O,
+스크린샷 2026-09-23 200045.png,shrimp_allergy,낙삼새볶음,ai,0,CAUTION,,새우(shrimp),1,낙삼새볶음에 새우가 들어가나요?,ai추정,15.2,O,약함,새=새우 / 수정됨→WARNING
+스크린샷 2026-09-23 200045.png,shrimp_allergy,수중전골,ai,0,CAUTION,,새우(shrimp),1,수중전골에 새우가 들어가나요?,ai추정,15.2,O,O,
+스크린샷 2026-09-23 200045.png,shrimp_allergy,불낙전골,menuzen,1,SAFE,,,0,,menuzen,15.2,O,O,
+스크린샷 2026-09-23 200045.png,shrimp_allergy,사리,menuzen,1,SAFE,,,0,,menuzen,15.2,O,O,
+스크린샷 2026-09-23 200045.png,shrimp_allergy,곱창추가,ai,0,SAFE,,,0,,ai추정,15.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,낙지볶음,menuzen,1,SAFE,,,0,,menuzen,0.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,낙새볶음,ai,0,SAFE,,,0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,낙곱볶음,ai,0,CAUTION,소곱창(beef),맛술(alcohol (incl. cooking wine)),2,낙곱볶음에 맛술이 들어가나요? / 낙곱볶음에 들어가는 소곱창이 할랄 인증 제품인가요?,ai추정,0.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,낙곱새볶음,menu_base,0,CAUTION,소곱창(beef),맛술(alcohol (incl. cooking wine)),2,낙곱새볶음에 맛술이 들어가나요? / 낙곱새볶음에 들어가는 소곱창이 할랄 인증 제품인가요?,ai추정,0.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,낙삼새볶음,ai,0,CAUTION,,삼겹살(pork),1,낙삼새볶음에 삼겹살이 들어가나요?,ai추정,0.2,O,약함,삼=삼겹살 / 수정됨→WARNING
+스크린샷 2026-09-23 200045.png,halal,수중전골,ai,0,SAFE,,,0,,ai추정,0.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,불낙전골,menuzen,1,CAUTION,소고기(beef),,1,불낙전골에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,0.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,사리,menuzen,1,CAUTION,소고기(beef),,1,사리에 들어가는 소고기가 할랄 인증 제품인가요?,menuzen,0.2,O,O,
+스크린샷 2026-09-23 200045.png,halal,곱창추가,ai,0,CAUTION,곱창(beef),,1,곱창추가에 들어가는 곱창이 할랄 인증 제품인가요?,ai추정,0.2,O,O,
+스크린샷 2026-09-23 200119.png,shrimp_allergy,순대국밥,menuzen,1,SAFE,,,0,,menuzen,22.0,O,위험,"같은 집 돼지국밥은 새우젓 질문, 순대국밥만 SAFE / 수정됨→CAUTION"
+스크린샷 2026-09-23 200119.png,shrimp_allergy,삼겹데지국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,삼겹데지국밥에 새우젓이 들어가나요?,ai추정,22.0,X,O,삼겹돼지국밥
+스크린샷 2026-09-23 200119.png,shrimp_allergy,얼큰국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,얼큰국밥에 새우젓이 들어가나요?,ai추정,22.0,O,O,
+스크린샷 2026-09-23 200119.png,shrimp_allergy,마늘순대백반,menu_base,0,SAFE,,,0,,ai추정,22.0,O,O,
+스크린샷 2026-09-23 200119.png,shrimp_allergy,마늘수육,ai,0,CAUTION,,새우(shrimp),1,마늘수육에 새우가 들어가나요?,ai추정,22.0,O,O,
+스크린샷 2026-09-23 200119.png,shrimp_allergy,수백당순대,menuzen,4,SAFE,,,0,,menuzen,22.0,O,O,
+스크린샷 2026-09-23 200119.png,shrimp_allergy,어린이국밥,menu_base,0,CAUTION,,새우젓(shrimp),1,어린이국밥에 새우젓이 들어가나요?,ai추정,22.0,O,O,
+스크린샷 2026-09-23 200119.png,shrimp_allergy,수백당곱새세트,menu_board,0,SAFE,,,0,,ai추정,22.0,O,위험,"곱새=곱창+새우, 메뉴판에도 새우 표기 / 수정됨→WARNING"
+스크린샷 2026-09-23 200119.png,shrimp_allergy,수백당곱새세트,menu_board,0,SAFE,,,0,,ai추정,22.0,O,위험,"곱새=곱창+새우, 메뉴판에도 새우 표기 / 수정됨→WARNING"
+스크린샷 2026-09-23 200119.png,shrimp_allergy,수백당곱새,menu_board,0,WARNING,새우(shrimp),,0,,ai추정,22.0,O,O,
+스크린샷 2026-09-23 200119.png,shrimp_allergy,수백당곱,ai,0,SAFE,,,0,,ai추정,22.0,O,O,
+스크린샷 2026-09-23 200119.png,halal,순대국밥,menuzen,1,WARNING,소 부산물(beef) / 소 부산물(meat) / 소고기(beef) / 돼지고기(pork),,0,,menuzen,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,삼겹데지국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,2.4,X,O,삼겹돼지국밥
+스크린샷 2026-09-23 200119.png,halal,얼큰국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,마늘순대백반,menu_base,0,WARNING,돼지 창자·선지(pork),,0,,ai추정,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,마늘수육,ai,0,WARNING,돼지고기(pork),맛술(alcohol (incl. cooking wine)),0,,ai추정,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,수백당순대,menuzen,4,WARNING,돼지 부산물(pork),,0,,menuzen,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,어린이국밥,menu_base,0,WARNING,돼지고기(pork) / 돼지뼈 육수(pork),순대(pork) / 돼지 내장(pork) / 돼지 수육(pork),0,,ai추정,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,수백당곱새세트,menu_board,0,WARNING,순대(pork),마늘수육(pork),0,,ai추정,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,수백당곱새세트,menu_board,0,WARNING,순대(pork),마늘수육(pork),0,,ai추정,2.4,O,O,
+스크린샷 2026-09-23 200119.png,halal,수백당곱새,menu_board,0,CAUTION,,곱창(meat),1,수백당곱새의 곱창에 고기가 들어가나요?,ai추정,2.4,O,약함,순대 포함 → WARNING이어야
+스크린샷 2026-09-23 200119.png,halal,수백당곱,ai,0,CAUTION,,곱창(meat),1,수백당곱의 곱창에 고기가 들어가나요?,ai추정,2.4,O,약함,순대 포함 → WARNING이어야

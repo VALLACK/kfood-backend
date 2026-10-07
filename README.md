@@ -128,6 +128,7 @@ API 상세는 `docs/API.md`, 피드백 반영 내역은 `docs/FEEDBACK_RESPONSE.
 | `docs/frontend/` | 수정 예시 코드(`ResultPage.example.jsx`), 실제 응답 예시 JSON |
 | `docs/EVALUATION.md` | 실사용 검증 결과 (메뉴판 9장·메뉴 136개) |
 | `docs/EVALUATION_SCORED.md` | 채점 결과 — 메뉴명 인식률, SAFE 오판 2건과 조치 |
+| `docs/EVALUATION_1005.md` | 10/05 재평가 — 메뉴판 12장, 메뉴명 88.8%, 위험 오판 12→2건 |
 | `docs/DEMO.md` | 시연 가이드 및 AI 구성 설명 |
 | `docs/ADDING_MENU_DATA.md` | 메뉴 데이터 추가 방법 |
 | `docs/FEEDBACK_RESPONSE.md` | 피드백 반영 정리 |

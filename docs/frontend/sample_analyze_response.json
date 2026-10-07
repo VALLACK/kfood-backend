@@ -1,42 +1,224 @@
 {
-  "scan_log_id": "a3f1c9e2-...",
+  "scan_log_id": null,
   "profile_applied": true,
   "results": [
     {
-      "menu": "짬뽕",
-      "menu_translated": "Jjamppong",
-      "description_translated": "Spicy seafood noodle soup with vegetables and meat.",
-      "data_source": "menuzen",
-      "matched_menu_db": true,
-      "base_menu": "짬뽕",
-      "family": ["짬뽕", "채소짬뽕", "짬뽕국", "배추백짬뽕탕", "백짬뽕국", "해물짬뽕", "차돌박이짬뽕국"],
+      "menu": "해물조개전골",
+      "menu_note": "3~4인분, 전복4,가리비4,오징어大,꽃게,새우2,낙지,어묵,조개류다수",
+      "menu_translated": "Seafood & Clam Hot Pot",
+      "description_translated": "A spicy hot pot with abalone, scallops, crab, shrimp and clams.",
+      "base_menu": null,
+      "resolved_variant": null,
+      "variant_options": [],
+      "matched_menu_db": false,
+      "data_source": "menu_board",
+      "provisional": false,
+      "family": [],
       "ingredients": [
         {
-          "name": "우동면",
-          "name_translated": "Noodle, Udong, Boiled",
-          "tags": ["wheat"],
+          "name": "전복",
+          "name_translated": "Abalone",
+          "tags": [
+            "shellfish"
+          ],
           "certainty": "confirmed",
-          "source": "menuzen",
-          "weight_g": 100,
-          "ratio_percent": 35.2,
-          "ratio_source": "menuzen"
+          "ratio_percent": 75.0,
+          "source": "menu_board",
+          "seen_in": [
+            "메뉴판 표기"
+          ]
         },
         {
-          "name": "오징어",
-          "name_translated": "Japanese flying squid",
-          "tags": ["squid"],
+          "name": "고추장",
+          "name_translated": "Red chili paste",
+          "tags": [
+            "soy",
+            "wheat"
+          ],
+          "certainty": "possible",
+          "ratio_percent": 25.0,
+          "source": "ai"
+        },
+        {
+          "name": "어묵",
+          "name_translated": null,
+          "tags": [
+            "fish",
+            "wheat"
+          ],
           "certainty": "confirmed",
-          "source": "menuzen",
-          "ratio_percent": 10.6,
-          "ratio_source": "menuzen"
+          "source": "menu_board",
+          "ratio_percent": null,
+          "seen_in": [
+            "메뉴판 표기"
+          ]
+        },
+        {
+          "name": "꽃게",
+          "name_translated": null,
+          "tags": [
+            "crab"
+          ],
+          "certainty": "confirmed",
+          "source": "menu_board",
+          "ratio_percent": null,
+          "seen_in": [
+            "메뉴판 표기"
+          ]
         },
         {
           "name": "새우",
-          "name_translated": "Shrimp",
-          "tags": ["shrimp"],
+          "name_translated": null,
+          "tags": [
+            "shrimp"
+          ],
+          "certainty": "confirmed",
+          "source": "menu_board",
+          "ratio_percent": null,
+          "seen_in": [
+            "메뉴판 표기"
+          ]
+        },
+        {
+          "name": "오징어",
+          "name_translated": null,
+          "tags": [
+            "squid"
+          ],
+          "certainty": "confirmed",
+          "source": "menu_board",
+          "ratio_percent": null,
+          "seen_in": [
+            "메뉴판 표기"
+          ]
+        },
+        {
+          "name": "낙지",
+          "name_translated": null,
+          "tags": [
+            "mollusk"
+          ],
+          "certainty": "confirmed",
+          "source": "menu_board",
+          "ratio_percent": null,
+          "seen_in": [
+            "메뉴판 표기"
+          ]
+        }
+      ],
+      "custom_allergen_hits": [],
+      "risk": {
+        "level": "WARNING",
+        "confirmed_reasons": [
+          {
+            "kind": "allergy",
+            "tag": "shrimp",
+            "label": "shrimp",
+            "ingredient": "새우",
+            "certainty": "confirmed",
+            "severity": "심각"
+          }
+        ],
+        "possible_reasons": [],
+        "needs_confirmation": false,
+        "staff_questions": [],
+        "notes": []
+      }
+    },
+    {
+      "menu": "돼지국밥",
+      "menu_note": null,
+      "menu_translated": "Pork Rice Soup",
+      "description_translated": "Busan-style pork bone broth soup with rice.",
+      "base_menu": "돼지국밥",
+      "resolved_variant": null,
+      "variant_options": [
+        "순대국밥",
+        "내장국밥",
+        "수육국밥"
+      ],
+      "matched_menu_db": true,
+      "data_source": "menu_base",
+      "provisional": false,
+      "family": [],
+      "ingredients": [
+        {
+          "name": "돼지고기",
+          "tags": [
+            "pork"
+          ],
+          "certainty": "confirmed",
+          "source": "menu_db",
+          "name_translated": "Pork",
+          "ratio_percent": 100.0
+        },
+        {
+          "name": "돼지뼈 육수",
+          "tags": [
+            "pork"
+          ],
+          "certainty": "confirmed",
+          "source": "menu_db",
+          "name_translated": null,
+          "ratio_percent": null
+        },
+        {
+          "name": "밥",
+          "tags": [],
+          "certainty": "confirmed",
+          "source": "menu_db",
+          "name_translated": null,
+          "ratio_percent": null
+        },
+        {
+          "name": "순대",
+          "tags": [
+            "pork"
+          ],
           "certainty": "possible",
-          "source": "family",
-          "seen_in": ["배추백짬뽕탕", "백짬뽕국", "해물짬뽕"],
+          "source": "variant",
+          "variant": "순대국밥",
+          "name_translated": null,
+          "ratio_percent": null
+        },
+        {
+          "name": "돼지 내장",
+          "tags": [
+            "pork"
+          ],
+          "certainty": "possible",
+          "source": "variant",
+          "variant": "내장국밥",
+          "name_translated": null,
+          "ratio_percent": null
+        },
+        {
+          "name": "돼지 수육",
+          "tags": [
+            "pork"
+          ],
+          "certainty": "possible",
+          "source": "variant",
+          "variant": "수육국밥",
+          "name_translated": null,
+          "ratio_percent": null
+        },
+        {
+          "name": "새우젓",
+          "tags": [
+            "shrimp"
+          ],
+          "certainty": "possible",
+          "source": "hidden",
+          "name_translated": null,
+          "ratio_percent": null
+        },
+        {
+          "name": "부추",
+          "tags": [],
+          "certainty": "possible",
+          "source": "hidden",
+          "name_translated": null,
           "ratio_percent": null
         }
       ],
@@ -49,7 +231,7 @@
             "kind": "allergy",
             "tag": "shrimp",
             "label": "shrimp",
-            "ingredient": "새우",
+            "ingredient": "새우젓",
             "certainty": "possible",
             "severity": "심각"
           }
@@ -58,13 +240,15 @@
         "staff_questions": [
           {
             "kind": "contains",
-            "ingredient": "새우",
+            "ingredient": "새우젓",
             "tag": "shrimp",
-            "tags": ["shrimp"],
+            "tags": [
+              "shrimp"
+            ],
             "options": [],
-            "ko": "짬뽕에 새우가 들어가나요?",
+            "ko": "돼지국밥에 새우젓이 들어가나요?",
             "user_lang": "en",
-            "translated": "Does the Jjamppong contain shrimp?"
+            "translated": "Does the Pork Rice Soup contain shrimp?"
           }
         ],
         "notes": []

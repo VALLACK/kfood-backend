@@ -65,7 +65,7 @@ navigate('/result', { state: { menus: res.data.menus, ocrText: res.data.text } }
 `/ocr` 응답:
 ```json
 {
-  "text": "짬뽕 9,000\n짜장면 7,000 ...",
+  "text": "짬뽕\n돌게탕",
   "menus": [
     { "name": "짬뽕", "price": "9,000", "note": null },
     { "name": "돌게탕", "price": "40,000", "note": "전복2,가리비2,꽃게,새우2,낙지,조개다수" }

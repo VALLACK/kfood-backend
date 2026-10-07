@@ -21,12 +21,13 @@
 ## POST /ocr
 multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로 자동 압축)
 ```json
-{"text": "짬뽕 9,000\n짜장면 7,000",
+{"text": "짬뽕\n돌게탕",
  "menus": [{"name": "짬뽕", "price": "9,000", "note": null},
            {"name": "돌게탕", "price": "40,000", "note": "전복2,가리비2,꽃게,새우2,낙지,조개다수"}],
  "skipped": ["소주", "음료수"],
  "origin_info": ["돼지고기: 국내산"]}
 ```
+`text`는 `menus`의 메뉴명을 줄바꿈으로 이은 것(이전 버전 호환용). 메뉴판 원문은 돌려주지 않는다 — AI 출력 한도 때문.
 
 ## POST /analyze
 ```json
