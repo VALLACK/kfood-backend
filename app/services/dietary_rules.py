@@ -213,11 +213,14 @@ def evaluate(menu_name: str, ingredients: list[dict], profile: DietProfile, menu
         options = list(dict.fromkeys(i["variant"] for i in ingredients if i.get("source") == "variant" and i.get("variant")))
         options.append(OTHER_OPTION)
         tpl = QUESTION_TEMPLATES["variant"]
+        ko = tpl["ko"].format(menu=menu_name, eunneun=_josa(menu_name, "은", "는"), options=" / ".join(options))
         questions.append({
             "kind": "variant", "ingredient": None, "tag": None, "tags": [], "options": options,
-            "ko": tpl["ko"].format(menu=menu_name, eunneun=_josa(menu_name, "은", "는"), options=" / ".join(options)),
+            "ko": ko,
             "user_lang": lang,
-            "translated": tpl[lang].format(menu_t=menu_t, options=" / ".join(OTHER_LABEL[lang] if o == OTHER_OPTION else o for o in options)),
+            # 사용자 언어가 한국어면 한국어 질문을 그대로 쓴다 (ko 템플릿은 {menu}를 써서 menu_t로 채울 수 없음)
+            "translated": ko if lang == "ko" else
+                tpl[lang].format(menu_t=menu_t, options=" / ".join(OTHER_LABEL[lang] if o == OTHER_OPTION else o for o in options)),
         })
 
     vkind = "kosher_meat" if profile.religious_diet == "kosher" else "halal_meat"
@@ -235,7 +238,8 @@ def evaluate(menu_name: str, ingredients: list[dict], profile: DietProfile, menu
                 "kind": kind, "ingredient": name, "tag": tags[0], "tags": tags, "options": [],
                 "ko": ko,
                 "user_lang": lang,
-                "translated": tpl[lang].format(menu_t=menu_t, labels=sep.join(label(t, lang) for t in tags)),
+                "translated": ko if lang == "ko" else
+                    tpl[lang].format(menu_t=menu_t, labels=sep.join(label(t, lang) for t in tags)),
             })
 
     if level == "WARNING":
