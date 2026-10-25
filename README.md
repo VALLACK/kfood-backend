@@ -64,6 +64,7 @@ scripts/
 ├── add_menu.py              # 미매칭으로 기록된 메뉴를 menu_base.json에 추가
 ├── evaluate_menus.py        # 메뉴판 사진으로 실사용 검증 → eval_result/
 ├── warm_cache.py            # 시연 전날 시연 메뉴판을 미리 분석해 캐시 채우기
+├── replay_eval.py           # 평가 원본으로 위험 오판 수정 효과 재확인 (Groq 호출 없음)
 └── migrate_menu_items.py    # (진행 중) menu_base.json → Supabase menu_items 테이블 이관. SUPABASE_SECRET_KEY 필요, --dry-run으로 먼저 확인
 
 supabase/

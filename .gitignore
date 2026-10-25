@@ -7,6 +7,7 @@ __pycache__/
 *:Zone.Identifier
 photos/
 eval_result/
+eval_*/
 eval_check/
 app/data/analysis_cache.json
 app/data/unmatched_menus.json
