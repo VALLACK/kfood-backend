@@ -25,9 +25,11 @@ multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로
  "menus": [{"name": "짬뽕", "price": "9,000", "note": null},
            {"name": "돌게탕", "price": "40,000", "note": "전복2,가리비2,꽃게,새우2,낙지,조개다수"}],
  "skipped": ["소주", "음료수"],
- "origin_info": ["돼지고기: 국내산"]}
+ "origin_info": ["돼지고기: 국내산"],
+ "truncated": false}
 ```
 `text`는 `menus`의 메뉴명을 줄바꿈으로 이은 것(이전 버전 호환용). 메뉴판 원문은 돌려주지 않는다 — AI 출력 한도 때문.
+`truncated`가 `true`면 메뉴가 너무 많아 AI 답이 출력 상한(1000토큰)에서 잘린 것이다. `menus`에는 끝까지 읽은 메뉴만 들어 있고 뒤쪽 메뉴가 빠졌을 수 있다.
 
 ## POST /analyze
 ```json

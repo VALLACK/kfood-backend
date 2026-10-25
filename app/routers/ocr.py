@@ -118,6 +118,7 @@ def extract_text(file: UploadFile):
     data, mime = _compress(data)
     b64 = base64.b64encode(data).decode()
 
+    meta: dict = {}
     result = groq_service.chat_json(
         settings.GROQ_VISION_MODEL,
         [{"role": "user", "content": [
@@ -127,6 +128,7 @@ def extract_text(file: UploadFile):
         max_tokens=OCR_MAX_TOKENS,
         reasoning_effort="none",    # qwen 계열 '생각 과정' 끄기 — 출력 토큰·시간 절약 (미지원이면 빼고 재시도)
         reasoning_format="hidden",  # 그래도 나오는 추론 텍스트는 숨김 (미지원이면 빼고 재시도)
+        meta=meta,
     )
     menus = [{"name": m["name"], "price": m.get("price"), "note": m.get("note") or None}
              for m in result.get("menus", []) if isinstance(m, dict) and m.get("name")]
@@ -139,4 +141,7 @@ def extract_text(file: UploadFile):
         "menus": menus,
         "skipped": [m["name"] for m in drinks],  # 음료·주류 등 분석 제외 항목
         "origin_info": result.get("origin_info", []),
+        # 메뉴가 아주 많아 AI 출력 상한(1000토큰)에서 잘렸으면 true → 뒤쪽 메뉴가 빠졌을 수 있다.
+        # 프론트는 "일부 메뉴만 인식됨 — 나머지는 나눠서 찍어주세요" 안내를 띄우면 된다.
+        "truncated": bool(meta.get("truncated")),
     }

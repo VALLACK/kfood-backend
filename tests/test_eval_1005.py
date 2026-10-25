@@ -181,3 +181,80 @@ def test_unsupported_option_is_dropped_one_by_one(monkeypatch):
     monkeypatch.setattr(groq_service, "get_client", lambda: Client)
     assert groq_service.chat_json("m", [], reasoning_effort="none", reasoning_format="hidden") == {"ok": 1}
     assert "reasoning_format" in sent[-1] and "reasoning_effort" not in sent[-1]
+
+
+# ── 리뷰 반영 (PR #7): OCR 잘림 표시, 수정 후 수치 재현 ──────────────
+
+def _client_returning(monkeypatch, content, finish_reason="stop"):
+    class Msg:
+        pass
+    Msg.content = content
+
+    class Choice:
+        message = Msg
+    Choice.finish_reason = finish_reason
+
+    class Resp:
+        choices = [Choice]
+
+    class Client:
+        class chat:
+            class completions:
+                @staticmethod
+                def create(**k):
+                    return Resp
+
+    monkeypatch.setattr(groq_service, "get_client", lambda: Client)
+
+
+def test_meta_reports_truncation_when_json_was_repaired(monkeypatch):
+    _client_returning(monkeypatch, '{"menus": [{"name": "아구찜"}, {"name": "아구', finish_reason="length")
+    meta = {}
+    data = groq_service.chat_json("m", [], meta=meta)
+    assert data == {"menus": [{"name": "아구찜"}]}
+    assert meta["truncated"] is True
+
+
+def test_meta_reports_no_truncation_for_complete_answer(monkeypatch):
+    _client_returning(monkeypatch, '{"menus": [{"name": "아구찜"}]}')
+    meta = {}
+    groq_service.chat_json("m", [], meta=meta)
+    assert meta["truncated"] is False
+
+
+def _post_ocr(monkeypatch, truncated):
+    import io
+    from fastapi.testclient import TestClient
+    from PIL import Image
+    from app.main import app
+
+    def fake(model, messages, meta=None, **extra):
+        if meta is not None:
+            meta["truncated"] = truncated
+        return {"menus": [{"name": "아구찜"}], "origin_info": []}
+
+    monkeypatch.setattr(groq_service, "chat_json", fake)
+    buf = io.BytesIO()
+    Image.new("RGB", (40, 40), "white").save(buf, format="PNG")
+    return TestClient(app).post("/ocr", files={"file": ("m.png", buf.getvalue(), "image/png")}).json()
+
+
+def test_ocr_response_flags_truncated_menu_list(monkeypatch):
+    """메뉴가 많아 뒤쪽이 잘리면 프론트가 '일부 메뉴만 인식됨'을 띄울 수 있게 알려준다."""
+    assert _post_ocr(monkeypatch, True)["truncated"] is True
+    assert _post_ocr(monkeypatch, False)["truncated"] is False
+
+
+def test_replay_reproduces_documented_numbers(capsys, monkeypatch):
+    """EVALUATION_1005.md의 '위험 오판 12건 → 2건'은 저장소의 원본으로 재현된다."""
+    import sys
+    from scripts import replay_eval
+    from app.services import analysis_cache
+
+    monkeypatch.setattr(sys, "argv", ["replay_eval"])
+    monkeypatch.setattr(groq_service, "chat_json", groq_service.chat_json)   # 스크립트가 바꾼 것을 테스트 후 원복
+    monkeypatch.setattr(analysis_cache, "PATH", analysis_cache.PATH)
+    replay_eval.main()
+    out = capsys.readouterr().out
+    assert "위험 오판 12건 → 2건" in out
+    assert "99.4%" in out

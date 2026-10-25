@@ -57,23 +57,28 @@ def _repair_truncated(text: str) -> str | None:
     return text[start:cut] + "".join(reversed(cut_stack))
 
 
-def parse_json(text: str):
+def _parse(text: str) -> tuple[dict, bool]:
+    """(결과, 잘림 복구 여부)를 돌려준다."""
     text = _THINK_RE.sub("", text or "").strip()
     text = text.removeprefix("```json").removeprefix("```").removesuffix("```").strip()
     try:
-        return json.loads(text)
+        return json.loads(text), False
     except json.JSONDecodeError:
         # 앞뒤 잡음이 섞였을 때 첫 { 또는 [ 부터 마지막 } 또는 ] 까지 잘라서 재시도
         m = re.search(r"[\{\[].*[\}\]]", text, re.DOTALL)
         if m:
             try:
-                return json.loads(m.group(0))
+                return json.loads(m.group(0)), False
             except json.JSONDecodeError:
                 pass
         fixed = _repair_truncated(text)   # 출력이 중간에 끊긴 경우
         if fixed:
-            return json.loads(fixed)
+            return json.loads(fixed), True
         raise
+
+
+def parse_json(text: str):
+    return _parse(text)[0]
 
 
 class AIUnavailable(HTTPException):
@@ -103,8 +108,12 @@ def _create_dropping_unsupported(client, kwargs: dict, optional: list[str]):
                 kwargs.pop(k, None)
 
 
-def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries: int = 4, **extra) -> dict:
-    """JSON object 모드로 호출하고 dict를 반환. 429(분당 한도)/5xx/파싱 실패 시 대기 후 재시도."""
+def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries: int = 4,
+              meta: dict | None = None, **extra) -> dict:
+    """JSON object 모드로 호출하고 dict를 반환. 429(분당 한도)/5xx/파싱 실패 시 대기 후 재시도.
+
+    meta에 dict를 넘기면 meta["truncated"]에 '출력 상한에 걸려 답이 잘렸는지'를 적어준다.
+    """
     client = get_client()
     last_err: Exception | None = None
     for attempt in range(retries + 1):
@@ -112,7 +121,10 @@ def chat_json(model: str, messages: list[dict], max_tokens: int = 3000, retries:
             kwargs = dict(model=model, messages=messages, max_tokens=max_tokens, temperature=0.1,
                           response_format={"type": "json_object"}, **extra)
             resp = _create_dropping_unsupported(client, kwargs, list(extra))
-            return parse_json(resp.choices[0].message.content or "")
+            data, repaired = _parse(resp.choices[0].message.content or "")
+            if meta is not None:
+                meta["truncated"] = repaired or getattr(resp.choices[0], "finish_reason", None) == "length"
+            return data
         except RateLimitError as e:  # 분당 토큰·요청 한도 → 헤더가 알려주는 시간만큼 대기
             if "Request too large" in str(e):
                 # 요청 하나가 분당 한도보다 크다 → 기다려도 같은 결과. 바로 실패시킨다(10/05 평가에서 77초 낭비)

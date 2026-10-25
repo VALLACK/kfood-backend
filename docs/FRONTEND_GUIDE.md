@@ -71,9 +71,11 @@ navigate('/result', { state: { menus: res.data.menus, ocrText: res.data.text } }
     { "name": "돌게탕", "price": "40,000", "note": "전복2,가리비2,꽃게,새우2,낙지,조개다수" }
   ],
   "skipped": ["소주", "음료수"],
-  "origin_info": ["소고기(국산), 돼지고기(독일산)"]
+  "origin_info": ["소고기(국산), 돼지고기(독일산)"],
+  "truncated": false
 }
 ```
+`truncated: true`면 메뉴가 많아 뒤쪽 일부가 빠졌을 수 있습니다. "일부 메뉴만 인식됐어요. 나머지는 나눠서 찍어주세요" 같은 안내를 띄워주세요.
 `menus`를 넘기면 텍스트 재파싱을 건너뛰어 더 정확하고 빠릅니다. 음료·주류는 `skipped`로 자동 제외됩니다.
 
 **`note`는 꼭 같이 넘겨주세요.** 메뉴판 괄호에 인쇄된 재료 문구입니다.
