@@ -19,6 +19,9 @@ class Settings:
         o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()
     ]
 
+    # 미리 알아보기 — 구글 평점 조회용 (없으면 평점 없이 동작)
+    GOOGLE_MAPS_API_KEY: str = os.environ.get("GOOGLE_MAPS_API_KEY", "")
+
     ENABLE_OPS_ROUTES: bool = os.environ.get("ENABLE_OPS_ROUTES", "") == "1"
 
     # Groq base64 이미지 한도 4MB → 여유 있게 3MB로 압축

@@ -65,6 +65,39 @@ multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로
 - `certainty`: confirmed(필수) / possible(가게마다 다름) / excluded(직원이 없다고 확인)
 - 위험도는 LLM이 아니라 `app/services/dietary_rules.py` 규칙이 계산 → 테스트로 정확도 검증 가능
 
+## POST /restaurants/search — 미리 알아보기 (가기 전에 식당 검색)
+저장해 둔 식당을 **내 프로필 기준으로 판정**해서 보여준다. AI를 부르지 않는다(저장된 메뉴판 분석 결과에 규칙만 다시 적용).
+로그인 사용자는 DB 프로필, 게스트는 body의 `profile`을 쓴다(/analyze와 같음).
+```json
+// 요청
+{"q": "국밥", "only_edible": true, "sort": "rating",
+ "profile": {"allergies": ["shellfish"], "preferred_language": "en"}}
+// 응답
+{"profile_applied": true,
+ "rating_attribution": "평점: Google",
+ "restaurants": [
+   {"id": "chakhan-gukbap", "name": "착한국밥", "area": "연제구 거제동", "category": "국밥", "name_confirmed": true,
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=...",
+    "summary": {"safe": 1, "caution": 11, "warning": 0, "safe_menus": ["순대 1접시"]},
+    "google": {"rating": 4.4, "count": 312, "maps_url": "https://maps.google.com/...", "source": "Google"}}
+ ]}
+```
+- `q`: 식당 이름·지역·업종·**메뉴명**으로 찾는다. 비우면 전체.
+- `only_edible`: 먹을 수 있는(SAFE) 메뉴가 1개 이상인 식당만.
+- `sort`: `rating`(구글 평점 높은 순, 평점 없는 식당은 뒤) | `edible`(먹을 수 있는 메뉴 많은 순).
+- `google`: 구글 평점. 키가 없거나 조회 실패면 `null`. **평점은 저장하지 않고 요청 때마다 구글에서 불러온다**(구글 정책).
+  화면에 평점을 보여줄 때는 `rating_attribution`("평점: Google")을 함께 표시할 것.
+
+## POST /restaurants/{id} — 식당 상세
+```json
+{"profile": {"allergies": ["shellfish"]}}   // body는 게스트일 때만, 로그인이면 생략 가능
+```
+→ `{id, name, area, category, summary, google, results, rating_attribution}`.
+`results`는 **/analyze의 results와 같은 형식**(직원 질문 `staff_questions` 포함) + `prices`. 먹을 수 있는 메뉴부터 정렬된다.
+
+식당 추가: `python -m scripts.add_restaurant --id ... --name ... --photo 메뉴판.jpg` (서버 켜고 실행, AI 사용)
+구글 식당 ID 채우기: `python -m scripts.find_place_ids --write` (`.env`의 `GOOGLE_MAPS_API_KEY` 필요)
+
 ## POST /qna
 `{"scan_log_id": "...", "menu_result": {...results[i]}, "question": "How spicy is it?", "input_type": "text"}`
 → `{"answer": "...", "staff_question_ko": "많이 맵나요? | null"}`

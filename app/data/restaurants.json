@@ -1,0 +1,8425 @@
+{
+ "_comment": "미리 알아보기용 식당 데이터. 판정·평점은 저장하지 않고 요청 때 계산/조회한다. name_confirmed=false인 식당은 상호를 확인해서 고칠 것.",
+ "restaurants": [
+  {
+   "id": "hadan-dolgetang",
+   "name": "하단 돌게탕",
+   "area": "사하구 하단동",
+   "category": "해물탕",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "10/05 평가 메뉴판 사진 스크린샷 2026-09-23 193106.png",
+   "menus": [
+    {
+     "name": "돌게탕",
+     "prices": [
+      "40,000"
+     ],
+     "note": "3~4인분, 전복2,가리비2,오징어中,꽃게,새우2,낙지,대구,알,곤,조개다수",
+     "ai": {
+      "menu": "돌게탕",
+      "menu_translated": "Stone Crab Soup",
+      "ingredients": [
+       {
+        "name": "전복",
+        "name_translated": "abalone",
+        "tags": [
+         "mollusk",
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "가리비",
+        "name_translated": "scallop",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "오징어",
+        "name_translated": "squid",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 12.0
+       },
+       {
+        "name": "꽃게",
+        "name_translated": "crab",
+        "tags": [
+         "crab"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 12.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "낙지",
+        "name_translated": "octopus",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "대구",
+        "name_translated": "cod",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 13.0
+       },
+       {
+        "name": "조개",
+        "name_translated": "clam",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 13.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "돌게탕(대)",
+     "prices": [
+      "62,000"
+     ],
+     "note": "3~4인분, 전복2,가리비2,오징어中,꽃게,새우2,낙지,대구,알,곤,조개다수",
+     "ai": {
+      "menu": "돌게탕(대)",
+      "menu_translated": "Stone Crab Soup (Large)",
+      "ingredients": [
+       {
+        "name": "전복",
+        "name_translated": "abalone",
+        "tags": [
+         "mollusk",
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "가리비",
+        "name_translated": "scallop",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "오징어",
+        "name_translated": "squid",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 12.0
+       },
+       {
+        "name": "꽃게",
+        "name_translated": "crab",
+        "tags": [
+         "crab"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 12.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "낙지",
+        "name_translated": "octopus",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "대구",
+        "name_translated": "cod",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 13.0
+       },
+       {
+        "name": "조개",
+        "name_translated": "clam",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 13.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "해물탕",
+     "prices": [
+      "55,000"
+     ],
+     "note": "3~4인분, 전복4,가리비4,오징어大,꽃게,새우2,낙지,대구,곤,발,조개다수",
+     "ai": {
+      "menu": "해물탕",
+      "menu_translated": "Seafood Soup",
+      "ingredients": [
+       {
+        "name": "오징어",
+        "name_translated": "Japanese flying squid, Roasted",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 22.6
+       },
+       {
+        "name": "조개",
+        "name_translated": "Jedo venus, Raw",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 7.5
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "꽃게",
+        "name_translated": null,
+        "tags": [
+         "crab"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "낙지",
+        "name_translated": null,
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "해물탕(대)",
+     "prices": [
+      "70,000"
+     ],
+     "note": "3~4인분, 전복4,가리비4,오징어大,꽃게,새우2,낙지,대구,곤,발,조개다수",
+     "ai": {
+      "menu": "해물탕(대)",
+      "menu_translated": "Seafood Soup (Large)",
+      "ingredients": [
+       {
+        "name": "오징어",
+        "name_translated": "Japanese flying squid, Roasted",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 22.6
+       },
+       {
+        "name": "조개",
+        "name_translated": "Jedo venus, Raw",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 7.5
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "꽃게",
+        "name_translated": null,
+        "tags": [
+         "crab"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "낙지",
+        "name_translated": null,
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "산우럭매운탕",
+     "prices": [
+      "38,000"
+     ],
+     "note": "국내산 3마리 이상 400g이상",
+     "ai": null
+    },
+    {
+     "name": "산우럭구이",
+     "prices": [
+      "53,000",
+      "25,000"
+     ],
+     "note": "국내산",
+     "ai": {
+      "menu": "산우럭구이",
+      "menu_translated": "Grilled Rockfish",
+      "ingredients": [
+       {
+        "name": "우럭",
+        "name_translated": "rockfish",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 80.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "레몬",
+        "name_translated": "lemon",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "산조개탕",
+     "prices": [
+      "35,000"
+     ],
+     "note": "국내산 가리비3,전복2,닭1, 중국산 조개다수",
+     "ai": {
+      "menu": "산조개탕",
+      "menu_translated": "Mountain Clam Soup",
+      "ingredients": [
+       {
+        "name": "조개",
+        "name_translated": "Chinese cyclina, Raw",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 78.4
+       },
+       {
+        "name": "가리비",
+        "name_translated": "Scallop",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "전복",
+        "name_translated": "Abalone",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "닭",
+        "name_translated": "Chicken",
+        "tags": [
+         "chicken"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "해물조개전골",
+     "prices": [
+      "70,000"
+     ],
+     "note": "3~4인분, 전복4,가리비4,오징어大,꽃게,새우2,낙지,대구,곤,발,조개다수",
+     "ai": {
+      "menu": "해물조개전골",
+      "menu_translated": "Seafood Clam Hot Pot",
+      "ingredients": [
+       {
+        "name": "전복",
+        "name_translated": "Abalone",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "가리비",
+        "name_translated": "Scallop",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "오징어",
+        "name_translated": "Squid",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "꽃게",
+        "name_translated": "Flower Crab",
+        "tags": [
+         "crab"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "Shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "낙지",
+        "name_translated": "Octopus",
+        "tags": [
+         "mollusk",
+         "squid"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "대구",
+        "name_translated": "Cod",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "조개",
+        "name_translated": "Clam",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "산가리비찜",
+     "prices": [
+      "50,000"
+     ],
+     "note": "일본산 9~14마리",
+     "ai": {
+      "menu": "산가리비찜",
+      "menu_translated": "Mountain Scallop Steamed",
+      "ingredients": [
+       {
+        "name": "가리비",
+        "name_translated": "Scallop",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "파",
+        "name_translated": "Green Onion",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Chili Pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame Oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "산소라숙회",
+     "prices": [
+      "40,000"
+     ],
+     "note": "국내산 뼈돌이 1,000g",
+     "ai": {
+      "menu": "산소라숙회",
+      "menu_translated": "Mountain Sea Snail Sashimi",
+      "ingredients": [
+       {
+        "name": "소라",
+        "name_translated": "Sea Snail",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 80.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "파",
+        "name_translated": "Green Onion",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Chili Pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 3.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame Oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 2.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "산눈지방탕탕이",
+     "prices": [
+      "35,000"
+     ],
+     "note": "국내산 12月~6月",
+     "ai": {
+      "menu": "산눈지방탕탕이",
+      "menu_translated": "Mountain Nunjibang Soup",
+      "ingredients": [
+       {
+        "name": "생선",
+        "name_translated": "Fish",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "파",
+        "name_translated": "Green Onion",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Chili Pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "산해물모듬",
+     "prices": [
+      "50,000"
+     ],
+     "note": "국내산 멍게,낙지,전복2,소라",
+     "ai": {
+      "menu": "산해물모듬",
+      "menu_translated": "Mountain Seafood Assortment",
+      "ingredients": [
+       {
+        "name": "멍게",
+        "name_translated": "Sea Squirt",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "낙지",
+        "name_translated": "Octopus",
+        "tags": [
+         "mollusk",
+         "squid"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "전복",
+        "name_translated": "Abalone",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "소라",
+        "name_translated": "Sea Snail",
+        "tags": [
+         "mollusk",
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "파",
+        "name_translated": "Green Onion",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Chili Pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "소갈비찜",
+     "prices": [
+      "44,000"
+     ],
+     "note": "호주산 1000g/2000g",
+     "ai": null
+    },
+    {
+     "name": "소갈비찜(대)",
+     "prices": [
+      "83,000"
+     ],
+     "note": "호주산 1000g/2000g",
+     "ai": null
+    },
+    {
+     "name": "돼지등갈비찜",
+     "prices": [
+      "33,000"
+     ],
+     "note": "제주도산 1000g/2000g",
+     "ai": null
+    },
+    {
+     "name": "돼지등갈비찜(대)",
+     "prices": [
+      "62,000"
+     ],
+     "note": "제주도산 1000g/2000g",
+     "ai": null
+    },
+    {
+     "name": "산소라구이",
+     "prices": [
+      "20,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "산소라구이",
+      "menu_translated": "Grilled Sea Snail",
+      "ingredients": [
+       {
+        "name": "소라",
+        "name_translated": "sea snail",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 75.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "chili pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "털게찜, 과메기",
+     "prices": [],
+     "note": "3月~6月, 10月~2月",
+     "ai": {
+      "menu": "털게찜, 과메기",
+      "menu_translated": "Steamed Hair Crab and Dried Pollack",
+      "ingredients": [
+       {
+        "name": "털게",
+        "name_translated": "Hair Crab",
+        "tags": [
+         "crab"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "과메기",
+        "name_translated": "Dried Pollack",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame Oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "맑은국 우동,곤약사리",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "맑은국 우동,곤약사리",
+      "menu_translated": "Clear Soup Udon with Konjac Noodles",
+      "ingredients": [
+       {
+        "name": "우동면",
+        "name_translated": "Udon Noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 50.0
+       },
+       {
+        "name": "다시육수",
+        "name_translated": "Fish Broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "곤약사리",
+        "name_translated": "Konjac Noodles",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "통나무죽",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "통나무죽",
+      "menu_translated": "Log-shaped Rice Porridge",
+      "ingredients": [
+       {
+        "name": "쌀",
+        "name_translated": "Rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "다시육수",
+        "name_translated": "Fish Broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "계란",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "대구알2,라2",
+     "prices": [
+      "5,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "대구알2,라2",
+      "menu_translated": "Cod Roe and \"Ra\"",
+      "ingredients": [
+       {
+        "name": "대구알",
+        "name_translated": "Cod Roe",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 80.0
+       },
+       {
+        "name": "라",
+        "name_translated": "Ra (unspecified)",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "란전",
+     "prices": [
+      "1,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "란전",
+      "menu_translated": "Egg Pancake",
+      "ingredients": [
+       {
+        "name": "계란",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "Wheat Flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "haemulnara",
+   "name": "해물나라 총각집",
+   "area": "서구 암남동",
+   "category": "조개구이",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "10/05 평가 메뉴판 사진 스크린샷 2026-09-23 193307.png",
+   "menus": [
+    {
+     "name": "조개구이",
+     "prices": [
+      "60,000",
+      "70,000",
+      "80,000",
+      "90,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "해산물 모듬",
+     "prices": [
+      "50,000",
+      "60,000",
+      "70,000",
+      "80,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "해산물 모듬",
+      "menu_translated": "Seafood Platter",
+      "ingredients": [
+       {
+        "name": "조개류",
+        "name_translated": "Shellfish",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 40.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "Shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "오징어",
+        "name_translated": "Squid",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "연어",
+        "name_translated": "Salmon",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "조개구이 볶음밥",
+     "prices": [
+      "2,000"
+     ],
+     "note": "1인",
+     "ai": {
+      "menu": "조개구이 볶음밥",
+      "menu_translated": "Grilled Clam Fried Rice",
+      "ingredients": [
+       {
+        "name": "밥",
+        "name_translated": "cooked rice",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "식용유",
+        "name_translated": "cooking oil",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "또띠아",
+     "prices": [
+      "2,000"
+     ],
+     "note": "10장",
+     "ai": {
+      "menu": "또띠아",
+      "menu_translated": "Tortilla",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 80.0
+       },
+       {
+        "name": "식용유",
+        "name_translated": "cooking oil",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "전복죽",
+     "prices": [
+      "30,000"
+     ],
+     "note": "2인",
+     "ai": null
+    },
+    {
+     "name": "왕새우 버터구이",
+     "prices": [
+      "20,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "왕새우 버터구이",
+      "menu_translated": "King Shrimp Butter Grill",
+      "ingredients": [
+       {
+        "name": "왕새우",
+        "name_translated": "king shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "식용유",
+        "name_translated": "cooking oil",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "전복 버터구이",
+     "prices": [
+      "30,000",
+      "40,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "전복 버터구이",
+      "menu_translated": "Grilled Abalone with Butter",
+      "ingredients": [
+       {
+        "name": "전복",
+        "name_translated": "Abalone",
+        "tags": [
+         "mollusk",
+         "shellfish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 80.0
+       },
+       {
+        "name": "버터",
+        "name_translated": "Butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "chakhan-gukbap",
+   "name": "착한국밥",
+   "area": "연제구 거제동",
+   "category": "국밥",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "10/05 평가 메뉴판 사진 스크린샷 2026-09-23 193320.png",
+   "menus": [
+    {
+     "name": "돼지국밥",
+     "prices": [
+      "8,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "돼지국밥(대)",
+     "prices": [
+      "9,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "내장국밥",
+     "prices": [
+      "8,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "순대국밥",
+     "prices": [
+      "8,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "섞어국밥",
+     "prices": [
+      "8,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "모둠국밥",
+     "prices": [
+      "9,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "수육백반",
+     "prices": [
+      "10,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "수육백반",
+      "menu_translated": "Boiled Pork Set Meal",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "red chili",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "김치",
+        "name_translated": "kimchi",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "수육 - 소",
+     "prices": [
+      "20,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "수육 - 소",
+      "menu_translated": "Boiled Pork (Small Portion)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 85.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "수육 - 중",
+     "prices": [
+      "28,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "수육 - 중",
+      "menu_translated": "Boiled Pork (Medium Portion)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 75.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "수육 - 대",
+     "prices": [
+      "35,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "수육 - 대",
+      "menu_translated": "Boiled Pork (Large Portion)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 65.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "red chili",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "모둠수육",
+     "prices": [
+      "40,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "모둠수육",
+      "menu_translated": "Assorted Boiled Pork",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "red chili",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "당면",
+        "name_translated": "glass noodles",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "순대 1접시",
+     "prices": [
+      "12,000"
+     ],
+     "note": null,
+     "ai": null
+    }
+   ]
+  },
+  {
+   "id": "osaka",
+   "name": "오사카",
+   "area": "사하구 하단동",
+   "category": "일식",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "10/05 평가 메뉴판 사진 스크린샷 2026-09-23 193336.png",
+   "menus": [
+    {
+     "name": "함박스테이크",
+     "prices": [
+      "W8,800"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "오무라이스",
+     "prices": [
+      "W6,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "오무라이스",
+      "menu_translated": "Omurice",
+      "ingredients": [
+       {
+        "name": "밥",
+        "name_translated": "Cooked Rice",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 40.0
+       },
+       {
+        "name": "케첩",
+        "name_translated": "Ketchup",
+        "tags": [
+         "tomato"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "양파",
+        "name_translated": "Onion",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "당근",
+        "name_translated": "Carrot",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "닭고기",
+        "name_translated": "Chicken",
+        "tags": [
+         "chicken"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "밀",
+        "name_translated": "Wheat Flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "버터",
+        "name_translated": "Butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "오코노미야키",
+     "prices": [
+      "W6,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "오코노미야키",
+      "menu_translated": "Okonomiyaki",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "Wheat Flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "돼지고기",
+        "name_translated": "Pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "Shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "오징어",
+        "name_translated": "Squid",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "소스",
+        "name_translated": "Okonomiyaki Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "마요네즈",
+        "name_translated": "Mayonnaise",
+        "tags": [
+         "milk",
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "돈카츠카레",
+     "prices": [
+      "W8,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "돈카츠카레",
+      "menu_translated": "Pork Cutlet Curry",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "Wheat Flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 14.3
+       },
+       {
+        "name": "달걀",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 7.1
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "Bread Crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 14.3
+       },
+       {
+        "name": "카레루",
+        "name_translated": "Curry Roux",
+        "tags": [
+         "soy",
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 35.7
+       },
+       {
+        "name": "밥",
+        "name_translated": "Cooked Rice",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 28.6
+       }
+      ]
+     }
+    },
+    {
+     "name": "함박카레",
+     "prices": [
+      "W8,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "함박카레",
+      "menu_translated": "Hambak Curry",
+      "ingredients": [
+       {
+        "name": "소고기",
+        "name_translated": "Beef",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 25.0
+       },
+       {
+        "name": "돼지고기",
+        "name_translated": "Pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "밀",
+        "name_translated": "Wheat Flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "콩기름",
+        "name_translated": "Soy Oil",
+        "tags": [
+         "soy"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "토마토 케첩",
+        "name_translated": "Tomato Ketchup",
+        "tags": [
+         "tomato"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "카레루",
+        "name_translated": "Curry Roux",
+        "tags": [
+         "soy",
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "코로케카레",
+     "prices": [
+      "W7,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "코로케카레",
+      "menu_translated": "Croquette Curry",
+      "ingredients": [
+       {
+        "name": "감자",
+        "name_translated": "Potato",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "소고기",
+        "name_translated": "Beef",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "Wheat Flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "Bread Crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "카레루",
+        "name_translated": "Curry Roux",
+        "tags": [
+         "soy",
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "돼지고기",
+        "name_translated": "Pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "밥",
+        "name_translated": "Cooked Rice",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "카레라이스",
+     "prices": [
+      "W6,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "장어덮밥",
+     "prices": [
+      "W18,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "장어덮밥",
+      "menu_translated": "Eel Rice Bowl",
+      "ingredients": [
+       {
+        "name": "멥쌀",
+        "name_translated": "Short-grain rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 42.1
+       },
+       {
+        "name": "장어",
+        "name_translated": "Eel",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 31.6
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.8
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame oil",
+        "tags": [
+         "soy",
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.3
+       },
+       {
+        "name": "대파",
+        "name_translated": "Green onion",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.3
+       }
+      ]
+     }
+    },
+    {
+     "name": "돈카츠덮밥",
+     "prices": [
+      "W8,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "돈카츠덮밥",
+      "menu_translated": "Pork Cutlet Rice Bowl",
+      "ingredients": [
+       {
+        "name": "멥쌀",
+        "name_translated": "Short-grain rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 35.0
+       },
+       {
+        "name": "돈가스",
+        "name_translated": "Pork cutlet",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "양배추",
+        "name_translated": "Cabbage",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "돈까스 소스",
+        "name_translated": "Tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat",
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "소고기덮밥",
+     "prices": [
+      "W8,800"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "달걀밥",
+     "prices": [
+      "W8,500"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "계란덮밥",
+     "prices": [
+      "W6,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "안주용함박",
+     "prices": [
+      "W9,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "안주용함박",
+      "menu_translated": "Anju-style Hambak (meat patty)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 40.0
+       },
+       {
+        "name": "소고기",
+        "name_translated": "beef",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "계란",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "안주용돈까스",
+     "prices": [
+      "W9,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "안주용돈까스",
+      "menu_translated": "Anju-style Tonkatsu (breaded pork cutlet)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "계란",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "카츠토지",
+     "prices": [
+      "W9,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "카츠토지",
+      "menu_translated": "Katsu Toji (pork cutlet with egg)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 55.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "계란",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "자루소바",
+     "prices": [
+      "W7,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "자루소바",
+      "menu_translated": "Jaru Soba (cold buckwheat noodles)",
+      "ingredients": [
+       {
+        "name": "메밀",
+        "name_translated": "buckwheat",
+        "tags": [
+         "buckwheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "생선",
+        "name_translated": "fish",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "돈코츠라멘",
+     "prices": [
+      "W8,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "돈코츠라멘",
+      "menu_translated": "Tonkotsu Ramen (pork bone broth ramen)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 33.3
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 33.3
+       },
+       {
+        "name": "계란",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 11.1
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 11.1
+       },
+       {
+        "name": "생선",
+        "name_translated": "fish",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 11.1
+       }
+      ]
+     }
+    },
+    {
+     "name": "소유라멘",
+     "prices": [
+      "W7,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "소유라멘",
+      "menu_translated": "Shoyu Ramen (soy sauce ramen)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "닭고기",
+        "name_translated": "chicken",
+        "tags": [
+         "chicken"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "계란",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "생선",
+        "name_translated": "fish",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "소고기우동",
+     "prices": [
+      "W8,800"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "우동",
+     "prices": [
+      "W5,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "돈까스",
+     "prices": [
+      "W8,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "돈까스",
+      "menu_translated": "Tonkatsu (Pork Cutlet)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "Pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "Bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "Wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "Egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "고로케",
+     "prices": [
+      "W1,500"
+     ],
+     "note": "개당",
+     "ai": {
+      "menu": "고로케",
+      "menu_translated": "Croquette",
+      "ingredients": [
+       {
+        "name": "감자",
+        "name_translated": "potato",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "차슈",
+     "prices": [
+      "W20,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "차슈",
+      "menu_translated": "Chashu (Braised Pork)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "Pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "Soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "술",
+        "name_translated": "Cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "단타카토나, 키티",
+     "prices": [
+      "W7,000"
+     ],
+     "note": null,
+     "ai": null
+    }
+   ]
+  },
+  {
+   "id": "katsuan",
+   "name": "카츠안",
+   "area": "금정구 장전동",
+   "category": "돈까스",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "10/05 평가 메뉴판 사진 스크린샷 2026-09-23 193353.png",
+   "menus": [
+    {
+     "name": "미니 냉모밀",
+     "prices": [
+      "3,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "미니 냉모밀",
+      "menu_translated": "Mini Cold Buckwheat Noodles",
+      "ingredients": [
+       {
+        "name": "모밀",
+        "name_translated": "buckwheat noodles",
+        "tags": [
+         "buckwheat",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "오이",
+        "name_translated": "cucumber",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "참깨",
+        "name_translated": "sesame seeds",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "육수",
+        "name_translated": "broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "미니 쫄면",
+     "prices": [
+      "2,900"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "냉모밀",
+     "prices": [
+      "5,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "냉모밀",
+      "menu_translated": "Cold Buckwheat Noodles",
+      "ingredients": [
+       {
+        "name": "모밀",
+        "name_translated": "buckwheat noodles",
+        "tags": [
+         "buckwheat",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 75.0
+       },
+       {
+        "name": "오이",
+        "name_translated": "cucumber",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 8.0
+       },
+       {
+        "name": "참깨",
+        "name_translated": "sesame seeds",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "육수",
+        "name_translated": "broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 7.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "쫄면",
+     "prices": [
+      "4,900"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "고로케",
+     "prices": [
+      "2,500"
+     ],
+     "note": "2p",
+     "ai": {
+      "menu": "고로케",
+      "menu_translated": "Croquette",
+      "ingredients": [
+       {
+        "name": "감자",
+        "name_translated": "potato",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "카레고로케",
+     "prices": [
+      "3,000"
+     ],
+     "note": "3p",
+     "ai": {
+      "menu": "카레고로케",
+      "menu_translated": "Curry Croquette",
+      "ingredients": [
+       {
+        "name": "감자",
+        "name_translated": "potato",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 45.0
+       },
+       {
+        "name": "당근",
+        "name_translated": "carrot",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "카레소스",
+        "name_translated": "curry sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "새우튀김",
+     "prices": [
+      "2,000"
+     ],
+     "note": "1p",
+     "ai": null
+    },
+    {
+     "name": "초밥카츠",
+     "prices": [
+      "7,500"
+     ],
+     "note": "카츠 안 시그니처 메뉴, 170g / 우스터소스",
+     "ai": {
+      "menu": "초밥카츠",
+      "menu_translated": "Sushi Cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 80.0
+       },
+       {
+        "name": "우스터소스",
+        "name_translated": "Worcestershire sauce",
+        "tags": [
+         "soy",
+         "wheat",
+         "alcohol"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 20.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "치즈카츠",
+     "prices": [
+      "7,500"
+     ],
+     "note": "순수 자염돼지고기, 170g / 가니소스, 매운소스",
+     "ai": {
+      "menu": "치즈카츠",
+      "menu_translated": "Cheese Cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "가니소스",
+        "name_translated": "Gani sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "매운소스",
+        "name_translated": "spicy sauce",
+        "tags": [
+         "soy",
+         "wheat",
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "돼지",
+        "name_translated": null,
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "안심카츠",
+     "prices": [
+      "8,000"
+     ],
+     "note": "부드러운 더 안심되는 맛, 160g / 허말라야소금, 기본소스",
+     "ai": {
+      "menu": "안심카츠",
+      "menu_translated": "Tenderloin Cutlet",
+      "ingredients": [
+       {
+        "name": "안심",
+        "name_translated": "Pork Tenderloin",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "기본소스",
+        "name_translated": "Basic Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "등심카츠",
+     "prices": [
+      "6,900"
+     ],
+     "note": "오리지널의 편안함, 160g / 허말라야소금, 기본소스",
+     "ai": {
+      "menu": "등심카츠",
+      "menu_translated": "Sirloin Cutlet",
+      "ingredients": [
+       {
+        "name": "등심",
+        "name_translated": "Beef Sirloin",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "기본소스",
+        "name_translated": "Basic Sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "명란카츠",
+     "prices": [
+      "9,300"
+     ],
+     "note": "염선된 식재료, 170g / 멕시코마요",
+     "ai": {
+      "menu": "명란카츠",
+      "menu_translated": "Myeongran (Pollock Roe) Cutlet",
+      "ingredients": [
+       {
+        "name": "명란",
+        "name_translated": "Pollock Roe",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 80.0
+       },
+       {
+        "name": "멕시코마요",
+        "name_translated": "Mexican Mayo",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "생선카츠",
+     "prices": [
+      "6,500"
+     ],
+     "note": "겉이 살아있는 신선함, 130g / 우스터소스, 타르타르소스",
+     "ai": {
+      "menu": "생선카츠",
+      "menu_translated": "Fish Cutlet",
+      "ingredients": [
+       {
+        "name": "생선",
+        "name_translated": "Fish",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "우스터소스",
+        "name_translated": "Worcestershire Sauce",
+        "tags": [
+         "soy",
+         "wheat",
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "타르타르소스",
+        "name_translated": "Tartar Sauce",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "gaemijip-gwangalli",
+   "name": "개미집 광안리 본점",
+   "area": "수영구 광안리",
+   "category": "낙곱새",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "10/05 평가 메뉴판 사진 스크린샷 2026-09-23 200045.png",
+   "menus": [
+    {
+     "name": "낙지볶음",
+     "prices": [
+      "11.000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "낙새볶음",
+     "prices": [
+      "12.000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "낙새볶음",
+      "menu_translated": "Stir-fried Octopus and Shrimp",
+      "ingredients": [
+       {
+        "name": "낙지",
+        "name_translated": "Octopus",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "Shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "고추장",
+        "name_translated": "Gochujang (red chili paste)",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Red chili pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고춧가루",
+        "name_translated": "Red chili powder",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 3.0
+       },
+       {
+        "name": "참깨",
+        "name_translated": "Sesame seeds",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 2.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "낙곱볶음",
+     "prices": [
+      "12.000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "낙곱볶음",
+      "menu_translated": "Stir-fried Octopus and Beef Intestines",
+      "ingredients": [
+       {
+        "name": "낙지",
+        "name_translated": "Octopus",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 35.0
+       },
+       {
+        "name": "소곱창",
+        "name_translated": "Beef tripe",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 30.0
+       },
+       {
+        "name": "고추장 양념",
+        "name_translated": "Gochujang seasoning",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "맛술",
+        "name_translated": "Cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "멸치 육수",
+        "name_translated": "Anchovy broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Red chili pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 3.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 2.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "낙곱새볶음",
+     "prices": [
+      "13.000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "낙삼새볶음",
+     "prices": [
+      "13.000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "낙삼새볶음",
+      "menu_translated": "Stir-fried Octopus, Pork Belly, and Shrimp",
+      "ingredients": [
+       {
+        "name": "낙지",
+        "name_translated": "Octopus",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 25.0
+       },
+       {
+        "name": "삼겹살",
+        "name_translated": "Pork belly",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 25.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "Shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "고추장",
+        "name_translated": "Gochujang (red chili paste)",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Red chili pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 3.0
+       },
+       {
+        "name": "고춧가루",
+        "name_translated": "Red chili powder",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 2.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "수중전골",
+     "prices": [
+      "15.000"
+     ],
+     "note": "해물전골",
+     "ai": {
+      "menu": "수중전골",
+      "menu_translated": "Seafood Hot Pot",
+      "ingredients": [
+       {
+        "name": "새우",
+        "name_translated": "Shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "조개",
+        "name_translated": "Clams",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "오징어",
+        "name_translated": "Squid",
+        "tags": [
+         "squid"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 20.0
+       },
+       {
+        "name": "두부",
+        "name_translated": "Tofu",
+        "tags": [
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 15.0
+       },
+       {
+        "name": "멸치 육수",
+        "name_translated": "Anchovy broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "고추장",
+        "name_translated": "Gochujang (red chili paste)",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Red chili pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "불낙전골",
+     "prices": [
+      "15.000"
+     ],
+     "note": "소고기+낙지",
+     "ai": {
+      "menu": "불낙전골",
+      "menu_translated": "Spicy Beef and Octopus Hot Pot",
+      "ingredients": [
+       {
+        "name": "낙지",
+        "name_translated": "Whiparm octopus, Fiine legs, Raw",
+        "tags": [
+         "mollusk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 30.6
+       },
+       {
+        "name": "소고기",
+        "name_translated": "Beef meat, Hanwoo, Brisket(Yangji), Boiled",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 17.5
+       }
+      ]
+     }
+    },
+    {
+     "name": "사리",
+     "prices": [
+      "2.000"
+     ],
+     "note": "당면/우동/라면/떡",
+     "ai": {
+      "menu": "사리",
+      "menu_translated": "Noodle Mix in Bracken Fern Soup",
+      "ingredients": [
+       {
+        "name": "당면/우동/라면/떡",
+        "name_translated": "Noodles (glass noodles, udon, ramen, rice cake)",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "곱창추가",
+     "prices": [
+      "10.000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "곱창추가",
+      "menu_translated": "Additional Beef Tripe",
+      "ingredients": [
+       {
+        "name": "곱창",
+        "name_translated": "Beef Tripe",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "Garlic",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "파",
+        "name_translated": "Green Onion",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "고추",
+        "name_translated": "Chili Pepper",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "Sesame Oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "소금",
+        "name_translated": "Salt",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "hiwaffle-kyungsung-pknu",
+   "name": "하이와플 경성대부경대점",
+   "area": "남구 대연동",
+   "category": "디저트·와플",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "11/04 메뉴판 사진 (재료는 일반 레시피 기준 수기 입력, AI 호출 없음)",
+   "menus": [
+    {
+     "name": "사과잼 플레인와플",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "사과잼 플레인와플",
+      "menu_translated": "Plain waffle with cream (Apple jam)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "사과잼",
+        "name_translated": "apple jam",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "딸기잼 플레인와플",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "딸기잼 플레인와플",
+      "menu_translated": "Plain waffle with cream (Strawberry jam)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "딸기잼",
+        "name_translated": "strawberry jam",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "초코잼 플레인와플",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "초코잼 플레인와플",
+      "menu_translated": "Plain waffle with cream (Chocolate spread)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "초코잼",
+        "name_translated": "chocolate spread",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "메이플 플레인와플",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "메이플 플레인와플",
+      "menu_translated": "Plain waffle with cream (Maple syrup)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "메이플 시럽",
+        "name_translated": "maple syrup",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "시나몬 플레인와플",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "시나몬 플레인와플",
+      "menu_translated": "Plain waffle with cream (Cinnamon)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "시나몬",
+        "name_translated": "cinnamon",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "땅콩버터 플레인와플",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "땅콩버터 플레인와플",
+      "menu_translated": "Plain waffle with cream (Peanut butter)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "땅콩버터",
+        "name_translated": "peanut butter",
+        "tags": [
+         "peanut"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "사과+시나몬 플레인와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "사과+시나몬 플레인와플",
+      "menu_translated": "Plain waffle with cream (Apple + cinnamon)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "사과잼",
+        "name_translated": "apple jam",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "시나몬",
+        "name_translated": "cinnamon",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "초코+땅콩버터 플레인와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "초코+땅콩버터 플레인와플",
+      "menu_translated": "Plain waffle with cream (Chocolate + peanut butter)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "초코잼",
+        "name_translated": "chocolate spread",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "땅콩버터",
+        "name_translated": "peanut butter",
+        "tags": [
+         "peanut"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "사과잼 카카오와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "사과잼 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Apple jam)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "사과잼",
+        "name_translated": "apple jam",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "딸기잼 카카오와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "딸기잼 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Strawberry jam)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "딸기잼",
+        "name_translated": "strawberry jam",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "초코잼 카카오와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "초코잼 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Chocolate spread)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "초코잼",
+        "name_translated": "chocolate spread",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "메이플 카카오와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "메이플 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Maple syrup)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "메이플 시럽",
+        "name_translated": "maple syrup",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "시나몬 카카오와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "시나몬 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Cinnamon)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "시나몬",
+        "name_translated": "cinnamon",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "땅콩버터 카카오와플",
+     "prices": [
+      "2,200"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "땅콩버터 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Peanut butter)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "땅콩버터",
+        "name_translated": "peanut butter",
+        "tags": [
+         "peanut"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "사과+시나몬 카카오와플",
+     "prices": [
+      "2,400"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "사과+시나몬 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Apple + cinnamon)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "사과잼",
+        "name_translated": "apple jam",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "시나몬",
+        "name_translated": "cinnamon",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "초코+땅콩버터 카카오와플",
+     "prices": [
+      "2,400"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "초코+땅콩버터 카카오와플",
+      "menu_translated": "Cocoa waffle with cream (Chocolate + peanut butter)",
+      "ingredients": [
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유",
+        "name_translated": "milk",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "버터",
+        "name_translated": "butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "코코아",
+        "name_translated": "cocoa",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생크림",
+        "name_translated": "whipped cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "초코잼",
+        "name_translated": "chocolate spread",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "땅콩버터",
+        "name_translated": "peanut butter",
+        "tags": [
+         "peanut"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "밀크 아이스크림",
+     "prices": [
+      "2,300"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "밀크 아이스크림",
+      "menu_translated": "Ice cream (Milk) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "다크초코 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "다크초코 아이스크림",
+      "menu_translated": "Ice cream (Dark chocolate) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "초콜릿",
+        "name_translated": "chocolate",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "녹차 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "녹차 아이스크림",
+      "menu_translated": "Ice cream (Green tea) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "녹차",
+        "name_translated": "green tea",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "요거트 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "요거트 아이스크림",
+      "menu_translated": "Ice cream (Yogurt) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "요거트",
+        "name_translated": "yogurt",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "요거트+녹차 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "요거트+녹차 아이스크림",
+      "menu_translated": "Ice cream (Yogurt + Green tea) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "요거트",
+        "name_translated": "yogurt",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "녹차",
+        "name_translated": "green tea",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "초코+요거트 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "초코+요거트 아이스크림",
+      "menu_translated": "Ice cream (Chocolate + Yogurt) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "초콜릿",
+        "name_translated": "chocolate",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "요거트",
+        "name_translated": "yogurt",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "초코+녹차 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "초코+녹차 아이스크림",
+      "menu_translated": "Ice cream (Chocolate + Green tea) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "초콜릿",
+        "name_translated": "chocolate",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "녹차",
+        "name_translated": "green tea",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "밀크+요거트 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "밀크+요거트 아이스크림",
+      "menu_translated": "Ice cream (Milk + Yogurt) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "요거트",
+        "name_translated": "yogurt",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "밀크+녹차 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "밀크+녹차 아이스크림",
+      "menu_translated": "Ice cream (Milk + Green tea) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "녹차",
+        "name_translated": "green tea",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "밀크+초코 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "밀크+초코 아이스크림",
+      "menu_translated": "Ice cream (Milk + Chocolate) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "초콜릿",
+        "name_translated": "chocolate",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "밀초+녹차 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "밀초+녹차 아이스크림",
+      "menu_translated": "Ice cream (Milk + Chocolate + Green tea) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "초콜릿",
+        "name_translated": "chocolate",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "녹차",
+        "name_translated": "green tea",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "밀초+요거트 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "밀초+요거트 아이스크림",
+      "menu_translated": "Ice cream (Milk + Chocolate + Yogurt) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "초콜릿",
+        "name_translated": "chocolate",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "요거트",
+        "name_translated": "yogurt",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "요녹+밀크 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "요녹+밀크 아이스크림",
+      "menu_translated": "Ice cream (Yogurt + Green tea + Milk) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "요거트",
+        "name_translated": "yogurt",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "녹차",
+        "name_translated": "green tea",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "요녹+초코 아이스크림",
+     "prices": [
+      "2,700"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "요녹+초코 아이스크림",
+      "menu_translated": "Ice cream (Yogurt + Green tea + Chocolate) - waffle/cone/cup",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "와플 또는 콘",
+        "name_translated": "waffle or cone (wheat)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "요거트",
+        "name_translated": "yogurt",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "녹차",
+        "name_translated": "green tea",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "초콜릿",
+        "name_translated": "chocolate",
+        "tags": [
+         "milk",
+         "soy"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "오레오 아이스크림",
+     "prices": [
+      "3,000"
+     ],
+     "note": "컵만 가능",
+     "ai": {
+      "menu": "오레오 아이스크림",
+      "menu_translated": "Oreo ice cream (cup only)",
+      "ingredients": [
+       {
+        "name": "아이스크림",
+        "name_translated": "ice cream",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "젤라틴·안정제",
+        "name_translated": "gelatin / stabilizer",
+        "tags": [
+         "animal_gelatin"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "오레오 쿠키",
+        "name_translated": "Oreo cookie",
+        "tags": [
+         "wheat",
+         "soy"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "yuilhan-siktak",
+   "name": "유일한 식탁",
+   "area": "남구 대연동",
+   "category": "돈까스·일식",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "11/04 메뉴판 사진 (재료는 일반 레시피 기준 수기 입력, AI 호출 없음)",
+   "menus": [
+    {
+     "name": "특등심돈카츠",
+     "prices": [
+      "13,000"
+     ],
+     "note": "당일 한정 수량, 국내산 돼지고기",
+     "ai": {
+      "menu": "특등심돈카츠",
+      "menu_translated": "Premium pork loin cutlet (limited daily)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "등심돈카츠 (로스카츠)",
+     "prices": [
+      "10,000"
+     ],
+     "note": "국내산 돼지고기",
+     "ai": {
+      "menu": "등심돈카츠 (로스카츠)",
+      "menu_translated": "Pork loin cutlet (rosu katsu)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "안심돈카츠 (히레카츠)",
+     "prices": [
+      "11,000"
+     ],
+     "note": "국내산 돼지고기",
+     "ai": {
+      "menu": "안심돈카츠 (히레카츠)",
+      "menu_translated": "Pork tenderloin cutlet (hire katsu)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "치즈돈카츠",
+     "prices": [
+      "11,500"
+     ],
+     "note": "모짜렐라 치즈 100%",
+     "ai": {
+      "menu": "치즈돈카츠",
+      "menu_translated": "Cheese pork cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "모짜렐라 치즈",
+        "name_translated": "mozzarella cheese",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "辛뚝배기돈까스",
+     "prices": [
+      "11,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "辛뚝배기돈까스",
+      "menu_translated": "Spicy pork cutlet in hot udon broth",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "우동면",
+        "name_translated": "udon noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "가쓰오·멸치 육수",
+        "name_translated": "bonito / anchovy broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "고춧가루",
+        "name_translated": "chili powder",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "냉모밀소바",
+     "prices": [
+      "8,500"
+     ],
+     "note": "육수 추가 1,000원",
+     "ai": {
+      "menu": "냉모밀소바",
+      "menu_translated": "Cold buckwheat soba",
+      "ingredients": [
+       {
+        "name": "메밀면",
+        "name_translated": "buckwheat noodles",
+        "tags": [
+         "buckwheat",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쯔유 (가쓰오 육수)",
+        "name_translated": "tsuyu (bonito broth)",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "카레라이스",
+     "prices": [
+      "8,500"
+     ],
+     "note": "가라아게 토핑",
+     "ai": {
+      "menu": "카레라이스",
+      "menu_translated": "Japanese curry rice with karaage",
+      "ingredients": [
+       {
+        "name": "카레 루",
+        "name_translated": "Japanese curry roux",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유·버터",
+        "name_translated": "milk / butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "고기 (돼지 또는 소)",
+        "name_translated": "meat (pork or beef)",
+        "tags": [
+         "pork",
+         "beef"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "닭고기",
+        "name_translated": "chicken",
+        "tags": [
+         "chicken"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "튀김옷 (밀가루·전분)",
+        "name_translated": "batter (wheat, starch)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "맛술",
+        "name_translated": "cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "돈까스 카레라이스",
+     "prices": [
+      "9,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "돈까스 카레라이스",
+      "menu_translated": "Pork cutlet curry rice",
+      "ingredients": [
+       {
+        "name": "카레 루",
+        "name_translated": "Japanese curry roux",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유·버터",
+        "name_translated": "milk / butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "고기 (돼지 또는 소)",
+        "name_translated": "meat (pork or beef)",
+        "tags": [
+         "pork",
+         "beef"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "가라아게",
+     "prices": [
+      "5,000"
+     ],
+     "note": "5개",
+     "ai": {
+      "menu": "가라아게",
+      "menu_translated": "Japanese fried chicken (5 pcs)",
+      "ingredients": [
+       {
+        "name": "닭고기",
+        "name_translated": "chicken",
+        "tags": [
+         "chicken"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "튀김옷 (밀가루·전분)",
+        "name_translated": "batter (wheat, starch)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "맛술",
+        "name_translated": "cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "미니우동",
+     "prices": [
+      "3,000"
+     ],
+     "note": "1인 1메뉴 주문 시",
+     "ai": {
+      "menu": "미니우동",
+      "menu_translated": "Mini udon",
+      "ingredients": [
+       {
+        "name": "우동면",
+        "name_translated": "udon noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "가쓰오·멸치 육수",
+        "name_translated": "bonito / anchovy broth",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "어묵",
+        "name_translated": "fish cake",
+        "tags": [
+         "fish",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "공기밥",
+     "prices": [
+      "1,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "공기밥",
+      "menu_translated": "Steamed rice",
+      "ingredients": [
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "hey-egg-noodle",
+   "name": "헤이에그누들",
+   "area": "남구 대연동",
+   "category": "아시안·누들",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "11/04 메뉴판 사진 (재료는 일반 레시피 기준 수기 입력, AI 호출 없음)",
+   "menus": [
+    {
+     "name": "더블 에그누들",
+     "prices": [
+      "7,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "더블 에그누들",
+      "menu_translated": "Double egg noodle",
+      "ingredients": [
+       {
+        "name": "에그누들",
+        "name_translated": "egg noodles",
+        "tags": [
+         "wheat",
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주·채소",
+        "name_translated": "bean sprouts / vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "굴소스",
+        "name_translated": "oyster sauce",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "돼지 에그누들",
+     "prices": [
+      "10,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "돼지 에그누들",
+      "menu_translated": "Pork egg noodle",
+      "ingredients": [
+       {
+        "name": "에그누들",
+        "name_translated": "egg noodles",
+        "tags": [
+         "wheat",
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주·채소",
+        "name_translated": "bean sprouts / vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "굴소스",
+        "name_translated": "oyster sauce",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "새우 에그누들",
+     "prices": [
+      "10,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "새우 에그누들",
+      "menu_translated": "Shrimp egg noodle",
+      "ingredients": [
+       {
+        "name": "에그누들",
+        "name_translated": "egg noodles",
+        "tags": [
+         "wheat",
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주·채소",
+        "name_translated": "bean sprouts / vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "굴소스",
+        "name_translated": "oyster sauce",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "콤보 에그누들",
+     "prices": [
+      "12,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "콤보 에그누들",
+      "menu_translated": "Combo egg noodle (pork + shrimp)",
+      "ingredients": [
+       {
+        "name": "에그누들",
+        "name_translated": "egg noodles",
+        "tags": [
+         "wheat",
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주·채소",
+        "name_translated": "bean sprouts / vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "굴소스",
+        "name_translated": "oyster sauce",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "헤이 볶음밥",
+     "prices": [
+      "11,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "헤이 볶음밥",
+      "menu_translated": "Hey fried rice",
+      "ingredients": [
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀",
+        "name_translated": "egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "굴소스",
+        "name_translated": "oyster sauce",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "마라 에그누들",
+     "prices": [
+      "9,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "마라 에그누들",
+      "menu_translated": "Mala egg noodle",
+      "ingredients": [
+       {
+        "name": "에그누들",
+        "name_translated": "egg noodles",
+        "tags": [
+         "wheat",
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주·채소",
+        "name_translated": "bean sprouts / vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "굴소스",
+        "name_translated": "oyster sauce",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "마라 소스",
+        "name_translated": "mala sauce (may contain beef tallow)",
+        "tags": [
+         "beef",
+         "peanut"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "고기·햄",
+        "name_translated": "meat / ham",
+        "tags": [
+         "pork",
+         "beef"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "소고기 마라탕면",
+     "prices": [
+      "11,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "소고기 마라탕면",
+      "menu_translated": "Beef mala soup noodle",
+      "ingredients": [
+       {
+        "name": "에그누들",
+        "name_translated": "egg noodles",
+        "tags": [
+         "wheat",
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "소고기",
+        "name_translated": "beef",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "마라 소스",
+        "name_translated": "mala sauce (may contain beef tallow)",
+        "tags": [
+         "beef",
+         "peanut"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "사골·고기 육수",
+        "name_translated": "meat broth",
+        "tags": [
+         "beef",
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "야끼마요 에그누들",
+     "prices": [
+      "11,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "야끼마요 에그누들",
+      "menu_translated": "Yaki mayo egg noodle",
+      "ingredients": [
+       {
+        "name": "에그누들",
+        "name_translated": "egg noodles",
+        "tags": [
+         "wheat",
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주·채소",
+        "name_translated": "bean sprouts / vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "굴소스",
+        "name_translated": "oyster sauce",
+        "tags": [
+         "shellfish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "마요네즈",
+        "name_translated": "mayonnaise",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "가쓰오부시",
+        "name_translated": "bonito flakes",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "고기",
+        "name_translated": "meat",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "subaekdang",
+   "name": "수백당 오시리아점",
+   "area": "기장군 기장읍",
+   "category": "국밥",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "10/05 평가 메뉴판 사진 스크린샷 2026-09-23 200119.png",
+   "menus": [
+    {
+     "name": "순대국밥",
+     "prices": [
+      "9,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "삼겹데지국밥",
+     "prices": [
+      "9,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "얼큰국밥",
+     "prices": [
+      "11,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "마늘순대백반",
+     "prices": [
+      "14,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "마늘수육",
+     "prices": [
+      "12,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "마늘수육",
+      "menu_translated": "Garlic Braised Pork",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 70.0
+       },
+       {
+        "name": "마늘",
+        "name_translated": "garlic",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": 10.0
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "참기름",
+        "name_translated": "sesame oil",
+        "tags": [
+         "sesame"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 5.0
+       },
+       {
+        "name": "맛술",
+        "name_translated": "cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 3.0
+       },
+       {
+        "name": "생강",
+        "name_translated": "ginger",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 3.0
+       },
+       {
+        "name": "파",
+        "name_translated": "green onion",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 2.0
+       },
+       {
+        "name": "후추",
+        "name_translated": "pepper",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": 2.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "수백당순대",
+     "prices": [
+      "10,000"
+     ],
+     "note": null,
+     "ai": null
+    },
+    {
+     "name": "어린이국밥",
+     "prices": [
+      "5,000"
+     ],
+     "note": "미취학(공기밥 포함)",
+     "ai": null
+    },
+    {
+     "name": "수백당곱새세트",
+     "prices": [
+      "22,000",
+      "20,000"
+     ],
+     "note": "순대+마늘수육",
+     "ai": {
+      "menu": "수백당곱새세트",
+      "menu_translated": "Subaekdang Gopsae Set",
+      "ingredients": [
+       {
+        "name": "순대",
+        "name_translated": "blood sausage",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 50.0
+       },
+       {
+        "name": "마늘수육",
+        "name_translated": "garlic boiled pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 50.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "수백당곱새",
+     "prices": [
+      "16,000"
+     ],
+     "note": "곱창+새우",
+     "ai": {
+      "menu": "수백당곱새",
+      "menu_translated": "Subaekdang Gopsae",
+      "ingredients": [
+       {
+        "name": "곱창",
+        "name_translated": "intestines",
+        "tags": [
+         "other_meat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 60.0
+       },
+       {
+        "name": "새우",
+        "name_translated": "shrimp",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": 40.0
+       }
+      ]
+     }
+    },
+    {
+     "name": "수백당곱",
+     "prices": [
+      "14,000"
+     ],
+     "note": "곱창",
+     "ai": {
+      "menu": "수백당곱",
+      "menu_translated": "Subaekdang Gop",
+      "ingredients": [
+       {
+        "name": "곱창",
+        "name_translated": "intestines",
+        "tags": [
+         "other_meat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": 100.0
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "myeonsikdang-pknu",
+   "name": "면식당 부경대점",
+   "area": "남구 대연동",
+   "category": "일식·라멘·카츠",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "11/04 메뉴판 사진 (재료는 일반 레시피 기준 수기 입력, AI 호출 없음)",
+   "menus": [
+    {
+     "name": "돈코츠라멘",
+     "prices": [
+      "8,400"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "돈코츠라멘",
+      "menu_translated": "Tonkotsu ramen",
+      "ingredients": [
+       {
+        "name": "돼지뼈 육수",
+        "name_translated": "pork bone broth",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "차슈",
+        "name_translated": "chashu pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생면",
+        "name_translated": "fresh wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "반숙 달걀",
+        "name_translated": "soft-boiled egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "매운돈코츠라멘",
+     "prices": [
+      "8,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "매운돈코츠라멘",
+      "menu_translated": "Spicy tonkotsu ramen",
+      "ingredients": [
+       {
+        "name": "돼지뼈 육수",
+        "name_translated": "pork bone broth",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "차슈",
+        "name_translated": "chashu pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생면",
+        "name_translated": "fresh wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "반숙 달걀",
+        "name_translated": "soft-boiled egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "고추기름",
+        "name_translated": "chili oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "쇼유라멘",
+     "prices": [
+      "7,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "쇼유라멘",
+      "menu_translated": "Shoyu ramen",
+      "ingredients": [
+       {
+        "name": "간장 육수 (닭·돼지)",
+        "name_translated": "soy broth (chicken / pork)",
+        "tags": [
+         "chicken",
+         "pork"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "차슈",
+        "name_translated": "chashu pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생면",
+        "name_translated": "fresh wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "반숙 달걀",
+        "name_translated": "soft-boiled egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "에비돈코츠라멘",
+     "prices": [
+      "10,400"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "에비돈코츠라멘",
+      "menu_translated": "Tonkotsu ramen with fried shrimp",
+      "ingredients": [
+       {
+        "name": "돼지뼈 육수",
+        "name_translated": "pork bone broth",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "차슈",
+        "name_translated": "chashu pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생면",
+        "name_translated": "fresh wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "반숙 달걀",
+        "name_translated": "soft-boiled egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우튀김",
+        "name_translated": "fried shrimp",
+        "tags": [
+         "shrimp",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "부타동",
+     "prices": [
+      "8,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "부타동",
+      "menu_translated": "Pork rice bowl (butadon)",
+      "ingredients": [
+       {
+        "name": "돼지고기 (부타)",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "맛술",
+        "name_translated": "cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "김치부타동",
+     "prices": [
+      "8,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "김치부타동",
+      "menu_translated": "Kimchi pork rice bowl",
+      "ingredients": [
+       {
+        "name": "돼지고기 (부타)",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "맛술",
+        "name_translated": "cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "김치 (젓갈)",
+        "name_translated": "kimchi (may contain salted seafood)",
+        "tags": [
+         "fish",
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "마제소바 (면 대신 밥)",
+     "prices": [
+      "8,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "마제소바 (면 대신 밥)",
+      "menu_translated": "Mazesoba toppings over rice",
+      "ingredients": [
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "다진 돼지고기",
+        "name_translated": "minced pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 노른자",
+        "name_translated": "egg yolk",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "가쓰오부시",
+        "name_translated": "bonito flakes",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "마제소바",
+     "prices": [
+      "9,400"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "마제소바",
+      "menu_translated": "Mazesoba (soupless noodles)",
+      "ingredients": [
+       {
+        "name": "굵은 면",
+        "name_translated": "thick wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "다진 돼지고기",
+        "name_translated": "minced pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 노른자",
+        "name_translated": "egg yolk",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "가쓰오부시",
+        "name_translated": "bonito flakes",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "김치마제소바",
+     "prices": [
+      "10,000"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "김치마제소바",
+      "menu_translated": "Kimchi mazesoba",
+      "ingredients": [
+       {
+        "name": "굵은 면",
+        "name_translated": "thick wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "다진 돼지고기",
+        "name_translated": "minced pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 노른자",
+        "name_translated": "egg yolk",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "가쓰오부시",
+        "name_translated": "bonito flakes",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "김치 (젓갈)",
+        "name_translated": "kimchi (may contain salted seafood)",
+        "tags": [
+         "fish",
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "냉소바",
+     "prices": [
+      "8,500"
+     ],
+     "note": "계절 메뉴",
+     "ai": {
+      "menu": "냉소바",
+      "menu_translated": "Cold soba (seasonal)",
+      "ingredients": [
+       {
+        "name": "메밀면",
+        "name_translated": "buckwheat noodles",
+        "tags": [
+         "buckwheat",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쯔유 (가쓰오 육수)",
+        "name_translated": "tsuyu (bonito broth)",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "판소바",
+     "prices": [
+      "8,400"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "판소바",
+      "menu_translated": "Zaru soba",
+      "ingredients": [
+       {
+        "name": "메밀면",
+        "name_translated": "buckwheat noodles",
+        "tags": [
+         "buckwheat",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쯔유 (가쓰오 육수)",
+        "name_translated": "tsuyu (bonito broth)",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "샤브쌀국수",
+     "prices": [
+      "8,900"
+     ],
+     "note": "글루텐 프리",
+     "ai": {
+      "menu": "샤브쌀국수",
+      "menu_translated": "Beef shabu rice noodle soup",
+      "ingredients": [
+       {
+        "name": "쌀국수 면",
+        "name_translated": "rice noodles (gluten-free)",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "소고기",
+        "name_translated": "beef",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "소고기 육수",
+        "name_translated": "beef broth",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "피시소스",
+        "name_translated": "fish sauce",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주",
+        "name_translated": "bean sprouts",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "매운샤브쌀국수",
+     "prices": [
+      "9,500"
+     ],
+     "note": "글루텐 프리",
+     "ai": {
+      "menu": "매운샤브쌀국수",
+      "menu_translated": "Spicy beef shabu rice noodle soup",
+      "ingredients": [
+       {
+        "name": "쌀국수 면",
+        "name_translated": "rice noodles (gluten-free)",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "소고기",
+        "name_translated": "beef",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "소고기 육수",
+        "name_translated": "beef broth",
+        "tags": [
+         "beef"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "피시소스",
+        "name_translated": "fish sauce",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "숙주",
+        "name_translated": "bean sprouts",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "고추기름",
+        "name_translated": "chili oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "수제등심카츠",
+     "prices": [
+      "10,500"
+     ],
+     "note": "국내산 돼지",
+     "ai": {
+      "menu": "수제등심카츠",
+      "menu_translated": "Handmade pork loin cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "매운파돈카츠",
+     "prices": [
+      "11,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "매운파돈카츠",
+      "menu_translated": "Spicy green onion pork cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "파",
+        "name_translated": "green onion",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "고추기름",
+        "name_translated": "chili oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "더블체다카츠",
+     "prices": [
+      "11,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "더블체다카츠",
+      "menu_translated": "Double cheddar pork cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "체다 치즈",
+        "name_translated": "cheddar cheese",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "반반카츠",
+     "prices": [
+      "11,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "반반카츠",
+      "menu_translated": "Half-and-half pork cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "모짜치즈카츠",
+     "prices": [
+      "12,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "모짜치즈카츠",
+      "menu_translated": "Mozzarella cheese cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "모짜렐라 치즈",
+        "name_translated": "mozzarella cheese",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "매콤카레카츠",
+     "prices": [
+      "13,500"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "매콤카레카츠",
+      "menu_translated": "Spicy curry pork cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "카레",
+        "name_translated": "curry (wheat roux)",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "우유·버터",
+        "name_translated": "milk / butter",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "고추기름",
+        "name_translated": "chili oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "히레카츠 (half)",
+     "prices": [
+      "4,900"
+     ],
+     "note": null,
+     "ai": {
+      "menu": "히레카츠 (half)",
+      "menu_translated": "Pork tenderloin cutlet (half)",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "돈코츠라멘 + 미니부타동",
+     "prices": [
+      "12,200"
+     ],
+     "note": "1인 세트",
+     "ai": {
+      "menu": "돈코츠라멘 + 미니부타동",
+      "menu_translated": "Set: tonkotsu ramen + mini butadon",
+      "ingredients": [
+       {
+        "name": "돼지뼈 육수",
+        "name_translated": "pork bone broth",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "차슈",
+        "name_translated": "chashu pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "생면",
+        "name_translated": "fresh wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "반숙 달걀",
+        "name_translated": "soft-boiled egg",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "돼지고기 (부타)",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "맛술",
+        "name_translated": "cooking wine",
+        "tags": [
+         "alcohol"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "마제소바 + 히레카츠",
+     "prices": [
+      "14,300"
+     ],
+     "note": "1인 세트",
+     "ai": {
+      "menu": "마제소바 + 히레카츠",
+      "menu_translated": "Set: mazesoba + pork tenderloin cutlet",
+      "ingredients": [
+       {
+        "name": "굵은 면",
+        "name_translated": "thick wheat noodles",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "다진 돼지고기",
+        "name_translated": "minced pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 노른자",
+        "name_translated": "egg yolk",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "가쓰오부시",
+        "name_translated": "bonito flakes",
+        "tags": [
+         "fish"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "간장",
+        "name_translated": "soy sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "수제등심카츠 + 모짜치즈카츠 2p",
+     "prices": [
+      "16,400"
+     ],
+     "note": "1인 세트",
+     "ai": {
+      "menu": "수제등심카츠 + 모짜치즈카츠 2p",
+      "menu_translated": "Set: pork loin cutlet + mozzarella cutlet",
+      "ingredients": [
+       {
+        "name": "돼지고기",
+        "name_translated": "pork",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "빵가루",
+        "name_translated": "bread crumbs",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "밀가루",
+        "name_translated": "wheat flour",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "달걀 (튀김옷)",
+        "name_translated": "egg (batter)",
+        "tags": [
+         "egg"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "돈카츠 소스",
+        "name_translated": "tonkatsu sauce",
+        "tags": [
+         "soy",
+         "wheat"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "모짜렐라 치즈",
+        "name_translated": "mozzarella cheese",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

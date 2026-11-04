@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
 from app.db.supabase_client import supabase
-from app.routers import analyze, menus, ocr, profile_card, qna, stt
+from app.routers import analyze, menus, ocr, profile_card, qna, restaurants, stt
 
 app = FastAPI(title="K-Food Safety Guide API")
 
@@ -19,6 +19,7 @@ app.include_router(analyze.router)
 app.include_router(qna.router)
 app.include_router(stt.router)
 app.include_router(profile_card.router)
+app.include_router(restaurants.router)
 
 # 팀 내부 운영용(인증 없음) — 로컬에서만 ENABLE_OPS_ROUTES=1 로 켠다
 if settings.ENABLE_OPS_ROUTES:
