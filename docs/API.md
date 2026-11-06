@@ -89,7 +89,7 @@ multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로
 - `sort`: `rating`(구글 평점 높은 순, 평점 없는 식당은 뒤) | `edible`(먹을 수 있는 메뉴 많은 순).
 - `google`: 구글 평점. 키가 없거나 조회 실패면 `null`. **평점은 저장하지 않고 요청 때마다 구글에서 불러온다**(구글 정책).
   화면에 평점을 보여줄 때는 `rating_attribution`("Google Maps")을 함께 표시할 것.
-  무료 사용량을 넘지 않게 **하루 조회 상한**(`GOOGLE_RATING_DAILY_LIMIT`, 기본 30건)이 있다. 넘으면 `google: null`로 오고 목록·판정은 그대로다.
+  무료 사용량을 넘지 않게 **하루 조회 상한**(`GOOGLE_RATING_DAILY_LIMIT`, 기본 100건)이 있다. 넘으면 `google: null`로 오고 목록·판정은 그대로다.
 - `profile_applied: false`면 프로필이 없는 상태라 **모든 메뉴가 SAFE로 나온다**. `notice` 문구를 화면에 꼭 보여줄 것.
 
 ## POST /restaurants/{id} — 식당 상세
