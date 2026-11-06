@@ -246,7 +246,10 @@ def test_ocr_response_flags_truncated_menu_list(monkeypatch):
 
 
 def test_replay_reproduces_documented_numbers(capsys, monkeypatch):
-    """EVALUATION_1005.md의 '위험 오판 12건 → 2건'은 저장소의 원본으로 재현된다."""
+    """EVALUATION_1005.md의 위험 오판 수치는 저장소의 원본으로 재현된다.
+
+    10/05 규칙 수정 후 2건 → 11/04 중식·일식 메뉴 보강 후 1건 (춘권 새우가 해결됨).
+    """
     import sys
     from scripts import replay_eval
     from app.services import analysis_cache
@@ -256,5 +259,5 @@ def test_replay_reproduces_documented_numbers(capsys, monkeypatch):
     monkeypatch.setattr(analysis_cache, "PATH", analysis_cache.PATH)
     replay_eval.main()
     out = capsys.readouterr().out
-    assert "위험 오판 12건 → 2건" in out
-    assert "99.4%" in out
+    assert "위험 오판 12건 → 1건" in out
+    assert "99.7%" in out

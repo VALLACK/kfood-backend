@@ -1397,6 +1397,804 @@
      ]
     }
    ]
+  },
+  "하가우": {
+   "aliases": [
+    "하카우",
+    "새우교자"
+   ],
+   "category": "딤섬",
+   "required": [
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "전분피(밀전분)",
+     "tags": [
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "돼지비계",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "참기름",
+     "tags": [
+      "sesame"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "시우마이": {
+   "aliases": [
+    "샤오마이",
+    "슈마이",
+    "사오마이"
+   ],
+   "category": "딤섬",
+   "required": [
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "밀가루피",
+     "tags": [
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "간장",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    },
+    {
+     "name": "굴소스",
+     "tags": [
+      "shellfish"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "샤오롱바오": {
+   "aliases": [
+    "사오롱바오",
+    "샤오룽바오",
+    "소룡포"
+   ],
+   "category": "딤섬",
+   "required": [
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "밀가루피",
+     "tags": [
+      "wheat"
+     ]
+    },
+    {
+     "name": "돼지껍데기 육수(젤라틴)",
+     "tags": [
+      "pork",
+      "animal_gelatin"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "게살",
+     "tags": [
+      "crab"
+     ]
+    },
+    {
+     "name": "간장",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    },
+    {
+     "name": "소흥주",
+     "tags": [
+      "alcohol"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "교자": {
+   "aliases": [
+    "자오쯔"
+   ],
+   "category": "딤섬",
+   "required": [
+    {
+     "name": "밀가루피",
+     "tags": [
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "간장",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "춘권": {
+   "aliases": [
+    "스프링롤"
+   ],
+   "category": "딤섬",
+   "required": [
+    {
+     "name": "밀가루피",
+     "tags": [
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "돼지기름(튀김)",
+     "tags": [
+      "pork"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "차슈": {
+   "aliases": [
+    "차사오"
+   ],
+   "category": "중식",
+   "required": [
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "간장",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "요리주",
+     "tags": [
+      "alcohol"
+     ]
+    },
+    {
+     "name": "굴소스",
+     "tags": [
+      "shellfish"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "장펀": {
+   "aliases": [
+    "창펀",
+    "청펀"
+   ],
+   "category": "딤섬",
+   "required": [
+    {
+     "name": "쌀피",
+     "tags": []
+    },
+    {
+     "name": "간장 소스",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "name": "새우장펀",
+     "keywords": [
+      "새우"
+     ],
+     "ingredients": [
+      {
+       "name": "새우",
+       "tags": [
+        "shrimp"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "차슈장펀",
+     "keywords": [
+      "차슈"
+     ],
+     "ingredients": [
+      {
+       "name": "돼지고기",
+       "tags": [
+        "pork"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "소고기장펀",
+     "keywords": [
+      "소고기",
+      "우육"
+     ],
+     "ingredients": [
+      {
+       "name": "소고기",
+       "tags": [
+        "beef"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "완탕면": {
+   "aliases": [
+    "완탕탕면",
+    "운탄면",
+    "완탄면"
+   ],
+   "category": "중식",
+   "required": [
+    {
+     "name": "밀가루면",
+     "tags": [
+      "wheat"
+     ]
+    },
+    {
+     "name": "완탕 속 돼지고기",
+     "tags": [
+      "pork"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "달걀면",
+     "tags": [
+      "egg"
+     ]
+    },
+    {
+     "name": "건새우·생선 육수",
+     "tags": [
+      "shrimp",
+      "fish"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "라멘": {
+   "aliases": [],
+   "category": "일식",
+   "required": [
+    {
+     "name": "밀가루면",
+     "tags": [
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "차슈",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "반숙 달걀",
+     "tags": [
+      "egg"
+     ]
+    },
+    {
+     "name": "가쓰오 육수",
+     "tags": [
+      "fish"
+     ]
+    },
+    {
+     "name": "미림",
+     "tags": [
+      "alcohol"
+     ]
+    },
+    {
+     "name": "간장",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "name": "돈코츠라멘",
+     "keywords": [
+      "돈코츠",
+      "돈꼬츠"
+     ],
+     "ingredients": [
+      {
+       "name": "돼지뼈 육수",
+       "tags": [
+        "pork"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "소유라멘",
+     "keywords": [
+      "소유",
+      "쇼유"
+     ],
+     "ingredients": [
+      {
+       "name": "간장",
+       "tags": [
+        "soy",
+        "wheat"
+       ]
+      },
+      {
+       "name": "닭 육수",
+       "tags": [
+        "chicken"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "미소라멘",
+     "keywords": [
+      "미소"
+     ],
+     "ingredients": [
+      {
+       "name": "된장",
+       "tags": [
+        "soy"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "냉모밀": {
+   "aliases": [
+    "자루소바",
+    "소바",
+    "메밀소바",
+    "판모밀"
+   ],
+   "category": "일식",
+   "required": [
+    {
+     "name": "메밀면",
+     "tags": [
+      "buckwheat",
+      "wheat"
+     ]
+    },
+    {
+     "name": "쯔유(간장)",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    },
+    {
+     "name": "가쓰오부시 육수",
+     "tags": [
+      "fish"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "미림",
+     "tags": [
+      "alcohol"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "오코노미야키": {
+   "aliases": [],
+   "category": "일식",
+   "required": [
+    {
+     "name": "밀가루",
+     "tags": [
+      "wheat"
+     ]
+    },
+    {
+     "name": "달걀",
+     "tags": [
+      "egg"
+     ]
+    },
+    {
+     "name": "마요네즈",
+     "tags": [
+      "egg"
+     ]
+    },
+    {
+     "name": "가쓰오부시",
+     "tags": [
+      "fish"
+     ]
+    },
+    {
+     "name": "오코노미 소스",
+     "tags": [
+      "wheat",
+      "soy"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "새우",
+     "tags": [
+      "shrimp"
+     ]
+    },
+    {
+     "name": "오징어",
+     "tags": [
+      "squid"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "돈까스": {
+   "aliases": [
+    "돈가스",
+    "돈카츠",
+    "등심카츠",
+    "안심카츠",
+    "로스카츠",
+    "히레카츠"
+   ],
+   "category": "일식",
+   "required": [
+    {
+     "name": "돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "빵가루",
+     "tags": [
+      "wheat"
+     ]
+    },
+    {
+     "name": "달걀",
+     "tags": [
+      "egg"
+     ]
+    },
+    {
+     "name": "밀가루",
+     "tags": [
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "돈까스 소스",
+     "tags": [
+      "wheat",
+      "soy"
+     ]
+    },
+    {
+     "name": "우스터소스",
+     "tags": [
+      "fish"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "name": "치즈돈까스",
+     "keywords": [
+      "치즈"
+     ],
+     "ingredients": [
+      {
+       "name": "치즈",
+       "tags": [
+        "milk"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "장어덮밥": {
+   "aliases": [
+    "우나기동",
+    "히쓰마부시"
+   ],
+   "category": "일식",
+   "required": [
+    {
+     "name": "장어",
+     "tags": [
+      "fish"
+     ]
+    },
+    {
+     "name": "간장 소스",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "미림",
+     "tags": [
+      "alcohol"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "오야코동": {
+   "aliases": [
+    "닭덮밥"
+   ],
+   "category": "일식",
+   "required": [
+    {
+     "name": "닭고기",
+     "tags": [
+      "chicken"
+     ]
+    },
+    {
+     "name": "달걀",
+     "tags": [
+      "egg"
+     ]
+    },
+    {
+     "name": "간장",
+     "tags": [
+      "soy",
+      "wheat"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "미림",
+     "tags": [
+      "alcohol"
+     ]
+    },
+    {
+     "name": "가쓰오 육수",
+     "tags": [
+      "fish"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "고로케": {
+   "aliases": [
+    "크로켓",
+    "코로케"
+   ],
+   "category": "일식",
+   "required": [
+    {
+     "name": "빵가루",
+     "tags": [
+      "wheat"
+     ]
+    },
+    {
+     "name": "밀가루",
+     "tags": [
+      "wheat"
+     ]
+    },
+    {
+     "name": "달걀",
+     "tags": [
+      "egg"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "다진 돼지고기",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "다진 소고기",
+     "tags": [
+      "beef"
+     ]
+    },
+    {
+     "name": "우유·버터",
+     "tags": [
+      "milk"
+     ]
+    }
+   ],
+   "variants": []
+  },
+  "오무라이스": {
+   "aliases": [],
+   "category": "일식",
+   "required": [
+    {
+     "name": "달걀",
+     "tags": [
+      "egg"
+     ]
+    },
+    {
+     "name": "케첩",
+     "tags": [
+      "tomato"
+     ]
+    }
+   ],
+   "hidden": [
+    {
+     "name": "닭고기",
+     "tags": [
+      "chicken"
+     ]
+    },
+    {
+     "name": "햄",
+     "tags": [
+      "pork"
+     ]
+    },
+    {
+     "name": "버터",
+     "tags": [
+      "milk"
+     ]
+    },
+    {
+     "name": "데미글라스 소스",
+     "tags": [
+      "wheat",
+      "beef"
+     ]
+    }
+   ],
+   "variants": []
   }
  }
 }
