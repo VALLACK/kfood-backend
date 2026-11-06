@@ -19,6 +19,12 @@ class Settings:
         o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()
     ]
 
+    # 미리 알아보기 — 구글 평점 조회용 (없으면 평점 없이 동작)
+    GOOGLE_MAPS_API_KEY: str = os.environ.get("GOOGLE_MAPS_API_KEY", "")
+    # 평점 조회 하루 상한 (목록 1번 = 식당 수만큼 사용). 시연·리허설에서 여러 번 열어도 되게 100으로 둔다.
+    # 월 무료량(약 1,000건)을 넘지 않게 하는 진짜 안전장치는 구글 클라우드 콘솔의 일일 할당량·예산 알림이다.
+    GOOGLE_RATING_DAILY_LIMIT: int = int(os.environ.get("GOOGLE_RATING_DAILY_LIMIT", "100"))
+
     ENABLE_OPS_ROUTES: bool = os.environ.get("ENABLE_OPS_ROUTES", "") == "1"
 
     # Groq base64 이미지 한도 4MB → 여유 있게 3MB로 압축

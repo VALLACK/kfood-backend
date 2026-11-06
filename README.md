@@ -65,6 +65,9 @@ scripts/
 ├── evaluate_menus.py        # 메뉴판 사진으로 실사용 검증 → eval_result/
 ├── warm_cache.py            # 시연 전날 시연 메뉴판을 미리 분석해 캐시 채우기
 ├── replay_eval.py           # 평가 원본으로 위험 오판 수정 효과 재확인 (Groq 호출 없음)
+├── build_restaurants.py     # 평가 메뉴판으로 미리 알아보기 식당 데이터(app/data/restaurants.json) 생성
+├── add_restaurant.py        # 메뉴판 사진으로 미리 알아보기 식당 추가 (학교 주변 등)
+├── find_place_ids.py        # 식당의 구글 식당 ID 채우기 (평점은 저장하지 않음)
 └── migrate_menu_items.py    # (진행 중) menu_base.json → Supabase menu_items 테이블 이관. SUPABASE_SECRET_KEY 필요, --dry-run으로 먼저 확인
 
 supabase/
