@@ -74,26 +74,31 @@ multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로
  "profile": {"allergies": ["shellfish"], "preferred_language": "en"}}
 // 응답
 {"profile_applied": true,
- "rating_attribution": "평점: Google",
+ "notice": null,               // 프로필이 없으면 "프로필이 없어서 모든 메뉴가 SAFE로 보입니다 ..." 문구
+ "disclaimer": "재료는 메뉴판과 일반 레시피 기준 추정이며, 최종 판단은 반드시 직원 확인 후 하세요.",
+ "rating_attribution": "Google Maps",
  "restaurants": [
    {"id": "chakhan-gukbap", "name": "착한국밥", "area": "연제구 거제동", "category": "국밥", "name_confirmed": true,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=...",
     "summary": {"safe": 1, "caution": 11, "warning": 0, "safe_menus": ["순대 1접시"]},
-    "google": {"rating": 4.4, "count": 312, "maps_url": "https://maps.google.com/...", "source": "Google"}}
+    "google": {"rating": 4.4, "count": 312, "maps_url": "https://maps.google.com/...", "source": "Google Maps"}}
  ]}
 ```
 - `q`: 식당 이름·지역·업종·**메뉴명**으로 찾는다. 비우면 전체.
 - `only_edible`: 먹을 수 있는(SAFE) 메뉴가 1개 이상인 식당만.
 - `sort`: `rating`(구글 평점 높은 순, 평점 없는 식당은 뒤) | `edible`(먹을 수 있는 메뉴 많은 순).
 - `google`: 구글 평점. 키가 없거나 조회 실패면 `null`. **평점은 저장하지 않고 요청 때마다 구글에서 불러온다**(구글 정책).
-  화면에 평점을 보여줄 때는 `rating_attribution`("평점: Google")을 함께 표시할 것.
+  화면에 평점을 보여줄 때는 `rating_attribution`("Google Maps")을 함께 표시할 것.
+  무료 사용량을 넘지 않게 **하루 조회 상한**(`GOOGLE_RATING_DAILY_LIMIT`, 기본 30건)이 있다. 넘으면 `google: null`로 오고 목록·판정은 그대로다.
+- `profile_applied: false`면 프로필이 없는 상태라 **모든 메뉴가 SAFE로 나온다**. `notice` 문구를 화면에 꼭 보여줄 것.
 
 ## POST /restaurants/{id} — 식당 상세
 ```json
 {"profile": {"allergies": ["shellfish"]}}   // body는 게스트일 때만, 로그인이면 생략 가능
 ```
-→ `{id, name, area, category, summary, google, results, rating_attribution}`.
+→ `{id, name, area, category, maps_url, summary, google, results, profile_applied, notice, disclaimer, rating_attribution}`.
 `results`는 **/analyze의 results와 같은 형식**(직원 질문 `staff_questions` 포함) + `prices`. 먹을 수 있는 메뉴부터 정렬된다.
+`data_source`·`ingredients[].source`에 `manual`이 올 수 있다: 팀이 메뉴판을 보고 일반 레시피 기준으로 직접 입력한 재료(AI 추론 아님).
 
 식당 추가: `python -m scripts.add_restaurant --id ... --name ... --photo 메뉴판.jpg` (서버 켜고 실행, AI 사용)
 구글 식당 ID 채우기: `python -m scripts.find_place_ids --write` (`.env`의 `GOOGLE_MAPS_API_KEY` 필요)

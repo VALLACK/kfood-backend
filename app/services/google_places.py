@@ -6,9 +6,14 @@
 - 키: .env의 GOOGLE_MAPS_API_KEY (결제 계정이 연결된 구글 클라우드 프로젝트의 키)
 - 키가 없거나 호출이 실패하면 평점 없이(None) 돌려준다. 검색 자체는 막지 않는다.
 - 평점(rating)은 Place Details의 Enterprise 등급 필드라 무료 사용량이 적다(월 약 1,000건).
-  식당 10곳 목록을 한 번 보여줄 때 10건이 쓰인다.
+  식당 11곳 목록을 한 번 보여줄 때 11건이 쓰인다.
+- 무료 사용량을 넘지 않게 하루 호출 상한(GOOGLE_RATING_DAILY_LIMIT, 기본 30)을 둔다.
+  상한을 넘으면 평점 없이 돌려준다(목록·판정은 그대로). 서버가 재시작되면 카운트가 0부터 다시 시작하므로,
+  구글 클라우드 콘솔의 할당량(Place Details 일일 요청 수)과 예산 알림도 같이 걸어둘 것.
 """
+import threading
 from concurrent.futures import ThreadPoolExecutor
+from datetime import date
 
 import httpx
 
@@ -18,8 +23,26 @@ URL = "https://places.googleapis.com/v1/places/{place_id}"
 FIELDS = "rating,userRatingCount,googleMapsUri"
 
 
+_lock = threading.Lock()
+_used = {"day": None, "count": 0}
+
+
+def _take_quota() -> bool:
+    """오늘 호출 상한이 남았으면 1건 차감하고 True."""
+    with _lock:
+        today = date.today()
+        if _used["day"] != today:
+            _used.update(day=today, count=0)
+        if _used["count"] >= settings.GOOGLE_RATING_DAILY_LIMIT:
+            return False
+        _used["count"] += 1
+        return True
+
+
 def get_rating(place_id: str | None) -> dict | None:
     if not place_id or not settings.GOOGLE_MAPS_API_KEY:
+        return None
+    if not _take_quota():
         return None
     try:
         r = httpx.get(
@@ -38,7 +61,7 @@ def get_rating(place_id: str | None) -> dict | None:
         "rating": d.get("rating"),
         "count": d.get("userRatingCount"),
         "maps_url": d.get("googleMapsUri"),
-        "source": "Google",
+        "source": "Google Maps",
     }
 
 

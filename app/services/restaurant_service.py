@@ -4,6 +4,7 @@
 판정은 /analyze와 같은 규칙 엔진(_build_results)을 그대로 쓰므로, 메뉴판을 직접 찍었을 때와
 같은 결과가 나온다.
 """
+import copy
 import json
 import unicodedata
 from functools import lru_cache
@@ -14,6 +15,7 @@ from urllib.parse import quote
 
 from app.services import analysis_service, google_places
 from app.services.dietary_rules import DietProfile
+from app.services.menu_knowledge import build_known_ingredients
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "restaurants.json"
 
@@ -35,12 +37,40 @@ def _matches(r: dict, q: str) -> bool:
     return any(q in _norm(f) for f in fields)
 
 
+@lru_cache(maxsize=256)
+def _known_for(names: tuple[str, ...]) -> dict:
+    """메뉴명 → 공공데이터·자체 DB 조회 결과. 프로필과 상관없어서 한 번만 찾고 재사용한다.
+    (식당 11곳·메뉴 170개를 매번 찾으면 검색 한 번에 1~5초 걸렸다)"""
+    return {n: build_known_ingredients(n) for n in names}
+
+
+def warm_cache() -> None:
+    """서버 시작 직후 메뉴 조회 캐시를 미리 채운다 (첫 검색도 빠르게)."""
+    for r in load_restaurants():
+        _known_for(tuple(m["name"] for m in r["menus"]))
+
+
 def judge_menus(r: dict, profile: DietProfile) -> list[dict]:
+    """저장된 재료 답변으로 판정한다.
+
+    메뉴의 재료 답변은 두 종류다.
+    - ai: 메뉴판 사진을 분석할 때 AI가 답한 재료 (scripts/add_restaurant.py, build_restaurants.py)
+    - manual: 팀이 메뉴판을 보고 일반 레시피 기준으로 직접 입력한 재료
+    판정 결과의 data_source·재료 source도 ai / manual로 구분해서 내보낸다.
+    """
     lines = [MenuLine(name=m["name"], note=m.get("note")) for m in r["menus"]]
-    ai = {m["name"]: analysis_service._sanitize(m["ai"]) for m in r["menus"] if m.get("ai")}
-    results = analysis_service._build_results(lines, ai, profile)
+    stored = {m["name"]: analysis_service._sanitize(m.get("ai") or m.get("manual"))
+              for m in r["menus"] if m.get("ai") or m.get("manual")}
+    known = copy.deepcopy(_known_for(tuple(l.name for l in lines)))
+    results = analysis_service._build_results(lines, stored, profile, known_map=known)
     for res, m in zip(results, r["menus"]):
         res["prices"] = m.get("prices", [])
+        if m.get("manual"):
+            if res.get("data_source") == "ai":
+                res["data_source"] = "manual"
+            for ing in res.get("ingredients", []):
+                if ing.get("source") == "ai":
+                    ing["source"] = "manual"
     return results
 
 

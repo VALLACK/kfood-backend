@@ -32,6 +32,44 @@ PHOTOS = {
 KEEP = ("name", "area", "category", "google_place_id", "name_confirmed")
 
 
+def _i(name, en, tags, certainty="confirmed"):
+    return {"name": name, "name_translated": en, "tags": tags, "certainty": certainty, "ratio_percent": None}
+
+
+# 평가 채점(docs/eval_1005_scored.csv)에서 메뉴명이 틀린 것(X)으로 나온 항목.
+# 없는 메뉴·중복·음료 칸 오인식은 빼고, 실제 메뉴를 알 수 있는 건 이름과 재료(manual)를 바로잡는다.
+MENU_DROP = {
+    "hadan-dolgetang": {"대구알2,라2", "란전", "맑은국 우동,곤약사리", "산소라구이", "산우럭구이", "통나무죽"},
+    "osaka": {"단타카토나, 키티"},
+}
+MENU_FIX = {
+    ("hadan-dolgetang", "산눈지방탕탕이"): ("산낙지탕탕이", "Raw live octopus (sannakji)", [
+        _i("산낙지", "live octopus", ["mollusk"]), _i("참기름", "sesame oil", []),
+        _i("마늘", "garlic", [], "possible"), _i("소금", "salt", [])]),
+    ("osaka", "달걀밥"): ("닭덮밥", "Chicken rice bowl (oyakodon style)", [   # 원래 '닭덮밥' — 달걀밥으로 읽혀 할랄에 SAFE가 났다
+        _i("닭고기", "chicken", ["chicken"]), _i("달걀", "egg", ["egg"]), _i("간장", "soy sauce", ["soy", "wheat"]),
+        _i("맛술", "cooking wine", ["alcohol"], "possible"), _i("쌀밥", "rice", []), _i("양파", "onion", [])]),
+    ("subaekdang", "삼겹데지국밥"): ("삼겹돼지국밥", "Pork belly gukbap (pork soup with rice)", [
+        _i("돼지 삼겹살", "pork belly", ["pork"]), _i("돼지뼈 육수", "pork bone broth", ["pork"]),
+        _i("새우젓", "salted shrimp", ["shrimp"], "possible"), _i("쌀밥", "rice", []), _i("부추", "chives", [], "possible")]),
+}
+
+
+def _fix_menus(rid: str, menus: list[dict]) -> list[dict]:
+    out = []
+    for m in menus:
+        if m["name"] in MENU_DROP.get(rid, set()):
+            continue
+        m["prices"] = [p.lstrip("W₩").strip() for p in m["prices"]]
+        fix = MENU_FIX.get((rid, m["name"]))
+        if fix:
+            name, en, ings = fix
+            m.update(name=name, ai=None, manual={"menu": name, "menu_translated": en, "ingredients": ings})
+            m.pop("ai")
+        out.append(m)
+    return out
+
+
 def build(raw: list[dict], old: dict[str, dict]) -> list[dict]:
     ai = _stored_ai_answers(raw)
     seen_photo = set()
@@ -61,7 +99,7 @@ def build(raw: list[dict], old: dict[str, dict]) -> list[dict]:
                               "ingredients": [{k: i.get(k) for k in ("name", "name_translated", "tags", "certainty", "ratio_percent")}
                                               for i in a["ingredients"]]}
         restaurants.append({**meta, "source": f"10/05 평가 메뉴판 사진 {blk['photo']}",
-                            "menus": list(menus.values())})
+                            "menus": _fix_menus(meta["id"], list(menus.values()))})
     return restaurants
 
 
@@ -74,10 +112,14 @@ def main():
     old = {}
     if OUT.exists():
         old = {r["id"]: r for r in json.loads(OUT.read_text(encoding="utf-8")).get("restaurants", [])}
+    built = build(raw, old)
+    ids = {r["id"] for r in built}
+    # 사진 평가와 상관없이 추가한 식당(add_restaurant.py·수기 입력)은 그대로 둔다
+    built += [r for r in old.values() if r["id"] not in ids]
     data = {
         "_comment": "미리 알아보기용 식당 데이터. 판정·평점은 저장하지 않고 요청 때 계산/조회한다. "
-                    "name_confirmed=false인 식당은 상호를 확인해서 고칠 것.",
-        "restaurants": build(raw, old),
+                    "메뉴 재료: ai=AI 답변, manual=팀이 일반 레시피 기준으로 직접 입력.",
+        "restaurants": built,
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     rs = data["restaurants"]

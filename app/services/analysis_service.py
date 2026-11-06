@@ -301,8 +301,11 @@ def _match_results(lines: list[MenuLine], results: list[dict]) -> dict:
     return matched
 
 
-def _build_results(lines: list[MenuLine], ai_by_menu: dict, profile: DietProfile) -> list[dict]:
-    known_map = {l.name: build_known_ingredients(l.name) for l in lines}
+def _build_results(lines: list[MenuLine], ai_by_menu: dict, profile: DietProfile,
+                   known_map: dict | None = None) -> list[dict]:
+    """known_map을 넘기면 메뉴별 공공데이터·자체 DB 조회를 건너뛴다(미리 알아보기에서 캐시해서 쓴다)."""
+    if known_map is None:
+        known_map = {l.name: build_known_ingredients(l.name) for l in lines}
     results = []
     for line in lines:
         n = line.name

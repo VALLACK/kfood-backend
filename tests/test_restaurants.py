@@ -30,6 +30,7 @@ def fake_google(monkeypatch):
                                                       "googleMapsUri": f"https://maps.google.com/?cid={pid}"})
 
     monkeypatch.setattr(google_places.httpx, "get", fake_get)
+    monkeypatch.setattr(google_places, "_used", {"day": None, "count": 0})   # 하루 상한 카운트 초기화
     return ratings, calls
 
 
@@ -73,7 +74,7 @@ def test_sorted_by_google_rating_and_unrated_last(fake_google, place_ids):
     names = [r["id"] for r in _search(profile=SHELLFISH)["restaurants"]]
     assert names[:3] == ["osaka", "chakhan-gukbap", "katsuan"]
     top = _search(profile=SHELLFISH)["restaurants"][0]
-    assert top["google"]["source"] == "Google" and top["google"]["rating"] == 4.7
+    assert top["google"]["source"] == "Google Maps" and top["google"]["rating"] == 4.7
 
 
 def test_profile_changes_what_is_edible():
@@ -231,3 +232,64 @@ def test_every_restaurant_has_maps_link_without_google_key(monkeypatch):
         assert r["maps_url"].startswith("https://www.google.com/maps/search/?api=1&query=")
     r = {"name": "카츠안", "area": "", "google_place_id": "ChIJabc"}
     assert restaurant_service.maps_url(r).endswith("&query_place_id=ChIJabc")
+
+
+def test_misread_menu_names_from_eval_are_fixed():
+    """태욱님 리뷰: 평가 채점에서 메뉴명 X였던 이름이 데이터에 남아 있으면 안 된다."""
+    import csv
+    from pathlib import Path
+    rows = csv.DictReader(Path("docs/eval_1005_scored.csv").open(encoding="utf-8-sig"))
+    wrong = {r["메뉴"] for r in rows if r["채점_메뉴명정확"] == "X"}
+    names = {m["name"] for r in restaurant_service.load_restaurants() for m in r["menus"]}
+    assert not (wrong & names), wrong & names
+    assert not [p for r in restaurant_service.load_restaurants() for m in r["menus"] for p in m["prices"]
+                if p.startswith(("W", "₩"))]
+
+
+def test_chicken_rice_bowl_is_not_safe_for_halal():
+    """원래 '닭덮밥'이 '달걀밥'으로 읽혀 할랄에 SAFE가 났던 문제."""
+    d = client.post("/restaurants/osaka", json={"profile": {"religious_diet": "halal"}}).json()
+    bowl = next(m for m in d["results"] if m["menu"] == "닭덮밥")
+    assert bowl["risk"]["level"] != "SAFE"
+    assert "달걀밥" not in [m["menu"] for m in d["results"]]
+
+
+def test_manual_menus_are_labeled_manual_not_ai():
+    d = client.post("/restaurants/hiwaffle-kyungsung-pknu", json={"profile": SHELLFISH}).json()
+    plain = next(m for m in d["results"] if m["menu"] == "사과잼 플레인와플")
+    assert plain["data_source"] == "manual"
+    assert {i["source"] for i in plain["ingredients"]} <= {"manual", "menu_name", "menu_board", "menuzen", "menu_base", None}
+    assert "ai" not in {i["source"] for i in plain["ingredients"]}
+    # 사진 분석 식당은 그대로 ai
+    d = client.post("/restaurants/katsuan", json={"profile": SHELLFISH}).json()
+    assert "manual" not in {m["data_source"] for m in d["results"]}
+
+
+def test_no_profile_shows_notice_and_disclaimer():
+    d = _search()
+    assert d["profile_applied"] is False and "SAFE" in d["notice"]
+    assert d["disclaimer"] and d["rating_attribution"] == "Google Maps"
+    d = _search(profile=SHELLFISH)
+    assert d["profile_applied"] is True and d["notice"] is None
+    d = client.post("/restaurants/osaka", json={}).json()
+    assert d["notice"] and d["disclaimer"]
+
+
+def test_google_daily_limit_stops_rating_calls(fake_google, place_ids, monkeypatch):
+    ratings, calls = fake_google
+    ratings.update({"P_KATSU": 4.2, "P_OSAKA": 4.3, "P_CHAKHAN": 5.0})
+    monkeypatch.setattr(settings, "GOOGLE_RATING_DAILY_LIMIT", 4)
+    _search(profile=SHELLFISH)                      # 3건 사용
+    d = _search(profile=SHELLFISH)                  # 1건만 남음
+    assert len(calls) == 4
+    assert sum(r["google"] is not None for r in d["restaurants"]) == 1
+    assert len(d["restaurants"]) == 11              # 평점이 없어도 목록은 그대로
+
+
+def test_repeated_search_is_fast():
+    """메뉴 DB 조회를 캐시해서 두 번째 검색부터는 빨라야 한다."""
+    import time
+    _search(profile=SHELLFISH)
+    t = time.time()
+    _search(profile={"religious_diet": "halal"})
+    assert time.time() - t < 1.0

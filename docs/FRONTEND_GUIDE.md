@@ -158,7 +158,7 @@ window.speechSynthesis.speak(u);
 | `ingredients[].ratio_percent` | 성분 비율 |
 | `ingredients[].ratio_source` | `"menuzen"`이면 **공공데이터 실제 중량 기준**, 없으면 AI 추정 |
 | `ingredients[].seen_in` | 그 재료가 등장한 유사 레시피 이름 (근거 표시용) |
-| `data_source` | `menuzen`(공공데이터) / `menu_base`(자체 DB) / `menu_board`(메뉴판 표기) / `ai`(추론) |
+| `data_source` | `menuzen`(공공데이터) / `menu_base`(자체 DB) / `menu_board`(메뉴판 표기) / `ai`(추론) / `manual`(팀 수기 입력, 미리 알아보기에서만) |
 | `provisional` | `true`면 전체 재료를 모르는 상태. 이때는 SAFE가 나오지 않고 최소 CAUTION + 직원 질문 |
 | `family[]` | 비교에 사용한 유사 레시피 목록 |
 | `profile_applied` | 프로필이 적용됐는지 |
@@ -214,18 +214,20 @@ setResults(full.data.results);
 ```
 [검색창: 식당·지역·메뉴]   [ ] 먹을 수 있는 메뉴 있는 곳만   정렬: 평점순 | 먹을 수 있는 메뉴순
 
-⭐ 4.7 (Google)  오사카 · 일식
+⭐ 4.3 (Google Maps)  오사카 · 일식
    🟢 20  🟡 2  🔴 2     먹을 수 있는 메뉴: 함박스테이크, 오무라이스 ...
-⭐ 4.4 (Google)  착한국밥 · 국밥
+⭐ 4.4 (Google Maps)  착한국밥 · 국밥
    🟢 1  🟡 11  🔴 0
 ```
+- **필수: `profile_applied`가 `false`면 목록·상세 맨 위에 `notice` 경고 배너를 보여주세요.** 프로필이 없으면 모든 메뉴가 SAFE로 나와서, 경고 없이 보여주면 위험합니다. 배너에 "프로필 설정" 버튼을 같이 두면 좋습니다.
+- `disclaimer`(직원 확인 안내)는 /analyze 결과 화면처럼 하단에 작게 표시.
 - 요청 body는 `/analyze`와 같이: 게스트면 `profile`을 넣고, 로그인이면 Authorization 헤더만.
 - `google`이 `null`이면 평점 자리에 "평점 정보 없음" 또는 숨김.
-- 평점을 보여줄 땐 **"Google" 출처 표시 필수**(구글 정책). "구글 지도에서 보기" 버튼은 `maps_url`(항상 있음, 키 없어도 됨)로 새 창 열기.
-- `name_confirmed: false`인 식당은 이름이 임시입니다(데이터 정리 중).
+- 평점을 보여줄 땐 **`rating_attribution`("Google Maps") 출처 표시 필수**(구글 정책). "구글 지도에서 보기" 버튼은 `maps_url`(항상 있음, 키 없어도 됨)로 새 창 열기.
 
 **상세 화면** — 식당을 누르면 `POST /restaurants/{id}`
 - `results`가 `/analyze` 결과와 **같은 형식**이라 지금 결과 카드(`ResultCard`)를 그대로 쓰면 됩니다. 메뉴판을 직접 찍지 않아도 같은 화면이 나옵니다.
 - 추가 필드 `prices`(가격 목록). 결과는 🟢 → 🟡 → 🔴 순으로 정렬돼서 옵니다.
 - 직원 질문 카드도 그대로 쓸 수 있습니다(가게에 도착해서 바로 보여주기).
+- `data_source: "manual"`은 팀이 메뉴판을 보고 직접 입력한 재료입니다. 근거 표시에 "팀 입력(일반 레시피 기준)" 같은 라벨로 보여주세요(`ai`는 "AI 추정").
 

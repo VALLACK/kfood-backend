@@ -10,6 +10,16 @@ from app.services.profile_service import resolve_profile
 
 router = APIRouter(tags=["restaurants"])
 
+RATING_ATTRIBUTION = "Google Maps"
+DISCLAIMER = "재료는 메뉴판과 일반 레시피 기준 추정이며, 최종 판단은 반드시 직원 확인 후 하세요."
+NO_PROFILE_NOTICE = "프로필(알레르기·식단)이 없어서 모든 메뉴가 SAFE로 보입니다. 프로필을 설정해야 판정이 적용됩니다."
+
+
+def _meta(profile) -> dict:
+    applied = not profile.is_empty()
+    return {"profile_applied": applied, "notice": None if applied else NO_PROFILE_NOTICE,
+            "disclaimer": DISCLAIMER, "rating_attribution": RATING_ATTRIBUTION}
+
 
 class RestaurantSearch(BaseModel):
     q: str = ""                      # 식당 이름·지역·업종·메뉴명 (비우면 전체)
@@ -26,11 +36,7 @@ class RestaurantDetail(BaseModel):
 def search_restaurants(body: RestaurantSearch, auth: AuthContext | None = Depends(optional_auth)):
     """가기 전에 미리 알아보기: 저장된 식당을 내 프로필 기준으로 판정해 구글 평점순으로 보여준다."""
     profile, _ = resolve_profile(auth, body.profile)
-    return {
-        "profile_applied": not profile.is_empty(),
-        "restaurants": restaurant_service.search(profile, body.q, body.only_edible, body.sort),
-        "rating_attribution": "평점: Google",
-    }
+    return {**_meta(profile), "restaurants": restaurant_service.search(profile, body.q, body.only_edible, body.sort)}
 
 
 @router.post("/restaurants/{restaurant_id}")
@@ -41,4 +47,4 @@ def restaurant_detail(restaurant_id: str, body: RestaurantDetail | None = None,
     data = restaurant_service.detail(restaurant_id, profile)
     if data is None:
         raise HTTPException(status_code=404, detail="저장된 식당이 아닙니다.")
-    return {"profile_applied": not profile.is_empty(), **data, "rating_attribution": "평점: Google"}
+    return {**_meta(profile), **data}

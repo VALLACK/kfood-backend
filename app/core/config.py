@@ -21,6 +21,8 @@ class Settings:
 
     # 미리 알아보기 — 구글 평점 조회용 (없으면 평점 없이 동작)
     GOOGLE_MAPS_API_KEY: str = os.environ.get("GOOGLE_MAPS_API_KEY", "")
+    # 평점 조회 하루 상한. 평점은 월 약 1,000건 무료 → 하루 30건이면 한 달 900건 안에서 끝난다.
+    GOOGLE_RATING_DAILY_LIMIT: int = int(os.environ.get("GOOGLE_RATING_DAILY_LIMIT", "30"))
 
     ENABLE_OPS_ROUTES: bool = os.environ.get("ENABLE_OPS_ROUTES", "") == "1"
 
