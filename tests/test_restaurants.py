@@ -293,3 +293,19 @@ def test_repeated_search_is_fast():
     t = time.time()
     _search(profile={"religious_diet": "halal"})
     assert time.time() - t < 1.0
+
+
+def test_rating_calls_only_for_returned_restaurants(fake_google, monkeypatch):
+    """태욱님 리뷰: 식당이 수백 곳이 돼도 평점은 돌려주는 식당(최대 20곳)만 조회한다."""
+    ratings, calls = fake_google
+    base = restaurant_service.load_restaurants()[0]
+    many = [{**base, "id": f"r{i}", "name": f"식당{i}", "google_place_id": f"P{i}"} for i in range(60)]
+    monkeypatch.setattr(restaurant_service, "load_restaurants", lambda: many)
+    d = _search(profile=SHELLFISH)
+    assert d["total"] == 60
+    assert len(d["restaurants"]) == 20
+    assert len(calls) == 20                       # 60건이 아니라 20건만 호출
+    calls.clear()
+    d = _search(profile=SHELLFISH, limit=5)
+    assert len(d["restaurants"]) == 5 and len(calls) == 5
+    assert client.post("/restaurants/search", json={"limit": 100}).status_code == 422

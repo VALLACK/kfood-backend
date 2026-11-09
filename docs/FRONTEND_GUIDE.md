@@ -223,6 +223,7 @@ setResults(full.data.results);
 - `disclaimer`(직원 확인 안내)는 /analyze 결과 화면처럼 하단에 작게 표시.
 - 요청 body는 `/analyze`와 같이: 게스트면 `profile`을 넣고, 로그인이면 Authorization 헤더만.
 - `google`이 `null`이면 평점 자리에 "평점 정보 없음" 또는 숨김.
+- 한 번에 최대 20곳만 옵니다(`limit`). `total`이 더 크면 "N곳 중 20곳 표시 · 검색어나 지역으로 좁혀 보세요" 안내를 보여주세요.
 - 평점을 보여줄 땐 **`rating_attribution`("Google Maps") 출처 표시 필수**(구글 정책). "구글 지도에서 보기" 버튼은 `maps_url`(항상 있음, 키 없어도 됨)로 새 창 열기.
 
 **상세 화면** — 식당을 누르면 `POST /restaurants/{id}`
