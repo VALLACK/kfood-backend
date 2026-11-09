@@ -32,9 +32,9 @@ class Settings:
     # OCR 전에 줄이는 긴 변 길이(px). 작은 글씨(사리·추가메뉴 칸)가 뭉개지면 2048로 올려서 비교해 볼 것
     # (scripts/compare_ocr.py). 키우면 이미지 토큰이 늘어 Groq 분당 한도에 더 빨리 닿는다.
     OCR_MAX_SIDE: int = int(os.environ.get("OCR_MAX_SIDE", "1600"))
-    # 사진이 이보다 작으면(긴 변 기준) 이 크기까지 확대한 뒤 OCR한다. 0이면 확대 안 함(기본).
-    # 10/05 평가 사진은 긴 변 576~1567px라 작은 글씨가 뭉개졌다 → 1600으로 켜고 compare_ocr로 비교할 것.
-    OCR_UPSCALE_TO: int = int(os.environ.get("OCR_UPSCALE_TO", "0"))
+    # 사진이 이보다 작으면(긴 변 기준) 이 크기까지 확대한 뒤 OCR한다. 0이면 확대 안 함.
+    # 11/09 compare_ocr(작은 글씨 사진 3장): 확대 전 74.1% → 1600 확대 79.3%, 가장 작은 사진(576px) 76% → 86%.
+    OCR_UPSCALE_TO: int = int(os.environ.get("OCR_UPSCALE_TO", "1600"))
     MAX_UPLOAD_BYTES: int = 15 * 1024 * 1024
 
     # 한 번의 LLM 호출에 담는 메뉴 수. 호출마다 지시문이 반복되므로 작을수록 느리다.

@@ -34,7 +34,7 @@ def test_small_photo_is_upscaled_only_when_enabled(monkeypatch):
     monkeypatch.setattr(settings, "OCR_MAX_SIDE", 1600)
     monkeypatch.setattr(settings, "OCR_UPSCALE_TO", 0)
     data, _ = ocr._compress(_png(576, 351))
-    assert Image.open(io.BytesIO(data)).size == (576, 351)          # 기본: 그대로
+    assert Image.open(io.BytesIO(data)).size == (576, 351)          # 0이면 그대로
     monkeypatch.setattr(settings, "OCR_UPSCALE_TO", 1600)
     data, _ = ocr._compress(_png(576, 351))
     assert max(Image.open(io.BytesIO(data)).size) == 1600
