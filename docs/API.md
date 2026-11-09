@@ -70,10 +70,11 @@ multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로
 로그인 사용자는 DB 프로필, 게스트는 body의 `profile`을 쓴다(/analyze와 같음).
 ```json
 // 요청
-{"q": "국밥", "only_edible": true, "sort": "rating",
+{"q": "국밥", "only_edible": true, "sort": "rating", "limit": 20,
  "profile": {"allergies": ["shellfish"], "preferred_language": "en"}}
 // 응답
 {"profile_applied": true,
+ "total": 3,                   // 조건에 맞는 식당 수 (restaurants는 그중 최대 limit곳)
  "notice": null,               // 프로필이 없으면 "프로필이 없어서 모든 메뉴가 SAFE로 보입니다 ..." 문구
  "disclaimer": "재료는 메뉴판과 일반 레시피 기준 추정이며, 최종 판단은 반드시 직원 확인 후 하세요.",
  "rating_attribution": "Google Maps",
@@ -87,6 +88,9 @@ multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로
 - `q`: 식당 이름·지역·업종·**메뉴명**으로 찾는다. 비우면 전체.
 - `only_edible`: 먹을 수 있는(SAFE) 메뉴가 1개 이상인 식당만.
 - `sort`: `rating`(구글 평점 높은 순, 평점 없는 식당은 뒤) | `edible`(먹을 수 있는 메뉴 많은 순).
+- `limit`: 최대 몇 곳을 받을지(1~20, 기본 20). **구글 평점은 돌려주는 식당만 조회**한다.
+  조건에 맞는 식당이 더 많으면 먹을 수 있는 메뉴가 많은 순으로 limit곳을 먼저 고르고, 그 안에서 평점순으로 정렬한다.
+  `total`이 `restaurants` 개수보다 크면 화면에 "검색어나 지역으로 좁혀 보세요" 안내를 띄울 것.
 - `google`: 구글 평점. 키가 없거나 조회 실패면 `null`. **평점은 저장하지 않고 요청 때마다 구글에서 불러온다**(구글 정책).
   화면에 평점을 보여줄 때는 `rating_attribution`("Google Maps")을 함께 표시할 것.
   무료 사용량을 넘지 않게 **하루 조회 상한**(`GOOGLE_RATING_DAILY_LIMIT`, 기본 100건)이 있다. 넘으면 `google: null`로 오고 목록·판정은 그대로다.

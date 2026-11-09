@@ -93,28 +93,43 @@ def _public(r: dict) -> dict:
     return {**{k: r.get(k) for k in ("id", "name", "area", "category", "name_confirmed")}, "maps_url": maps_url(r)}
 
 
-def search(profile: DietProfile, q: str = "", only_edible: bool = False, sort: str = "rating") -> list[dict]:
+MAX_RESULTS = 20   # 한 번에 돌려주는 식당 수 상한 = 평점 조회 상한 (구글 호출 한도 보호)
+
+
+def search_page(profile: DietProfile, q: str = "", only_edible: bool = False, sort: str = "rating",
+                limit: int = MAX_RESULTS) -> dict:
     """식당 목록 + 내 프로필 기준 판정 요약 + 구글 평점.
 
     sort: rating(구글 평점 높은 순, 평점 없는 식당은 뒤) | edible(먹을 수 있는 메뉴 많은 순)
     only_edible: 먹을 수 있는(SAFE) 메뉴가 하나라도 있는 식당만
+    limit: 최대 몇 곳을 돌려줄지 (1~20). 구글 평점은 **돌려주는 식당만** 조회한다.
+      식당이 많을 때(공공데이터 추가 등) 검색 한 번에 수백 건씩 평점을 부르지 않도록,
+      먼저 '먹을 수 있는 메뉴 많은 순'으로 후보를 limit곳 고른 뒤 그 식당들만 평점을 조회해 정렬한다.
     """
-    rows = [r for r in load_restaurants() if _matches(r, q)]
+    limit = max(1, min(limit, MAX_RESULTS))
     items = []
-    for r in rows:
+    for r in load_restaurants():
+        if not _matches(r, q):
+            continue
         s = _summary(judge_menus(r, profile))
         if only_edible and s["safe"] == 0:
             continue
         items.append({**_public(r), "summary": s, "_place_id": r.get("google_place_id")})
+    total = len(items)
+    items.sort(key=lambda i: (-i["summary"]["safe"], i["summary"]["warning"]))
+    items = items[:limit]
     ratings = google_places.get_ratings([i.pop("_place_id") for i in items])
     for i, g in zip(items, ratings):
         i["google"] = g
-    if sort == "edible":
-        items.sort(key=lambda i: (-i["summary"]["safe"], i["summary"]["warning"]))
-    else:
+    if sort == "rating":
         items.sort(key=lambda i: (i["google"] is None, -((i["google"] or {}).get("rating") or 0),
                                   -i["summary"]["safe"]))
-    return items
+    return {"total": total, "restaurants": items}
+
+
+def search(profile: DietProfile, q: str = "", only_edible: bool = False, sort: str = "rating",
+           limit: int = MAX_RESULTS) -> list[dict]:
+    return search_page(profile, q, only_edible, sort, limit)["restaurants"]
 
 
 def detail(restaurant_id: str, profile: DietProfile) -> dict | None:

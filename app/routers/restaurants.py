@@ -1,7 +1,7 @@
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from app.core.auth import AuthContext, optional_auth
 from app.models.schemas import ProfileInput
@@ -25,6 +25,7 @@ class RestaurantSearch(BaseModel):
     q: str = ""                      # 식당 이름·지역·업종·메뉴명 (비우면 전체)
     only_edible: bool = False        # 먹을 수 있는(SAFE) 메뉴가 있는 식당만
     sort: Literal["rating", "edible"] = "rating"
+    limit: int = Field(restaurant_service.MAX_RESULTS, ge=1, le=restaurant_service.MAX_RESULTS)  # 최대 20곳
     profile: ProfileInput | None = None   # 게스트용. 로그인 사용자는 DB 프로필을 쓴다
 
 
@@ -36,7 +37,8 @@ class RestaurantDetail(BaseModel):
 def search_restaurants(body: RestaurantSearch, auth: AuthContext | None = Depends(optional_auth)):
     """가기 전에 미리 알아보기: 저장된 식당을 내 프로필 기준으로 판정해 구글 평점순으로 보여준다."""
     profile, _ = resolve_profile(auth, body.profile)
-    return {**_meta(profile), "restaurants": restaurant_service.search(profile, body.q, body.only_edible, body.sort)}
+    page = restaurant_service.search_page(profile, body.q, body.only_edible, body.sort, body.limit)
+    return {**_meta(profile), **page}
 
 
 @router.post("/restaurants/{restaurant_id}")
