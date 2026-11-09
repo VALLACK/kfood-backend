@@ -98,6 +98,10 @@ def _compress(data: bytes) -> tuple[bytes, str]:
             raise HTTPException(status_code=400, detail="이미지를 읽을 수 없습니다.")
     img = ImageOps.exif_transpose(Image.open(io.BytesIO(data))).convert("RGB")
     img.thumbnail((settings.OCR_MAX_SIDE, settings.OCR_MAX_SIDE))
+    target = min(settings.OCR_UPSCALE_TO, settings.OCR_MAX_SIDE)
+    if target and max(img.size) < target:   # 작은 사진은 키워서 작은 글씨를 덜 뭉개지게
+        r = target / max(img.size)
+        img = img.resize((round(img.width * r), round(img.height * r)), Image.LANCZOS)
     quality = 85
     while True:
         buf = io.BytesIO()

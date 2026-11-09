@@ -7,7 +7,8 @@
 
 사용법 (서버를 먼저 띄운 상태에서, 사진 폴더 지정):
     python -m scripts.compare_ocr --dir eval_photos
-    # 서버를 OCR_MAX_SIDE=2048 로 다시 띄운 뒤 한 번 더 → 두 결과의 '인식률'을 비교
+    # .env에 OCR_UPSCALE_TO=1600 추가 → 서버 재시작 → 한 번 더 → 두 결과의 '인식률'을 비교
+    # (평가 사진은 모두 1600px보다 작아서 OCR_MAX_SIDE를 올리는 건 효과가 없다. 작은 사진 확대가 핵심)
     python -m scripts.compare_ocr --dir eval_photos --only 193106,193251,193421   # 작은 글씨 많은 사진만
 
 Groq를 사진 1장당 1번 쓴다(12장 ≈ 12번). 결과는 화면과 eval_result/compare_ocr_<시각>.csv에 남는다.
