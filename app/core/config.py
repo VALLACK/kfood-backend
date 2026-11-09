@@ -29,6 +29,9 @@ class Settings:
 
     # Groq base64 이미지 한도 4MB → 여유 있게 3MB로 압축
     MAX_IMAGE_BYTES: int = 3 * 1024 * 1024
+    # OCR 전에 줄이는 긴 변 길이(px). 작은 글씨(사리·추가메뉴 칸)가 뭉개지면 2048로 올려서 비교해 볼 것
+    # (scripts/compare_ocr.py). 키우면 이미지 토큰이 늘어 Groq 분당 한도에 더 빨리 닿는다.
+    OCR_MAX_SIDE: int = int(os.environ.get("OCR_MAX_SIDE", "1600"))
     MAX_UPLOAD_BYTES: int = 15 * 1024 * 1024
 
     # 한 번의 LLM 호출에 담는 메뉴 수. 호출마다 지시문이 반복되므로 작을수록 느리다.

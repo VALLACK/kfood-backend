@@ -63,6 +63,7 @@ scripts/
 ├── fetch_menuzen.py         # 메뉴젠 API 전체 수집·정규화 → app/data/menuzen_menus.json
 ├── add_menu.py              # 미매칭으로 기록된 메뉴를 menu_base.json에 추가
 ├── evaluate_menus.py        # 메뉴판 사진으로 실사용 검증 → eval_result/
+├── compare_ocr.py           # OCR 메뉴명 인식률 비교 (10/05 채점표 기준, 설정 바꿔 가며)
 ├── warm_cache.py            # 시연 전날 시연 메뉴판을 미리 분석해 캐시 채우기
 ├── replay_eval.py           # 평가 원본으로 위험 오판 수정 효과 재확인 (Groq 호출 없음)
 ├── build_restaurants.py     # 평가 메뉴판으로 미리 알아보기 식당 데이터(app/data/restaurants.json) 생성

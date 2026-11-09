@@ -4,6 +4,7 @@ from app.core.auth import AuthContext, optional_auth
 from app.models.schemas import AnalyzeRequest
 from app.services import analysis_service
 from app.services.profile_service import resolve_profile
+from app.services.messages import t
 
 router = APIRouter(tags=["analyze"])
 
@@ -30,5 +31,5 @@ def analyze_menu(body: AnalyzeRequest, auth: AuthContext | None = Depends(option
         "scan_log_id": scan_log_id,
         "profile_applied": not profile.is_empty(),
         "results": results,
-        "disclaimer": "성분 비율(ratio_percent)은 AI 추정치이며, 최종 판단은 반드시 직원 확인 후 하세요.",
+        "disclaimer": t("analyze_disclaimer", profile),
     }

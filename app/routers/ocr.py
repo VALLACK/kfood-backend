@@ -90,14 +90,14 @@ def _share_notes(menus: list[dict]) -> list[dict]:
 
 
 def _compress(data: bytes) -> tuple[bytes, str]:
-    """Groq base64 이미지 한도(4MB) 대응: 긴 변 1600px, JPEG 재인코딩."""
+    """Groq base64 이미지 한도(4MB) 대응: 긴 변 OCR_MAX_SIDE(기본 1600px), JPEG 재인코딩."""
     if len(data) <= settings.MAX_IMAGE_BYTES:
         try:
             Image.open(io.BytesIO(data)).verify()
         except Exception:
             raise HTTPException(status_code=400, detail="이미지를 읽을 수 없습니다.")
     img = ImageOps.exif_transpose(Image.open(io.BytesIO(data))).convert("RGB")
-    img.thumbnail((1600, 1600))
+    img.thumbnail((settings.OCR_MAX_SIDE, settings.OCR_MAX_SIDE))
     quality = 85
     while True:
         buf = io.BytesIO()
