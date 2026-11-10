@@ -6,19 +6,19 @@ from pydantic import BaseModel, Field
 from app.core.auth import AuthContext, optional_auth
 from app.models.schemas import ProfileInput
 from app.services import restaurant_service
+from app.services.messages import t
 from app.services.profile_service import resolve_profile
 
 router = APIRouter(tags=["restaurants"])
 
 RATING_ATTRIBUTION = "Google Maps"
-DISCLAIMER = "재료는 메뉴판과 일반 레시피 기준 추정이며, 최종 판단은 반드시 직원 확인 후 하세요."
-NO_PROFILE_NOTICE = "프로필(알레르기·식단)이 없어서 모든 메뉴가 SAFE로 보입니다. 프로필을 설정해야 판정이 적용됩니다."
 
 
 def _meta(profile) -> dict:
     applied = not profile.is_empty()
-    return {"profile_applied": applied, "notice": None if applied else NO_PROFILE_NOTICE,
-            "disclaimer": DISCLAIMER, "rating_attribution": RATING_ATTRIBUTION}
+    # notice·disclaimer는 프로필 언어(ko/en/zh/ja)로 번역해서 내려준다 — 프론트는 그대로 표시
+    return {"profile_applied": applied, "notice": None if applied else t("no_profile_notice", profile),
+            "disclaimer": t("restaurant_disclaimer", profile), "rating_attribution": RATING_ATTRIBUTION}
 
 
 class RestaurantSearch(BaseModel):

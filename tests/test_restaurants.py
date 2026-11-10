@@ -223,7 +223,7 @@ def test_hiwaffle_peanut_menus_are_warning():
     d = restaurant_service.detail("hiwaffle-kyungsung-pknu", DietProfile.from_row({"allergies": ["peanut"]}))
     warn = {r["menu"] for r in d["results"] if r["risk"]["level"] == "WARNING"}
     assert warn and all("땅콩" in m for m in warn)
-    assert d["summary"]["warning"] == 4 and d["summary"]["safe"] == 27
+    assert d["summary"]["warning"] == 4 and d["summary"]["safe"] == 26   # 생크림와플 16종 + 아이스크림 14종
 
 
 def test_every_restaurant_has_maps_link_without_google_key(monkeypatch):

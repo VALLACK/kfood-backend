@@ -221,6 +221,7 @@ setResults(full.data.results);
 ```
 - **필수: `profile_applied`가 `false`면 목록·상세 맨 위에 `notice` 경고 배너를 보여주세요.** 프로필이 없으면 모든 메뉴가 SAFE로 나와서, 경고 없이 보여주면 위험합니다. 배너에 "프로필 설정" 버튼을 같이 두면 좋습니다.
 - `disclaimer`(직원 확인 안내)는 /analyze 결과 화면처럼 하단에 작게 표시.
+- `notice`·`disclaimer`는 백엔드가 **프로필 언어(ko/en/zh/ja)로 번역해서** 보냅니다. 프론트에서 따로 번역할 필요 없이 그대로 띄우면 됩니다. 게스트도 `profile.preferred_language`만 보내면 그 언어로 옵니다.
 - 요청 body는 `/analyze`와 같이: 게스트면 `profile`을 넣고, 로그인이면 Authorization 헤더만.
 - `google`이 `null`이면 평점 자리에 "평점 정보 없음" 또는 숨김.
 - 한 번에 최대 20곳만 옵니다(`limit`). `total`이 더 크면 "N곳 중 20곳 표시 · 검색어나 지역으로 좁혀 보세요" 안내를 보여주세요.

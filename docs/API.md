@@ -95,6 +95,7 @@ multipart `file` (jpeg/png/webp/heic, 최대 15MB — 서버에서 3MB 이하로
   화면에 평점을 보여줄 때는 `rating_attribution`("Google Maps")을 함께 표시할 것.
   무료 사용량을 넘지 않게 **하루 조회 상한**(`GOOGLE_RATING_DAILY_LIMIT`, 기본 100건)이 있다. 넘으면 `google: null`로 오고 목록·판정은 그대로다.
 - `profile_applied: false`면 프로필이 없는 상태라 **모든 메뉴가 SAFE로 나온다**. `notice` 문구를 화면에 꼭 보여줄 것.
+- `notice`·`disclaimer`는 프로필의 `preferred_language`(ko/en/zh/ja, 없으면 en)로 **번역돼서** 온다. 프론트는 받은 문자열을 그대로 표시하면 된다. (/analyze의 `disclaimer`도 같다)
 
 ## POST /restaurants/{id} — 식당 상세
 ```json
