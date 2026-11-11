@@ -9134,6 +9134,617 @@
      }
     }
    ]
+  },
+  {
+   "id": "songjeong-3dae-gukbap",
+   "name": "송정3대국밥",
+   "area": "부산진구 서면",
+   "category": "돼지국밥",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "네이버 플레이스 메뉴판 이미지·메뉴 정보(업주 등록, 11/11 확인) — 메뉴명·가격만 옮겨 적고 재료는 일반 레시피 기준 수기 입력, AI 호출 없음",
+   "menus": [
+    {
+     "name": "(따로)국밥",
+     "prices": [
+      "9,500"
+     ],
+     "note": "돼지·순대·내장 원하는 대로 섞어 줌",
+     "manual": {
+      "menu": "(따로)국밥",
+      "menu_translated": "Pork gukbap (soup and rice served separately)",
+      "ingredients": [
+       {
+        "name": "돼지뼈 육수",
+        "name_translated": "pork bone broth",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "돼지고기 수육",
+        "name_translated": "boiled pork slices",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우젓",
+        "name_translated": "salted shrimp (side sauce)",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "맛녀석국밥",
+     "prices": [
+      "9,500"
+     ],
+     "note": "삼겹살+항정살",
+     "manual": {
+      "menu": "맛녀석국밥",
+      "menu_translated": "Pork gukbap with belly & neck meat",
+      "ingredients": [
+       {
+        "name": "돼지뼈 육수",
+        "name_translated": "pork bone broth",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "삼겹살·항정살",
+        "name_translated": "pork belly / jowl",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우젓",
+        "name_translated": "salted shrimp (side sauce)",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "수육백반",
+     "prices": [
+      "12,000"
+     ],
+     "note": null,
+     "manual": {
+      "menu": "수육백반",
+      "menu_translated": "Boiled pork set meal with soup and rice",
+      "ingredients": [
+       {
+        "name": "돼지고기 수육",
+        "name_translated": "boiled pork slices",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "돼지뼈 육수",
+        "name_translated": "pork bone broth",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우젓",
+        "name_translated": "salted shrimp (side sauce)",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "수육 (소, 2~3인분)",
+     "prices": [
+      "31,000"
+     ],
+     "note": null,
+     "manual": {
+      "menu": "수육 (소, 2~3인분)",
+      "menu_translated": "Boiled pork slices (small, for 2–3)",
+      "ingredients": [
+       {
+        "name": "돼지고기 수육",
+        "name_translated": "boiled pork slices",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우젓",
+        "name_translated": "salted shrimp (side sauce)",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "수육 (대, 3인분)",
+     "prices": [
+      "36,000"
+     ],
+     "note": null,
+     "manual": {
+      "menu": "수육 (대, 3인분)",
+      "menu_translated": "Boiled pork slices (large, for 3)",
+      "ingredients": [
+       {
+        "name": "돼지고기 수육",
+        "name_translated": "boiled pork slices",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우젓",
+        "name_translated": "salted shrimp (side sauce)",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "이북식 찹쌀순대 (소)",
+     "prices": [
+      "11,000"
+     ],
+     "note": null,
+     "manual": {
+      "menu": "이북식 찹쌀순대 (소)",
+      "menu_translated": "North Korean-style blood sausage (small)",
+      "ingredients": [
+       {
+        "name": "순대 (돼지 창자·선지)",
+        "name_translated": "Korean blood sausage (pork casing, blood)",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "찹쌀·당면",
+        "name_translated": "glutinous rice / glass noodles",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "채소",
+        "name_translated": "vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우젓",
+        "name_translated": "salted shrimp (side sauce)",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "이북식 찹쌀순대 (대)",
+     "prices": [
+      "14,000"
+     ],
+     "note": null,
+     "manual": {
+      "menu": "이북식 찹쌀순대 (대)",
+      "menu_translated": "North Korean-style blood sausage (large)",
+      "ingredients": [
+       {
+        "name": "순대 (돼지 창자·선지)",
+        "name_translated": "Korean blood sausage (pork casing, blood)",
+        "tags": [
+         "pork"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "찹쌀·당면",
+        "name_translated": "glutinous rice / glass noodles",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "채소",
+        "name_translated": "vegetables",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "새우젓",
+        "name_translated": "salted shrimp (side sauce)",
+        "tags": [
+         "shrimp"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "공기밥",
+     "prices": [
+      "1,000"
+     ],
+     "note": null,
+     "manual": {
+      "menu": "공기밥",
+      "menu_translated": "Steamed rice",
+      "ingredients": [
+       {
+        "name": "쌀밥",
+        "name_translated": "rice",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "haeundae-hotteok",
+   "name": "해운대명품호떡",
+   "area": "해운대구 중동",
+   "category": "호떡·간식",
+   "name_confirmed": true,
+   "google_place_id": null,
+   "source": "네이버 플레이스 메뉴판 이미지·메뉴 정보(업주 등록, 11/11 확인) — 메뉴명·가격만 옮겨 적고 재료는 일반 레시피 기준 수기 입력, AI 호출 없음",
+   "menus": [
+    {
+     "name": "꿀 호떡",
+     "prices": [
+      "2,000"
+     ],
+     "note": null,
+     "manual": {
+      "menu": "꿀 호떡",
+      "menu_translated": "Honey hotteok (sweet pancake)",
+      "ingredients": [
+       {
+        "name": "밀가루 반죽",
+        "name_translated": "wheat dough",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "찹쌀가루",
+        "name_translated": "glutinous rice flour",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "식용유 (튀기듯 구움)",
+        "name_translated": "frying oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "흑설탕 시럽",
+        "name_translated": "brown sugar syrup",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "꿀",
+        "name_translated": "honey",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "씨앗 호떡",
+     "prices": [
+      "2,500"
+     ],
+     "note": "부산 대표 간식",
+     "manual": {
+      "menu": "씨앗 호떡",
+      "menu_translated": "Seed hotteok (Busan-style, filled with seeds)",
+      "ingredients": [
+       {
+        "name": "밀가루 반죽",
+        "name_translated": "wheat dough",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "찹쌀가루",
+        "name_translated": "glutinous rice flour",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "식용유 (튀기듯 구움)",
+        "name_translated": "frying oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "흑설탕 시럽",
+        "name_translated": "brown sugar syrup",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "해바라기씨·호박씨",
+        "name_translated": "sunflower / pumpkin seeds",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "땅콩·견과류",
+        "name_translated": "peanuts / tree nuts",
+        "tags": [
+         "peanut",
+         "tree_nut"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "치즈 호떡",
+     "prices": [
+      "3,000"
+     ],
+     "note": "목~일 오후 6시 이후",
+     "manual": {
+      "menu": "치즈 호떡",
+      "menu_translated": "Cheese hotteok",
+      "ingredients": [
+       {
+        "name": "밀가루 반죽",
+        "name_translated": "wheat dough",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "찹쌀가루",
+        "name_translated": "glutinous rice flour",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "식용유 (튀기듯 구움)",
+        "name_translated": "frying oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "모짜렐라 치즈",
+        "name_translated": "mozzarella cheese",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "치즈 꿀 호떡",
+     "prices": [
+      "3,000"
+     ],
+     "note": "목~일 오후 6시 이후",
+     "manual": {
+      "menu": "치즈 꿀 호떡",
+      "menu_translated": "Cheese & honey hotteok",
+      "ingredients": [
+       {
+        "name": "밀가루 반죽",
+        "name_translated": "wheat dough",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "찹쌀가루",
+        "name_translated": "glutinous rice flour",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "식용유 (튀기듯 구움)",
+        "name_translated": "frying oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "모짜렐라 치즈",
+        "name_translated": "mozzarella cheese",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "꿀",
+        "name_translated": "honey",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       }
+      ]
+     }
+    },
+    {
+     "name": "치즈 씨앗 호떡",
+     "prices": [
+      "3,000"
+     ],
+     "note": "목~일 오후 6시 이후",
+     "manual": {
+      "menu": "치즈 씨앗 호떡",
+      "menu_translated": "Cheese & seed hotteok",
+      "ingredients": [
+       {
+        "name": "밀가루 반죽",
+        "name_translated": "wheat dough",
+        "tags": [
+         "wheat"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "찹쌀가루",
+        "name_translated": "glutinous rice flour",
+        "tags": [],
+        "certainty": "possible",
+        "ratio_percent": null
+       },
+       {
+        "name": "식용유 (튀기듯 구움)",
+        "name_translated": "frying oil",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "모짜렐라 치즈",
+        "name_translated": "mozzarella cheese",
+        "tags": [
+         "milk"
+        ],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "흑설탕 시럽",
+        "name_translated": "brown sugar syrup",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "해바라기씨·호박씨",
+        "name_translated": "sunflower / pumpkin seeds",
+        "tags": [],
+        "certainty": "confirmed",
+        "ratio_percent": null
+       },
+       {
+        "name": "땅콩·견과류",
+        "name_translated": "peanuts / tree nuts",
+        "tags": [
+         "peanut",
+         "tree_nut"
+        ],
+        "certainty": "possible",
+        "ratio_percent": null
+       }
+      ]
+     }
+    }
+   ]
   }
  ]
 }
