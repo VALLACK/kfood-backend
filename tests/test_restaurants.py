@@ -88,7 +88,9 @@ def test_profile_changes_what_is_edible():
 
 def test_only_edible_filters_out_restaurants_with_nothing_to_eat():
     d = _search(q="국밥", only_edible=True, profile={"religious_diet": "halal"})
-    assert d["restaurants"] == []
+    ids = {r["id"] for r in d["restaurants"]}
+    assert "chakhan-gukbap" not in ids and "subaekdang" not in ids     # 먹을 수 있는 메뉴가 없는 국밥집은 빠진다
+    assert all(r["summary"]["safe"] > 0 for r in d["restaurants"])  # 공기밥만 되는 집은 남는다
     d = _search(q="국밥", profile={"religious_diet": "halal"})
     assert len(d["restaurants"]) >= 2   # 필터를 끄면 국밥집이 보인다
 
@@ -283,7 +285,7 @@ def test_google_daily_limit_stops_rating_calls(fake_google, place_ids, monkeypat
     d = _search(profile=SHELLFISH)                  # 1건만 남음
     assert len(calls) == 4
     assert sum(r["google"] is not None for r in d["restaurants"]) == 1
-    assert len(d["restaurants"]) == 11              # 평점이 없어도 목록은 그대로
+    assert len(d["restaurants"]) == len(restaurant_service.load_restaurants())   # 평점이 없어도 목록은 그대로
 
 
 def test_repeated_search_is_fast():
@@ -309,3 +311,13 @@ def test_rating_calls_only_for_returned_restaurants(fake_google, monkeypatch):
     d = _search(profile=SHELLFISH, limit=5)
     assert len(d["restaurants"]) == 5 and len(calls) == 5
     assert client.post("/restaurants/search", json={"limit": 100}).status_code == 422
+
+
+def test_tourist_spots_busan_signature_foods():
+    """11/11 추가: 서면 돼지국밥, 해운대 씨앗호떡 — 외국인 관광 동선의 부산 대표 음식."""
+    gukbap = client.post("/restaurants/songjeong-3dae-gukbap", json={"profile": {"religious_diet": "halal"}}).json()
+    assert gukbap["summary"]["warning"] >= 7 and "공기밥" in gukbap["summary"]["safe_menus"]
+    shrimp = client.post("/restaurants/songjeong-3dae-gukbap", json={"profile": {"allergies": ["shrimp"]}}).json()
+    assert shrimp["summary"]["warning"] == 0 and shrimp["summary"]["caution"] >= 7   # 새우젓은 직원 확인
+    hotteok = client.post("/restaurants/haeundae-hotteok", json={"profile": {"allergies": ["milk"]}}).json()
+    assert {m["menu"] for m in hotteok["results"] if m["risk"]["level"] == "WARNING"} == {"치즈 호떡", "치즈 꿀 호떡", "치즈 씨앗 호떡"}

@@ -32,4 +32,4 @@ def test_no_restaurant_uses_google_maps_photos():
     rs = restaurant_service.load_restaurants()
     assert not [r["id"] for r in rs if r.get("source_check") == "replace_photo" or "구글" in r.get("source", "")]
     naver = {r["id"] for r in rs if "네이버 플레이스" in r.get("source", "")}
-    assert naver == {"hiwaffle-kyungsung-pknu", "yuilhan-siktak", "hey-egg-noodle", "myeonsikdang-pknu"}
+    assert {"hiwaffle-kyungsung-pknu", "yuilhan-siktak", "hey-egg-noodle", "myeonsikdang-pknu"} <= naver
