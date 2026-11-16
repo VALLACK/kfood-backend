@@ -9145,13 +9145,13 @@
    "source": "네이버 플레이스 메뉴판 이미지·메뉴 정보(업주 등록, 11/11 확인) — 메뉴명·가격만 옮겨 적고 재료는 일반 레시피 기준 수기 입력, AI 호출 없음",
    "menus": [
     {
-     "name": "(따로)국밥",
+     "name": "돼지국밥 (따로)",
      "prices": [
       "9,500"
      ],
      "note": "돼지·순대·내장 원하는 대로 섞어 줌",
      "manual": {
-      "menu": "(따로)국밥",
+      "menu": "돼지국밥 (따로)",
       "menu_translated": "Pork gukbap (soup and rice served separately)",
       "ingredients": [
        {
@@ -9511,7 +9511,9 @@
        {
         "name": "꿀",
         "name_translated": "honey",
-        "tags": [],
+        "tags": [
+         "honey"
+        ],
         "certainty": "confirmed",
         "ratio_percent": null
        }
@@ -9668,7 +9670,9 @@
        {
         "name": "꿀",
         "name_translated": "honey",
-        "tags": [],
+        "tags": [
+         "honey"
+        ],
         "certainty": "confirmed",
         "ratio_percent": null
        }

@@ -20,7 +20,7 @@ RELIGIOUS_RULES: dict[str, dict[str, set[str]]] = {
 }
 
 DIET_RULES: dict[str, set[str]] = {
-    "vegan": MEATS | SEAFOOD | {"egg", "milk"},
+    "vegan": MEATS | SEAFOOD | {"egg", "milk", "honey"},   # 꿀도 동물성 (태욱님 #17 리뷰)
     "vegetarian": MEATS | SEAFOOD,       # lacto-ovo
     "lacto_ovo": MEATS | SEAFOOD,
     "lacto": MEATS | SEAFOOD | {"egg"},

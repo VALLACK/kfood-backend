@@ -28,6 +28,7 @@ DIRECT_RULES: list[tuple[str, list[str]]] = [
     ("계란", ["egg"]), ("달걀", ["egg"]), ("마요네즈", ["egg"]), ("메추리알", ["egg"]),
     ("치즈", ["milk"]), ("버터", ["milk"]), ("크림", ["milk"]), ("우유", ["milk"]),
     ("밀가루", ["wheat"]), ("부침가루", ["wheat"]), ("튀김가루", ["wheat"]), ("빵가루", ["wheat"]),
+    ("꿀", ["honey"]), ("벌꿀", ["honey"]),
     ("메밀", ["buckwheat"]), ("땅콩", ["peanut"]), ("호두", ["walnut"]), ("잣", ["pine_nut"]),
     ("참기름", ["sesame"]), ("참깨", ["sesame"]),
     ("맛술", ["alcohol"]), ("미림", ["alcohol"]), ("청주", ["alcohol"]), ("요리주", ["alcohol"]),

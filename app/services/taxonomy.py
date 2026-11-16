@@ -32,6 +32,7 @@ TAGS: dict[str, str] = {
     "sulfite": "아황산류(말린 과일·와인 등)",
     "alcohol": "술·맛술·미림·청주·요리주",
     "animal_gelatin": "젤라틴",
+    "honey": "꿀·벌꿀·로열젤리 (비건 제외 대상)",
 }
 
 # 프로필 알레르기 이름(한/영) → 태그. 식약처 알레르기 유발물질 22종 기준 + 흔한 묶음 표현
@@ -87,6 +88,7 @@ TAG_LABELS: dict[str, dict[str, str]] = {
     "soy": {"ko": "대두", "en": "soy", "zh": "大豆", "ja": "大豆"},
     "peanut": {"ko": "땅콩", "en": "peanut", "zh": "花生", "ja": "落花生"},
     "walnut": {"ko": "호두", "en": "walnut", "zh": "核桃", "ja": "くるみ"},
+    "honey": {"ko": "꿀", "en": "honey", "zh": "蜂蜜", "ja": "はちみつ"},
     "pine_nut": {"ko": "잣", "en": "pine nut", "zh": "松子", "ja": "松の実"},
     "sesame": {"ko": "참깨", "en": "sesame", "zh": "芝麻", "ja": "ごま"},
     "peach": {"ko": "복숭아", "en": "peach", "zh": "桃子", "ja": "桃"},
