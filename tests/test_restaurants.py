@@ -321,3 +321,16 @@ def test_tourist_spots_busan_signature_foods():
     assert shrimp["summary"]["warning"] == 0 and shrimp["summary"]["caution"] >= 7   # 새우젓은 직원 확인
     hotteok = client.post("/restaurants/haeundae-hotteok", json={"profile": {"allergies": ["milk"]}}).json()
     assert {m["menu"] for m in hotteok["results"] if m["risk"]["level"] == "WARNING"} == {"치즈 호떡", "치즈 꿀 호떡", "치즈 씨앗 호떡"}
+
+
+def test_review_followups_16_17():
+    """#16·#17 리뷰 후속: 에비=새우 확정, 꿀=비건 금지, 송정 '돼지국밥 (따로)'는 돼지국밥으로 매칭."""
+    shrimp = {"allergies": ["shrimp"]}
+    d = client.post("/restaurants/myeonsikdang-pknu", json={"profile": shrimp}).json()
+    assert next(m for m in d["results"] if m["menu"] == "에비돈코츠라멘")["risk"]["level"] == "WARNING"
+    d = client.post("/restaurants/haeundae-hotteok", json={"profile": {"vegetarian_type": "vegan"}}).json()
+    assert next(m for m in d["results"] if m["menu"] == "꿀 호떡")["risk"]["level"] == "WARNING"
+    d = client.post("/restaurants/songjeong-3dae-gukbap", json={"profile": shrimp}).json()
+    gukbap = next(m for m in d["results"] if m["menu"] == "돼지국밥 (따로)")
+    assert gukbap["risk"]["level"] == "CAUTION"                       # 새우젓만 확인 질문
+    assert not {"굴", "명태"} & {i["name"] for i in gukbap["ingredients"]}
