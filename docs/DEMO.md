@@ -65,4 +65,4 @@
 - 운영 API: `GET /menus/unmatched?limit=50`, `GET /menus/lookup?name=돈까스`
 - 메뉴 추가: `python -m scripts.add_menu --list` 로 대기 목록 확인 후
   `python -m scripts.add_menu "돈까스" --required "돼지고기:pork" "빵가루:wheat" --hidden "돈까스소스:wheat,soy" --alias "돈가스"`
-- 배포 환경에서 여러 사용자 수집을 모으려면 `supabase/migrations/09_unmatched_menus.sql` 적용
+- 배포 환경에서 여러 사용자 수집을 모으려면 `supabase/migrations/99_unmatched_menus.sql` 적용
