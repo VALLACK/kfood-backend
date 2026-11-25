@@ -39,7 +39,7 @@ def test_gijang_marks_seafood_as_possible_not_confirmed():
     assert tags == {"shrimp": "possible", "shellfish": "possible", "squid": "possible"}
 
 
-@pytest.mark.parametrize("menu", ["기장밥", "찰기장밥", "기장떡", "소고기장조림", "기장현미밥"])
+@pytest.mark.parametrize("menu", ["기장밥", "찰기장밥", "기장떡", "소고기장조림", "기장현미밥", "기장 난자완스"])
 def test_grain_gijang_is_not_seafood(menu):
     assert not any(t in ("shrimp", "shellfish", "squid")
                    for i in from_menu_name(menu, set()) for t in i["tags"])
