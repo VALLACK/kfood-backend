@@ -39,10 +39,16 @@ def test_gijang_marks_seafood_as_possible_not_confirmed():
     assert tags == {"shrimp": "possible", "shellfish": "possible", "squid": "possible"}
 
 
-@pytest.mark.parametrize("menu", ["기장밥", "찰기장밥", "기장떡"])
+@pytest.mark.parametrize("menu", ["기장밥", "찰기장밥", "기장떡", "소고기장조림", "기장현미밥"])
 def test_grain_gijang_is_not_seafood(menu):
     assert not any(t in ("shrimp", "shellfish", "squid")
                    for i in from_menu_name(menu, set()) for t in i["tags"])
+
+
+@pytest.mark.parametrize("menu", ["소고기장조림", "기장현미밥"])
+def test_gijang_exceptions_stay_safe_for_shrimp_allergy(menu):
+    """#20 리뷰: '고기장'·곡물 기장 메뉴가 새우 알레르기에 CAUTION으로 바뀌면 안 된다."""
+    assert _level(menu, allergies=["새우"]) == "SAFE"
 
 
 # ── 2. 꿀 재료 이름 ──────────────────────────────────────────
