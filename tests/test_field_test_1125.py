@@ -51,6 +51,17 @@ def test_gijang_exceptions_stay_safe_for_shrimp_allergy(menu):
     assert _level(menu, allergies=["새우"]) == "SAFE"
 
 
+# ── 1-2. 조기 = 생선 ('라조기' 닭 요리로 매칭되던 문제) ─────────
+
+@pytest.mark.parametrize("menu", ["조기", "조기(1마리)", "조기구이", "굴비"])
+def test_jogi_is_fish(menu):
+    assert _level(menu, allergies=["생선"]) == "WARNING"
+
+
+def test_rajogi_is_not_fish():
+    assert "fish" not in {t for i in from_menu_name("라조기", set()) for t in i["tags"]}
+
+
 # ── 2. 꿀 재료 이름 ──────────────────────────────────────────
 
 def test_honey_from_menu_name_is_named_in_korean():
